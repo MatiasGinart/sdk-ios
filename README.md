@@ -18,7 +18,7 @@ There are two ways to add MercadoPago to your project:
 - Ensure that the deployment target of MercadoPagoSDK.framework matches that of the application target.
 - In the tab bar at the top of that window, open the "Build Phases" panel.
 - Expand the "Target Dependencies" group, and add MercadoPagoSDK.framework.
--Click on the + button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy - Frameworks", set the "Destination" to "Frameworks", and add MercadoPagoSDK.framework.
+- Click on the + button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add MercadoPagoSDK.framework.
 
 ### CocoaPods
 
@@ -26,7 +26,8 @@ Coming soon.
 
 Usage
 -----
-- Add import MercadoPagoSDK
+- Swift: Add import MercadoPagoSDK for Swift 
+- Objective C: Add #import <MercadoPagoSDK/MercadoPagoSDK.h>
 
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]

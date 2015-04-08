@@ -3,6 +3,10 @@ The MercadoPago iOS SDK make it easy to collect your users' credit card details 
 
 It is developed for iOS 7 or sooner.
 
+## Examples
+
+![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png?token=AEMe-evtNJbwTxgKnHqB79kI889JOuxzks5VLocBwA%3D%3D)
+
 ## Installation
 
 There are two ways to add MercadoPago to your project:

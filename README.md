@@ -25,34 +25,34 @@ Usage
 - Add import MercadoPagoSDK
 
         func initMercadoPagoVault() {
-        let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]
+                let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]
         
-        let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", 
-            merchantBaseUrl: nil, merchantGetCustomerUri: nil, merchantAccessToken: nil, amount: 10.0, 
-            supportedPaymentTypes: supportedPaymentTypes) { 
-            (paymentMethod, token, cardIssuerId, installments) -> Void in
-                let alert = UIAlertController()
-                alert.title = "Payment Info"
+                let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", 
+                merchantBaseUrl: nil, merchantGetCustomerUri: nil, merchantAccessToken: nil, amount: 10.0, 
+                supportedPaymentTypes: supportedPaymentTypes) { 
+                (paymentMethod, token, cardIssuerId, installments) -> Void in
+                        let alert = UIAlertController()
+                        alert.title = "Payment Info"
                 
-                var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
-                msg = msg + " Installments = \(installments!)."
-                msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
+                        var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
+                        msg = msg + " Installments = \(installments!)."
+                        msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
                 
-                alert.message = msg
-                alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
-                  switch action.style{
-                    case .Default:
-                      self.nav!.popToRootViewControllerAnimated(true)
-                      self.nav!.popViewControllerAnimated(true)
-                      self.initViewController()
-                    case .Cancel:
-                      println("cancel")
-                    case .Destructive:
-                      println("destructive")
-                  }
-                }))
-                self.nav!.presentViewController(alert, animated: true, completion: nil)
-            }
-        // Put vaultController at the top of navigator.
-        self.nav!.pushViewController(vaultViewController, animated: false)
+                        alert.message = msg
+                        alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
+                          switch action.style{
+                            case .Default:
+                              self.nav!.popToRootViewControllerAnimated(true)
+                              self.nav!.popViewControllerAnimated(true)
+                              self.initViewController()
+                            case .Cancel:
+                              println("cancel")
+                            case .Destructive:
+                              println("destructive")
+                          }
+                        }))
+                        self.nav!.presentViewController(alert, animated: true, completion: nil)
+                    }
+                // Put vaultController at the top of navigator.
+                self.nav!.pushViewController(vaultViewController, animated: false)
         }

@@ -23,7 +23,8 @@ Coming soon.
 Usage
 -----
 - Add import MercadoPagoSDK
-    func initMercadoPagoVault() {
+
+        func initMercadoPagoVault() {
         let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]
         
         let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", 
@@ -52,6 +53,6 @@ Usage
                 }))
                 self.nav!.presentViewController(alert, animated: true, completion: nil)
             }
-      // Put vaultController at the top of navigator.
-      self.nav!.pushViewController(vaultViewController, animated: false)
-    }
+        // Put vaultController at the top of navigator.
+        self.nav!.pushViewController(vaultViewController, animated: false)
+        }

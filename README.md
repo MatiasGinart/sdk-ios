@@ -26,8 +26,7 @@ Coming soon.
 
 Usage
 -----
-- Swift: Add import MercadoPagoSDK for Swift 
-- Objective C: Add #import <MercadoPagoSDK/MercadoPagoSDK.h>
+- Add import MercadoPagoSDK for Swift 
 
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]

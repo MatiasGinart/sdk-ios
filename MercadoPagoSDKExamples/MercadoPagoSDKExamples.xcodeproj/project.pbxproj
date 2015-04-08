@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */; };
+		0F9884FF1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */; };
+		0F9885011AD2BCB900F750F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885001AD2BCB900F750F0 /* ViewController.swift */; };
+		0F9885061AD2BCB900F750F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885051AD2BCB900F750F0 /* Images.xcassets */; };
+		0F9885151AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */; };
+		0F9885251AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */; };
+		0F9885261AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */; };
+		0F9885271AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */; };
+		0F9885281AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */; };
+		0F98852B1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */; };
+		0F98852C1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */; };
+		0F9885341AD2BD8700F750F0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885321AD2BD8700F750F0 /* CardViewController.swift */; };
+		0F9885351AD2BD8700F750F0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885321AD2BD8700F750F0 /* CardViewController.swift */; };
+		0F9885361AD2BD8700F750F0 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885331AD2BD8700F750F0 /* CardViewController.xib */; };
+		0F9885371AD2BD8700F750F0 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885331AD2BD8700F750F0 /* CardViewController.xib */; };
+		0F98853A1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */; };
+		0F98853B1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */; };
+		0F98853C1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */; };
+		0F98853D1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */; };
+		0F9885401AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */; };
+		0F9885411AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */; };
+		0F9885421AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */; };
+		0F9885431AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */; };
+		0F9885451AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */; };
+		0F9885461AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */; };
+		0F9885481AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
+		0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
+		0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
+		0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
+		0FF616E71AD56C5400CC4C99 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF616E21AD5686000CC4C99 /* MercadoPagoSDK.framework */; };
+		0FF616E81AD56C5900CC4C99 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF616E21AD5686000CC4C99 /* MercadoPagoSDK.framework */; };
+		0FF616E91AD56C5900CC4C99 /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF616E21AD5686000CC4C99 /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F98850F1AD2BCB900F750F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F9884EE1AD2BCB900F750F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F9884F51AD2BCB900F750F0;
+			remoteInfo = MercadoPagoSDKExamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0FF616EA1AD56C5900CC4C99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0FF616E91AD56C5900CC4C99 /* MercadoPagoSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F9884FA1AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F9884FE1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MercadoPagoSDKExamples.xcdatamodel; sourceTree = "<group>"; };
+		0F9885001AD2BCB900F750F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F9885051AD2BCB900F750F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoPagoSDKExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F9885131AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoPagoSDKExamplesTests.swift; sourceTree = "<group>"; };
+		0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
+		0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamplesViewController.xib; sourceTree = "<group>"; };
+		0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesUtils.swift; sourceTree = "<group>"; };
+		0F9885321AD2BD8700F750F0 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		0F9885331AD2BD8700F750F0 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSecurityCodeTableViewCell.swift; sourceTree = "<group>"; };
+		0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleSecurityCodeTableViewCell.xib; sourceTree = "<group>"; };
+		0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleVaultViewController.swift; sourceTree = "<group>"; };
+		0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleVaultViewController.xib; sourceTree = "<group>"; };
+		0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedVaultViewController.swift; sourceTree = "<group>"; };
+		0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalVaultViewController.swift; sourceTree = "<group>"; };
+		0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		0FF616E21AD5686000CC4C99 /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MercadoPagoSDK.framework; path = "../../../Library/Developer/Xcode/DerivedData/MercadoPagoSDK-aqooidbdveqdrngseedjqdaseahf/Build/Products/Debug-iphoneos/MercadoPagoSDK.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F9884F31AD2BCB900F750F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF616E81AD56C5900CC4C99 /* MercadoPagoSDK.framework in Frameworks */,
+				0FF616E71AD56C5400CC4C99 /* MercadoPagoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F98850B1AD2BCB900F750F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F9884ED1AD2BCB900F750F0 = {
+			isa = PBXGroup;
+			children = (
+				0FF616E21AD5686000CC4C99 /* MercadoPagoSDK.framework */,
+				0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
+				0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,
+				0F9884F71AD2BCB900F750F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F9884F71AD2BCB900F750F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */,
+				0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */ = {
+			isa = PBXGroup;
+			children = (
+				0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */,
+				0F98851E1AD2BCD800F750F0 /* Example */,
+				0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */,
+				0F9885001AD2BCB900F750F0 /* ViewController.swift */,
+				0F9885051AD2BCB900F750F0 /* Images.xcassets */,
+				0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */,
+				0F9884F91AD2BCB900F750F0 /* Supporting Files */,
+			);
+			path = MercadoPagoSDKExamples;
+			sourceTree = "<group>";
+		};
+		0F9884F91AD2BCB900F750F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F9884FA1AD2BCB900F750F0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */,
+				0F9885121AD2BCB900F750F0 /* Supporting Files */,
+			);
+			path = MercadoPagoSDKExamplesTests;
+			sourceTree = "<group>";
+		};
+		0F9885121AD2BCB900F750F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885131AD2BCB900F750F0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F98851E1AD2BCD800F750F0 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885291AD2BD2200F750F0 /* Utils */,
+				0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */,
+				0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */,
+				0F98851F1AD2BCDD00F750F0 /* Example1 */,
+				0F9885201AD2BCE300F750F0 /* Example2 */,
+				0F9885211AD2BCF800F750F0 /* Example3 */,
+				0F9885221AD2BD0200F750F0 /* Example4 */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		0F98851F1AD2BCDD00F750F0 /* Example1 */ = {
+			isa = PBXGroup;
+			children = (
+				0F98852E1AD2BD6300F750F0 /* Cells */,
+				0F98852D1AD2BD5A00F750F0 /* SimpleCard */,
+			);
+			name = Example1;
+			sourceTree = "<group>";
+		};
+		0F9885201AD2BCE300F750F0 /* Example2 */ = {
+			isa = PBXGroup;
+			children = (
+				0F98852F1AD2BD6A00F750F0 /* SimpleVault */,
+			);
+			name = Example2;
+			sourceTree = "<group>";
+		};
+		0F9885211AD2BCF800F750F0 /* Example3 */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885301AD2BD7200F750F0 /* AdvancedVault */,
+			);
+			name = Example3;
+			sourceTree = "<group>";
+		};
+		0F9885221AD2BD0200F750F0 /* Example4 */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885311AD2BD7900F750F0 /* FinalVault */,
+			);
+			name = Example4;
+			sourceTree = "<group>";
+		};
+		0F9885291AD2BD2200F750F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0F98852D1AD2BD5A00F750F0 /* SimpleCard */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885321AD2BD8700F750F0 /* CardViewController.swift */,
+				0F9885331AD2BD8700F750F0 /* CardViewController.xib */,
+			);
+			name = SimpleCard;
+			sourceTree = "<group>";
+		};
+		0F98852E1AD2BD6300F750F0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */,
+				0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0F98852F1AD2BD6A00F750F0 /* SimpleVault */ = {
+			isa = PBXGroup;
+			children = (
+				0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */,
+				0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */,
+			);
+			name = SimpleVault;
+			sourceTree = "<group>";
+		};
+		0F9885301AD2BD7200F750F0 /* AdvancedVault */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */,
+			);
+			name = AdvancedVault;
+			sourceTree = "<group>";
+		};
+		0F9885311AD2BD7900F750F0 /* FinalVault */ = {
+			isa = PBXGroup;
+			children = (
+				0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */,
+			);
+			name = FinalVault;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F9885181AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamples" */;
+			buildPhases = (
+				0F9884F21AD2BCB900F750F0 /* Sources */,
+				0F9884F31AD2BCB900F750F0 /* Frameworks */,
+				0F9884F41AD2BCB900F750F0 /* Resources */,
+				0FF616EA1AD56C5900CC4C99 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MercadoPagoSDKExamples;
+			productName = MercadoPagoSDKExamples;
+			productReference = 0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F98850D1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamplesTests" */;
+			buildPhases = (
+				0F98850A1AD2BCB900F750F0 /* Sources */,
+				0F98850B1AD2BCB900F750F0 /* Frameworks */,
+				0F98850C1AD2BCB900F750F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F9885101AD2BCB900F750F0 /* PBXTargetDependency */,
+			);
+			name = MercadoPagoSDKExamplesTests;
+			productName = MercadoPagoSDKExamplesTests;
+			productReference = 0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F9884EE1AD2BCB900F750F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = MercadoPago;
+				TargetAttributes = {
+					0F9884F51AD2BCB900F750F0 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					0F98850D1AD2BCB900F750F0 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 0F9884F51AD2BCB900F750F0;
+					};
+				};
+			};
+			buildConfigurationList = 0F9884F11AD2BCB900F750F0 /* Build configuration list for PBXProject "MercadoPagoSDKExamples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F9884ED1AD2BCB900F750F0;
+			productRefGroup = 0F9884F71AD2BCB900F750F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
+				0F98850D1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F9884F41AD2BCB900F750F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F98853C1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */,
+				0F9885271AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */,
+				0F9885361AD2BD8700F750F0 /* CardViewController.xib in Resources */,
+				0F9885421AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */,
+				0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */,
+				0F9885061AD2BCB900F750F0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F98850C1AD2BCB900F750F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */,
+				0F98853D1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */,
+				0F9885371AD2BD8700F750F0 /* CardViewController.xib in Resources */,
+				0F9885281AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */,
+				0F9885431AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F9884F21AD2BCB900F750F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9885011AD2BCB900F750F0 /* ViewController.swift in Sources */,
+				0F9885251AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */,
+				0F9885451AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */,
+				0F9885341AD2BD8700F750F0 /* CardViewController.swift in Sources */,
+				0F9884FF1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld in Sources */,
+				0F98853A1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */,
+				0F98852B1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */,
+				0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */,
+				0F9885481AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */,
+				0F9885401AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F98850A1AD2BCB900F750F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9885351AD2BD8700F750F0 /* CardViewController.swift in Sources */,
+				0F9885151AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift in Sources */,
+				0F9885461AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */,
+				0F9885261AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */,
+				0F9885411AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */,
+				0F98852C1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */,
+				0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */,
+				0F98853B1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F9885101AD2BCB900F750F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */;
+			targetProxy = 0F98850F1AD2BCB900F750F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F9885161AD2BCB900F750F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F9885171AD2BCB900F750F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F9885191AD2BCB900F750F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MercadoPagoSDK-biowuakdtvqvkidiyospabfuhcgg/Build/Products/Debug-iphoneos",
+					"/Users/mgualino/Desktop/Development/MercadoPagoSDK/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MercadoPagoSDK-aqooidbdveqdrngseedjqdaseahf/Build/Products/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = MercadoPagoSDKExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F98851A1AD2BCB900F750F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MercadoPagoSDK-biowuakdtvqvkidiyospabfuhcgg/Build/Products/Debug-iphoneos",
+					"/Users/mgualino/Desktop/Development/MercadoPagoSDK/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MercadoPagoSDK-aqooidbdveqdrngseedjqdaseahf/Build/Products/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = MercadoPagoSDKExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F98851C1AD2BCB900F750F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MercadoPagoSDKExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
+			};
+			name = Debug;
+		};
+		0F98851D1AD2BCB900F750F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MercadoPagoSDKExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F9884F11AD2BCB900F750F0 /* Build configuration list for PBXProject "MercadoPagoSDKExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F9885161AD2BCB900F750F0 /* Debug */,
+				0F9885171AD2BCB900F750F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F9885181AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F9885191AD2BCB900F750F0 /* Debug */,
+				0F98851A1AD2BCB900F750F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamplesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F98851C1AD2BCB900F750F0 /* Debug */,
+				0F98851D1AD2BCB900F750F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F9884FE1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodel */,
+			);
+			currentVersion = 0F9884FE1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodel */;
+			path = MercadoPagoSDKExamples.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0F9884EE1AD2BCB900F750F0 /* Project object */;
+}

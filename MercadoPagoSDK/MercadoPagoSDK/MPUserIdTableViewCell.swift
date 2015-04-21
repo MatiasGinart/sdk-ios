@@ -51,8 +51,8 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
     public func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange,    replacementString string: String!) -> Bool {
         if textField == self.userIdValueTextField {
             
-            if (identificationType?.type? == "number" && !Regex("^[0-9]$").test(string)) ||
-            (identificationType?.type? != "number" && Regex("^[0-9]$").test(string)){
+            if ((identificationType?.type? == "number" && !Regex("^[0-9]$").test(string)) ||
+            (identificationType?.type? != "number" && Regex("^[0-9]$").test(string))) && string != "" {
                 return false
             }
             var txtAfterUpdate:NSString = textField.text as NSString

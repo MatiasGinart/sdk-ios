@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Setting : NSObject {
+public class Setting : Serializable {
     public var bin : Bin!
     public var cardNumber : CardNumber!
     public var securityCode : SecurityCode!

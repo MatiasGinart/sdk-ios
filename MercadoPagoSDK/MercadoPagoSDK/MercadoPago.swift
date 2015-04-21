@@ -84,7 +84,7 @@ public class MercadoPago : NSObject {
         return CongratsViewController(payment: payment, paymentMethod: paymentMethod)
     }
     
-    public class func startVaultViewController(merchantPublicKey: String, merchantBaseUrl: String?, merchantGetCustomerUri: String?, merchantAccessToken: String?, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: Token?, cardIssuerId: Int64?, installments: Int?) -> Void) -> VaultViewController {
+    public class func startVaultViewController(merchantPublicKey: String, merchantBaseUrl: String?, merchantGetCustomerUri: String?, merchantAccessToken: String?, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, tokenId: String?, issuerId: Int64?, installments: Int?) -> Void) -> VaultViewController {
         
         return VaultViewController(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, amount: amount, supportedPaymentTypes: supportedPaymentTypes, callback: callback)
     }

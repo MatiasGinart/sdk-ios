@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Bin : NSObject {
+public class Bin : Serializable {
     public var exclusionPattern : String!
     public var installmentsPattern : String!
     public var pattern : String!

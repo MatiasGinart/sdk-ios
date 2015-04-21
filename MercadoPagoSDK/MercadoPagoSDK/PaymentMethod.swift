@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PaymentMethod : NSObject {
+public class PaymentMethod : Serializable {
     public var id : String!
     public var name : String!
     public var paymentTypeId : String!
@@ -65,4 +65,5 @@ public class PaymentMethod : NSObject {
         paymentMethod.additionalInfoNeeded = additionalInfoNeeded
         return paymentMethod
     }
+    
 }

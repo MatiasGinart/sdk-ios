@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CardNumber : NSObject {
+public class CardNumber : Serializable {
     public var length : Int!
     public var validation : String!
     

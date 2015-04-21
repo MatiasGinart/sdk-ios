@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SecurityCode : NSObject {
+public class SecurityCode : Serializable {
     public var length : Int!
     public var cardLocation : String!
     public var mode : String!

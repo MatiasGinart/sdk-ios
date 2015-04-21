@@ -53,7 +53,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
     
     public func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange,    replacementString string: String!) -> Bool {
         
-        if !Regex("^[0-9]$").test(string) {
+        if !Regex("^[0-9]$").test(string) && string != "" {
             return false
         }
         

@@ -50,8 +50,8 @@ public class Card : NSObject {
         if let chDic = json["cardholder"] as? NSDictionary {
             card.cardHolder = Cardholder.fromJSON(chDic)
         }
-        card.dateLastUpdated = JSON(json["date_last_updated"]!).asDate
-        card.dateCreated = JSON(json["date_created"]!).asDate
+        card.dateLastUpdated = Utils.getDateFromString(json["date_last_updated"] as String!)
+        card.dateCreated = Utils.getDateFromString(json["date_created"] as String!)
         return card
     }
     

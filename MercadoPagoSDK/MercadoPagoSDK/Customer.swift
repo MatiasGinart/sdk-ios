@@ -45,9 +45,9 @@ public class Customer : NSObject {
             customer.address = Address.fromJSON(addressDic)
         }
         customer.metadata = json["metadata"]! as? NSDictionary
-        customer.dateCreated = JSON(json["date_created"]!).asDate
-        customer.dateLastUpdated = JSON(json["date_last_updated"]!).asDate
-        customer.registrationDate = JSON(json["date_registered"]!).asDate
+        customer.dateCreated = Utils.getDateFromString(json["date_created"] as String!)
+        customer.dateLastUpdated = Utils.getDateFromString(json["date_last_updated"] as String!)
+        customer.registrationDate = Utils.getDateFromString(json["date_registered"] as String!)
         var cards : [Card] = [Card]()
         if let cardsArray = json["cards"] as? NSArray {
             for i in 0..<cardsArray.count {

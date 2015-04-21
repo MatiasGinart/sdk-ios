@@ -53,13 +53,13 @@ public class Token : NSObject {
         let luhn = json["luhn_validation"] == nil ? nil : JSON(json["luhn_validation"]!).asString
         let usedDate = json["used_date"] == nil ? nil : JSON(json["used_date"]!).asString
         let cardNumberLength = json["card_number_length"] == nil ? nil : JSON(json["card_number_length"]!).asInt
-        let creationDate = JSON(json["creation_date"]!).asDate
+        let creationDate = Utils.getDateFromString(json["creation_date"] as String!)
         let truncCardNumber = json["trunc_card_number"] == nil ? nil : JSON(json["trunc_card_number"]!).asString
         let securityCodeLength = JSON(json["security_code_length"]!).asInt
         let expMonth = json["expiration_month"] == nil ? nil : JSON(json["expiration_month"]!).asInt
         let expYear = json["expiration_year"] == nil ? nil : JSON(json["expiration_year"]!).asInt
-        let lastModifiedDate = JSON(json["last_modified_date"]!).asDate
-        let dueDate = JSON(json["due_date"]!).asDate
+        let lastModifiedDate = Utils.getDateFromString(json["last_modified_date"] as String!)
+        let dueDate = Utils.getDateFromString(json["due_date"] as String!)
         return Token(id: id, publicKey: publicKey, cardId: cardId, luhnValidation: luhn, status: status,
             usedDate: usedDate, cardNumberLength: cardNumberLength, creationDate: creationDate, truncCardNumber: truncCardNumber,
             securityCodeLength: securityCodeLength, expirationMonth: expMonth, expirationYear: expYear, lastModifiedDate: lastModifiedDate,

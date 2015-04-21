@@ -23,7 +23,7 @@ public class Refund : NSObject {
         refund.source = JSON(json["source"]!).asString
         refund.uniqueSequenceNumber = JSON(json["unique_sequence_number"]!).asString
         refund.paymentId = json["payment_id"] as Int!
-        refund.dateCreated = Utils.getDateFromString(json["date_created"] as String!)
+        refund.dateCreated = Utils.getDateFromString(json["date_created"] as? String)
         return refund
     }
     

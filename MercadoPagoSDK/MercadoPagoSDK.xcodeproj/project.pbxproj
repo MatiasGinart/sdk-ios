@@ -202,6 +202,8 @@
 		0F98861E1AD3981A00F750F0 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98861C1AD3981A00F750F0 /* GenericErrorView.swift */; };
 		0F9886201AD39E7E00F750F0 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98861F1AD39E7E00F750F0 /* ErrorTableViewCell.swift */; };
 		0F9886211AD39E7E00F750F0 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98861F1AD39E7E00F750F0 /* ErrorTableViewCell.swift */; };
+		0FE3E37F1AE706B600C27B97 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3E37E1AE706B600C27B97 /* Utils.swift */; };
+		0FE3E3801AE706B600C27B97 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3E37E1AE706B600C27B97 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,6 +320,7 @@
 		0F98845A1AD2AF1500F750F0 /* VaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VaultViewController.xib; sourceTree = "<group>"; };
 		0F98861C1AD3981A00F750F0 /* GenericErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
 		0F98861F1AD39E7E00F750F0 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		0FE3E37E1AE706B600C27B97 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +469,7 @@
 		0F9883AB1AD2ABB400F750F0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0FE3E37E1AE706B600C27B97 /* Utils.swift */,
 				0F9883AE1AD2ACFE00F750F0 /* CurrenciesUtil.swift */,
 				0F9883AD1AD2ACF400F750F0 /* Additions */,
 				0F9883AC1AD2ABBC00F750F0 /* Frameworks */,
@@ -855,6 +859,7 @@
 				0F9883771AD2AB6000F750F0 /* IdentificationType.swift in Sources */,
 				0F9883C21AD2AD4000F750F0 /* UILoadingView.swift in Sources */,
 				0F9883991AD2AB6000F750F0 /* TransactionDetails.swift in Sources */,
+				0FE3E37F1AE706B600C27B97 /* Utils.swift in Sources */,
 				0F9884551AD2AEF800F750F0 /* MPPaymentMethodTableViewCell.swift in Sources */,
 				0F9883A31AD2AB8000F750F0 /* PaymentService.swift in Sources */,
 				0F98845B1AD2AF1500F750F0 /* VaultViewController.swift in Sources */,
@@ -935,6 +940,7 @@
 				0F9883A81AD2AB8000F750F0 /* MercadoPagoService.swift in Sources */,
 				0F9883701AD2AB6000F750F0 /* Discount.swift in Sources */,
 				0F9883331AD2AB3C00F750F0 /* MerchantServer.swift in Sources */,
+				0FE3E3801AE706B600C27B97 /* Utils.swift in Sources */,
 				0F98835C1AD2AB6000F750F0 /* Bin.swift in Sources */,
 				0F9883941AD2AB6000F750F0 /* SecurityCode.swift in Sources */,
 				0F9884381AD2AE6200F750F0 /* InstallmentsViewController.swift in Sources */,

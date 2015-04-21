@@ -180,6 +180,9 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
             // TODO couponUrl = nil
         }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
-        self.navigationItem.rightBarButtonItem?.enabled = false
+    }
+    
+    public func submitForm() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 }

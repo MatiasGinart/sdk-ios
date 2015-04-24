@@ -40,7 +40,7 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.init(coder: aDecoder)
     }
     
-    override init() {
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -97,30 +97,30 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         var cardNumberNib = UINib(nibName: "MPCardNumberTableViewCell", bundle: MercadoPago.getBundle())
         self.tableView.registerNib(cardNumberNib, forCellReuseIdentifier: "cardNumberCell")
-        self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as MPCardNumberTableViewCell
+        self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as! MPCardNumberTableViewCell
         self.cardNumberCell.height = 55.0
         self.cardNumberCell.setIcon(self.paymentMethod.id)
-        self.cardNumberCell.setSetting(self.paymentMethod.settings[0])
+        self.cardNumberCell._setSetting(self.paymentMethod.settings[0])
 
         var expirationDateNib = UINib(nibName: "MPExpirationDateTableViewCell", bundle: MercadoPago.getBundle())
         self.tableView.registerNib(expirationDateNib, forCellReuseIdentifier: "expirationDateCell")
-        self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as MPExpirationDateTableViewCell
+        self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as! MPExpirationDateTableViewCell
         self.expirationDateCell.height = 55.0
         
         var cardholderNameNib = UINib(nibName: "MPCardholderNameTableViewCell", bundle: MercadoPago.getBundle())
         self.tableView.registerNib(cardholderNameNib, forCellReuseIdentifier: "cardholderNameCell")
-        self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as MPCardholderNameTableViewCell
+        self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as! MPCardholderNameTableViewCell
         self.cardholderNameCell.height = 55.0
         
         var userIdNib = UINib(nibName: "MPUserIdTableViewCell", bundle: MercadoPago.getBundle())
         self.tableView.registerNib(userIdNib, forCellReuseIdentifier: "userIdCell")
-        self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as MPUserIdTableViewCell
-        self.userIdCell.setIdentificationTypes(self.identificationTypes)
+        self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as! MPUserIdTableViewCell
+        self.userIdCell._setIdentificationTypes(self.identificationTypes)
         self.userIdCell.height = 55.0
         
         var securityCodeNib = UINib(nibName: "SimpleSecurityCodeTableViewCell", bundle: nil)
         self.tableView.registerNib(securityCodeNib, forCellReuseIdentifier: "securityCodeCell")
-        self.securityCodeCell = self.tableView.dequeueReusableCellWithIdentifier("securityCodeCell") as SimpleSecurityCodeTableViewCell
+        self.securityCodeCell = self.tableView.dequeueReusableCellWithIdentifier("securityCodeCell") as! SimpleSecurityCodeTableViewCell
         self.securityCodeCell.height = 55.0
         
         self.tableView.estimatedRowHeight = 55.0
@@ -226,12 +226,12 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return result
     }
     
-    func textFieldDidBeginEditing(textField: UITextField!) {
-        let cell = textField.superview?.superview as UITableViewCell?
+    func textFieldDidBeginEditing(textField: UITextField) {
+        let cell = textField.superview?.superview as! UITableViewCell?
         self.tableView.scrollToRowAtIndexPath(self.tableView.indexPathForCell(cell!)!, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true

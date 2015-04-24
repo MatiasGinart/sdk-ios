@@ -29,7 +29,7 @@ public class MercadoPagoService : NSObject {
         request.HTTPMethod = method
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if body != nil {
-            request.HTTPBody = (body as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+            request.HTTPBody = (body as! NSString).dataUsingEncoding(NSUTF8StringEncoding)
         }
         
         var urlConnection: NSURLConnection = NSURLConnection(request: request,

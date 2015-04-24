@@ -44,10 +44,10 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
         declareAndInitCells()
         
         // Title
-        setTitle(payment!)
+        _setTitle(payment!)
         
         // Icon
-        setIcon(payment!)
+        _setIcon(payment!)
         
         // Description
         setDescription(payment!)
@@ -72,16 +72,16 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     
     public func declareAndInitCells() {
         self.tableView.registerNib(UINib(nibName: "PaymentTotalTableViewCell", bundle: self.bundle), forCellReuseIdentifier: "paymentTotalCell")
-        self.paymentTotalCell = self.tableView.dequeueReusableCellWithIdentifier("paymentTotalCell") as PaymentTotalTableViewCell
+        self.paymentTotalCell = self.tableView.dequeueReusableCellWithIdentifier("paymentTotalCell") as! PaymentTotalTableViewCell
         
         self.tableView.registerNib(UINib(nibName: "CongratsPaymentMethodTableViewCell", bundle: self.bundle), forCellReuseIdentifier: "congratsPaymentMethodCell")
-        self.congratsPaymentMethodCell = self.tableView.dequeueReusableCellWithIdentifier("congratsPaymentMethodCell") as CongratsPaymentMethodTableViewCell
+        self.congratsPaymentMethodCell = self.tableView.dequeueReusableCellWithIdentifier("congratsPaymentMethodCell") as! CongratsPaymentMethodTableViewCell
         
         self.tableView.registerNib(UINib(nibName: "PaymentIDTableViewCell", bundle: self.bundle), forCellReuseIdentifier: "paymentIDCell")
-        self.paymentIDCell = self.tableView.dequeueReusableCellWithIdentifier("paymentIDCell") as PaymentIDTableViewCell
+        self.paymentIDCell = self.tableView.dequeueReusableCellWithIdentifier("paymentIDCell") as! PaymentIDTableViewCell
         
         self.tableView.registerNib(UINib(nibName: "PaymentDateTableViewCell", bundle: self.bundle), forCellReuseIdentifier: "paymentDateCell")
-        self.paymentDateCell = self.tableView.dequeueReusableCellWithIdentifier("paymentDateCell") as PaymentDateTableViewCell
+        self.paymentDateCell = self.tableView.dequeueReusableCellWithIdentifier("paymentDateCell") as! PaymentDateTableViewCell
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -105,7 +105,7 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
         return 4
     }
     
-    public func setTitle(payment: Payment) {
+    public func _setTitle(payment: Payment) {
         if payment.status == "approved" {
             self.lblTitle.text = "¡Felicitaciones!"
         } else if payment.status == "pending" {
@@ -117,7 +117,7 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
         }
     }
     
-    public func setIcon(payment: Payment) {
+    public func _setIcon(payment: Payment) {
         if payment.status == "approved" {
             self.icon.image = UIImage(named:"ic_approved", inBundle: bundle, compatibleWithTraitCollection:nil)
         } else if payment.status == "pending" {

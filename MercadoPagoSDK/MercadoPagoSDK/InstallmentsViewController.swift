@@ -33,7 +33,7 @@ public class InstallmentsViewController : UIViewController, UITableViewDataSourc
         super.init(coder: aDecoder)
     }
     
-    override public init() {
+    public init() {
         super.init(nibName: "InstallmentsViewController", bundle: self.bundle)
     }
     
@@ -66,7 +66,7 @@ public class InstallmentsViewController : UIViewController, UITableViewDataSourc
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var pccell : InstallmentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("installmentCell") as InstallmentTableViewCell
+        var pccell : InstallmentTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("installmentCell") as! InstallmentTableViewCell
         
         let payerCost : PayerCost = self.payerCosts![indexPath.row]
         pccell.fillWithPayerCost(payerCost, amount: amount)

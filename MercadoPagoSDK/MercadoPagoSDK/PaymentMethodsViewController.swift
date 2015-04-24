@@ -31,7 +31,7 @@ public class PaymentMethodsViewController : UIViewController, UITableViewDataSou
         super.init(coder: aDecoder)
     }
     
-    override public init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -87,7 +87,7 @@ public class PaymentMethodsViewController : UIViewController, UITableViewDataSou
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var pmcell : PaymentMethodTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("paymentMethodCell") as PaymentMethodTableViewCell
+        var pmcell : PaymentMethodTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("paymentMethodCell") as! PaymentMethodTableViewCell
         
         let paymentMethod : PaymentMethod = items[indexPath.row]
         pmcell.setLabel(paymentMethod.name)

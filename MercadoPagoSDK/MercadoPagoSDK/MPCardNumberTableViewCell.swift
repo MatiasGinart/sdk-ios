@@ -13,7 +13,6 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
     @IBOutlet weak private var cardNumberLabel: UILabel!
     @IBOutlet weak private var cardNumberImageView: UIImageView!
     @IBOutlet weak public var cardNumberTextField: UITextField!
-    public var hasError : Bool = false
     public var setting : Setting!
     
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
@@ -25,7 +24,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
         // Initialization code
     }
     
-    required public override init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -42,7 +41,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
         }
     }
     
-    public func setSetting(setting: Setting!) {
+    public func _setSetting(setting: Setting!) {
         self.setting = setting
         self.cardNumberTextField.delegate = self
     }
@@ -51,7 +50,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
         self.cardNumberTextField.delegate = delegate
     }
     
-    public func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange,    replacementString string: String!) -> Bool {
+    public func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,    replacementString string: String) -> Bool {
         
         if !Regex("^[0-9]$").test(string) && string != "" {
             return false
@@ -79,7 +78,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
                             mutableString.appendFormat("%C", cardNumber.characterAtIndex(i))
                         }
                     }
-                    self.cardNumberTextField.text = mutableString
+                    self.cardNumberTextField.text = mutableString as String
                     return false
                 } else if maxLength == 15 {
                     // 4 6 5
@@ -91,7 +90,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
                             mutableString.appendFormat("%C", cardNumber.characterAtIndex(i))
                         }
                     }
-                    self.cardNumberTextField.text = mutableString
+                    self.cardNumberTextField.text = mutableString as String
                     return false
                 }
             }

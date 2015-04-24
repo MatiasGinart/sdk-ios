@@ -45,7 +45,7 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
         super.init(coder: aDecoder)
     }
     
-    override public init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -91,25 +91,25 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
     public func prepareTableView() {
         var cardNumberNib = UINib(nibName: "MPCardNumberTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(cardNumberNib, forCellReuseIdentifier: "cardNumberCell")
-        self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as MPCardNumberTableViewCell
+        self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as! MPCardNumberTableViewCell
         self.cardNumberCell.height = 55
         self.cardNumberCell.setIcon(self.paymentMethod!.id)
-        self.cardNumberCell.setSetting(self.paymentMethod!.settings?[0])
+        self.cardNumberCell._setSetting(self.paymentMethod!.settings?[0])
 
         var expirationDateNib = UINib(nibName: "MPExpirationDateTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(expirationDateNib, forCellReuseIdentifier: "expirationDateCell")
-        self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as MPExpirationDateTableViewCell
+        self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as! MPExpirationDateTableViewCell
         self.expirationDateCell.height = 55
         
         var cardholderNameNib = UINib(nibName: "MPCardholderNameTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(cardholderNameNib, forCellReuseIdentifier: "cardholderNameCell")
-        self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as MPCardholderNameTableViewCell
+        self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as! MPCardholderNameTableViewCell
         self.cardholderNameCell.height = 55
 
         var userIdNib = UINib(nibName: "MPUserIdTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(userIdNib, forCellReuseIdentifier: "userIdCell")
-        self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as MPUserIdTableViewCell
-        self.userIdCell.setIdentificationTypes(self.identificationTypes)
+        self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as! MPUserIdTableViewCell
+        self.userIdCell._setIdentificationTypes(self.identificationTypes)
         self.userIdCell.height = 55
         
         self.tableView.delegate = self

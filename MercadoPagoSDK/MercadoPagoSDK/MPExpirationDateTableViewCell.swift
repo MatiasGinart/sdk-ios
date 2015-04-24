@@ -12,7 +12,6 @@ import UIKit
 public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDelegate {
     @IBOutlet weak private var expirationDateLabel: UILabel!
     @IBOutlet weak private var expirationDateTextField: UITextField!
-    public var hasError : Bool = false
     
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,7 +23,7 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
         self.expirationDateTextField.keyboardType = UIKeyboardType.NumberPad
     }
     
-    required public override init(coder aDecoder: NSCoder) {
+    required public  init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -52,7 +51,7 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
         self.expirationDateTextField.delegate = delegate
     }
     
-    public func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange,    replacementString string: String!) -> Bool {
+    public func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,    replacementString string: String) -> Bool {
         
         if !Regex("^[0-9]$").test(string) && string != "" {
             return false
@@ -71,7 +70,7 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
                         mutableString.appendFormat("%C", date.characterAtIndex(i))
                     }
                 }
-                self.expirationDateTextField.text = mutableString
+                self.expirationDateTextField.text = mutableString as String
                 return false
             }
             return true

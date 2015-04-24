@@ -102,7 +102,7 @@ public class MercadoPago : NSObject {
                         success(token: token)
                     } else {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.createNewCardToken", code: MercadoPago.ERROR_API_CODE, userInfo: tokenDic))
+                            failure!(error: NSError(domain: "mercadopago.sdk.createNewCardToken", code: MercadoPago.ERROR_API_CODE, userInfo: tokenDic as [NSObject : AnyObject]))
                         }
                     }
                 }
@@ -128,7 +128,7 @@ public class MercadoPago : NSObject {
                         success(token: token)
                     } else {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.createToken", code: MercadoPago.ERROR_API_CODE, userInfo: tokenDic))
+                            failure!(error: NSError(domain: "mercadopago.sdk.createToken", code: MercadoPago.ERROR_API_CODE, userInfo: tokenDic as [NSObject : AnyObject]))
                         }
                     }
                 }
@@ -148,11 +148,11 @@ public class MercadoPago : NSObject {
                 if let errorDic = jsonResult as? NSDictionary {
                     if errorDic["error"] != nil {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.getPaymentMethods", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic))
+                            failure!(error: NSError(domain: "mercadopago.sdk.getPaymentMethods", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic as [NSObject : AnyObject]))
                         }
                     }
                 } else {
-                    var paymentMethods = jsonResult as NSArray?
+                    var paymentMethods = jsonResult as? NSArray
                     var pms : [PaymentMethod] = [PaymentMethod]()
                     if paymentMethods != nil {
                         for i in 0..<paymentMethods!.count {
@@ -178,17 +178,17 @@ public class MercadoPago : NSObject {
             service.getIdentificationTypes(public_key: self.publicKey, privateKey: self.privateKey, success: {(jsonResult: AnyObject?) -> Void in
                 
                 if let error = jsonResult as? NSDictionary {
-                    if (error["status"]! as Int) == 404 {
+                    if (error["status"]! as? Int) == 404 {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.getIdentificationTypes", code: MercadoPago.ERROR_API_CODE, userInfo: error))
+                            failure!(error: NSError(domain: "mercadopago.sdk.getIdentificationTypes", code: MercadoPago.ERROR_API_CODE, userInfo: error as [NSObject : AnyObject]))
                         }
                     }
                 } else {
-                    var identificationTypesResult = jsonResult as NSArray?
+                    var identificationTypesResult = jsonResult as? NSArray?
                     var identificationTypes : [IdentificationType] = [IdentificationType]()
                     if identificationTypesResult != nil {
-                        for i in 0..<identificationTypesResult!.count {
-                            if let identificationTypeDic = identificationTypesResult![i] as? NSDictionary {
+                        for var i = 0; i < identificationTypesResult!!.count; i++ {
+                            if let identificationTypeDic = identificationTypesResult!![i] as? NSDictionary {
                                 identificationTypes.append(IdentificationType.fromJSON(identificationTypeDic))
                             }
                         }
@@ -212,11 +212,11 @@ public class MercadoPago : NSObject {
                 if let errorDic = jsonResult as? NSDictionary {
                     if errorDic["error"] != nil {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.getInstallments", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic))
+                            failure!(error: NSError(domain: "mercadopago.sdk.getInstallments", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic as [NSObject : AnyObject]))
                         }
                     }
                 } else {
-                    var paymentMethods = jsonResult as NSArray?
+                    var paymentMethods = jsonResult as? NSArray
                     var installments : [Installment] = [Installment]()
                     if paymentMethods != nil {
                         if let dic = paymentMethods![0] as? NSDictionary {
@@ -242,11 +242,11 @@ public class MercadoPago : NSObject {
                 if let errorDic = jsonResult as? NSDictionary {
                     if errorDic["error"] != nil {
                         if failure != nil {
-                            failure!(error: NSError(domain: "mercadopago.sdk.getIssuers", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic))
+                            failure!(error: NSError(domain: "mercadopago.sdk.getIssuers", code: MercadoPago.ERROR_API_CODE, userInfo: errorDic as [NSObject : AnyObject]))
                         }
                     }
                 } else {
-                    var issuersArray = jsonResult as NSArray?
+                    var issuersArray = jsonResult as? NSArray
                     var issuers : [Issuer] = [Issuer]()
                     if issuersArray != nil {
                         for i in 0..<issuersArray!.count {

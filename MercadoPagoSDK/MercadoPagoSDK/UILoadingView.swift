@@ -13,7 +13,7 @@ public class UILoadingView : UIView {
     public init(frame rect: CGRect, text: NSString = "Cargando...") {
         super.init(frame: rect)
         self.backgroundColor = UIColor.whiteColor()
-        self.label.text = text
+        self.label.text = text as String
         self.label.textColor = self.spinner.color
         self.spinner.startAnimating()
         

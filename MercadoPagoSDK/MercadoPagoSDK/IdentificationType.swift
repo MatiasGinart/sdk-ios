@@ -20,8 +20,8 @@ public class IdentificationType : NSObject {
         identificationType.id = JSON(json["id"]!).asString
         identificationType.name = JSON(json["name"]!).asString
         identificationType.type = JSON(json["type"]!).asString
-        identificationType.minLength = (json["min_length"]! as Int)
-        identificationType.maxLength = (json["max_length"]! as Int)
+        identificationType.minLength = json["min_length"] as? Int
+        identificationType.maxLength = json["max_length"] as? Int
         return identificationType
     }
 }

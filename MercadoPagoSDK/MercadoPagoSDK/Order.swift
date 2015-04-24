@@ -14,8 +14,8 @@ public class Order : NSObject {
     
     public class func fromJSON(json : NSDictionary) -> Order {
         var order : Order = Order()
-        order.id = json["id"] as Int!
-        order.type = json["type"] as String!
+        order.id = json["id"] as? Int
+        order.type = json["type"] as? String
         return order
     }
 }

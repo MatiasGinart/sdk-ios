@@ -31,7 +31,7 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
         super.init(coder: aDecoder)
     }
     
-    override public init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -51,7 +51,6 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
-
         mercadoPago.getIssuers(self.paymentMethod!.id, success: { (issuers: [Issuer]?) -> Void in
                 self.items = issuers
                 self.tableView.reloadData()
@@ -73,7 +72,7 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var issuerCell : IssuerTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("issuerCell") as IssuerTableViewCell
+        var issuerCell : IssuerTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("issuerCell") as! IssuerTableViewCell
         
         let issuer : Issuer = items[indexPath.row]
         issuerCell.fillWithIssuer(issuer)

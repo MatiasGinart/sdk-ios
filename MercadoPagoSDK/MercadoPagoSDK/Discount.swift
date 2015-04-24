@@ -21,7 +21,7 @@ public class Discount : NSObject {
         discount.amountOff = (json["amount_off"] as? NSNumber)?.longLongValue
         discount.couponAmount = (json["coupon_amount"] as? NSNumber)?.longLongValue
         discount.currencyId = JSON(json["currency_id"]!).asString
-        discount.id = json["id"]! as Int
+        discount.id = json["id"]! as? Int
         discount.name = JSON(json["name"]!).asString
         discount.percentOff = (json["percent_off"] as? NSNumber)?.longLongValue
         return discount

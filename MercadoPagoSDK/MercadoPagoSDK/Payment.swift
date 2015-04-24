@@ -45,17 +45,22 @@ public class Payment : NSObject {
     public class func fromJSON(json : NSDictionary) -> Payment {
         var payment : Payment = Payment()
         
-        payment.id = json["id"] as Int!
-        payment.binaryMode = JSON(json["binary_mode"]!).asBool
-        payment.captured = JSON(json["captured"]!).asBool
+        payment.id = json["id"] as? Int
+        if json["binary_mode"] != nil {
+            payment.binaryMode = JSON(json["binary_mode"]!).asBool
+        }
+        if json["captured"] != nil {
+            payment.captured = JSON(json["captured"]!).asBool
+        }
+        
         payment.currencyId = JSON(json["currency_id"]!).asString
-        payment.moneyReleaseDate = getDateFromString(json["money_release_date"] as? String!)
-        payment.dateCreated = getDateFromString(json["date_created"] as String!)
-        payment.dateLastUpdated = getDateFromString(json["date_last_updated"] as String!)
-        payment.dateApproved = getDateFromString(json["date_approved"] as String!)
+        payment.moneyReleaseDate = getDateFromString(json["money_release_date"] as? String)
+        payment.dateCreated = getDateFromString(json["date_created"] as? String)
+        payment.dateLastUpdated = getDateFromString(json["date_last_updated"] as? String)
+        payment.dateApproved = getDateFromString(json["date_approved"] as? String)
         payment._description = JSON(json["description"]!).asString
         payment.externalReference = JSON(json["external_reference"]!).asString
-        payment.installments = json["installments"] as Int!
+        payment.installments = json["installments"] as? Int
         payment.liveMode = JSON(json["live_mode"]!).asBool
         payment.notificationUrl = JSON(json["notification_url"]!).asString
         var feesDetails : [FeesDetail] = [FeesDetail]()

@@ -12,7 +12,6 @@ import MercadoPagoSDK
 class SimpleSecurityCodeTableViewCell: ErrorTableViewCell {
     @IBOutlet weak private var securityCodeLabel: UILabel!
     @IBOutlet weak var securityCodeTextField: UITextField!
-    var hasError : Bool = false
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,7 +22,7 @@ class SimpleSecurityCodeTableViewCell: ErrorTableViewCell {
         // Initialization code
     }
     
-    required override init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

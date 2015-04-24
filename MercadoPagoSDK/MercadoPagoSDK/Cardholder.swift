@@ -19,7 +19,7 @@ public class Cardholder : NSObject {
     public class func fromJSON(json : NSDictionary) -> Cardholder {
         var cardholder : Cardholder = Cardholder()
         cardholder.name = JSON(json["name"]!).asString
-        cardholder.identification = Identification.fromJSON(json["identification"]! as NSDictionary)
+        cardholder.identification = Identification.fromJSON(json["identification"]! as! NSDictionary)
         return cardholder
     }
     

@@ -103,19 +103,19 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     public func declareAndInitCells() {
         var paymentMethodNib = UINib(nibName: "MPPaymentMethodTableViewCell", bundle: self.bundle)
         self.tableview.registerNib(paymentMethodNib, forCellReuseIdentifier: "paymentMethodCell")
-        self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as MPPaymentMethodTableViewCell
+        self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as! MPPaymentMethodTableViewCell
         
         var emptyPaymentMethodNib = UINib(nibName: "MPPaymentMethodEmptyTableViewCell", bundle: self.bundle)
         self.tableview.registerNib(emptyPaymentMethodNib, forCellReuseIdentifier: "emptyPaymentMethodCell")
-        self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as MPPaymentMethodEmptyTableViewCell
+        self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
         
         var securityCodeNib = UINib(nibName: "MPSecurityCodeTableViewCell", bundle: self.bundle)
         self.tableview.registerNib(securityCodeNib, forCellReuseIdentifier: "securityCodeCell")
-        self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as MPSecurityCodeTableViewCell
+        self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell")as! MPSecurityCodeTableViewCell
         
         var installmentsNib = UINib(nibName: "MPInstallmentsTableViewCell", bundle: self.bundle)
         self.tableview.registerNib(installmentsNib, forCellReuseIdentifier: "installmentsCell")
-        self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as MPInstallmentsTableViewCell
+        self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as! MPInstallmentsTableViewCell
     }
  
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -135,10 +135,10 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if !newCard && self.selectedCard == nil && self.selectedPaymentMethod == nil {
-                self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as MPPaymentMethodEmptyTableViewCell
+                self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
                 return self.emptyPaymentMethodCell
             } else {
-                self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as MPPaymentMethodTableViewCell
+                self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as! MPPaymentMethodTableViewCell
                 if !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId) {
                     self.paymentMethodCell.fillWithPaymentMethod(self.selectedPaymentMethod!)
                 }
@@ -150,11 +150,11 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
                 return self.paymentMethodCell
             }
         } else if indexPath.row == 1 {
-            self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as MPInstallmentsTableViewCell
+            self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as! MPInstallmentsTableViewCell
             self.installmentsCell.fillWithPayerCost(self.selectedPayerCost, amount: self.amount!)
             return self.installmentsCell
         } else if indexPath.row == 2 {
-            self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as MPSecurityCodeTableViewCell
+            self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as! MPSecurityCodeTableViewCell
             self.securityCodeCell.fillWithPaymentMethod(self.selectedPaymentMethod!)
             return self.securityCodeCell
         }
@@ -229,7 +229,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
             if String.isNullOrEmpty(securityCode) {
                 self.securityCodeCell.setError("El código de seguridad es requerido")
                 canContinue = false
-            } else if securityCode.utf16Count != securityCodeLength {
+            } else if count(securityCode) != securityCodeLength {
                 self.securityCodeCell.setError("Ingresa los \(securityCodeLength) caracteres del código de seguridad")
                 canContinue = false
             }

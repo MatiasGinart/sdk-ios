@@ -19,10 +19,10 @@ public class Refund : NSObject {
     
     public class func fromJSON(json : NSDictionary) -> Refund {
         var refund : Refund = Refund()
-        refund.id = json["id"] as Int!
+        refund.id = json["id"] as? Int
         refund.source = JSON(json["source"]!).asString
         refund.uniqueSequenceNumber = JSON(json["unique_sequence_number"]!).asString
-        refund.paymentId = json["payment_id"] as Int!
+        refund.paymentId = json["payment_id"] as? Int
         refund.dateCreated = Utils.getDateFromString(json["date_created"] as? String)
         return refund
     }

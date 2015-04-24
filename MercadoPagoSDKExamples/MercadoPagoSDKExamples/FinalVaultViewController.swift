@@ -11,13 +11,13 @@ import MercadoPagoSDK
 
 class FinalVaultViewController : AdvancedVaultViewController {
 
-    var finalCallback : ((paymentMethod: PaymentMethod, token: Token?, cardIssuerId: Int64?, installments: Int?) -> Void)?
+    var finalCallback : ((paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void)?
  
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    init(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: Token?, cardIssuerId: Int64?, installments: Int?) -> Void) {
+    init(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void) {
         super.init(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, amount: amount, supportedPaymentTypes: supportedPaymentTypes, callback: nil)
         self.finalCallback = callback
     }
@@ -66,10 +66,10 @@ class FinalVaultViewController : AdvancedVaultViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if !newCard && self.selectedCard == nil && self.selectedPaymentMethod == nil {
-                self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as MPPaymentMethodEmptyTableViewCell
+                self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
                 return self.emptyPaymentMethodCell
             } else {
-                self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as MPPaymentMethodTableViewCell
+                self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as! MPPaymentMethodTableViewCell
                 if !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId) {
                     self.paymentMethodCell.fillWithPaymentMethod(self.selectedPaymentMethod!)                    
                 }
@@ -81,11 +81,11 @@ class FinalVaultViewController : AdvancedVaultViewController {
                 return self.paymentMethodCell
             }
         } else if indexPath.row == 1 {
-            self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as MPInstallmentsTableViewCell
+            self.installmentsCell = self.tableview.dequeueReusableCellWithIdentifier("installmentsCell") as! MPInstallmentsTableViewCell
             self.installmentsCell.fillWithPayerCost(self.selectedPayerCost, amount: self.amount)
             return self.installmentsCell
         } else if indexPath.row == 2 {
-            self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as MPSecurityCodeTableViewCell
+            self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as! MPSecurityCodeTableViewCell
             self.securityCodeCell.fillWithPaymentMethod(self.selectedPaymentMethod!)
             self.securityCodeCell.securityCodeTextField.delegate = self
             return self.securityCodeCell

@@ -30,11 +30,11 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         return identificationTypes.count
     }
     
-    public func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+    public func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return identificationTypes[row].name
     }
     
-    public func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    public func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         setFormWithIndex(row)
         pickerIdentificationType.hidden = true
@@ -48,11 +48,11 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         return true
     }
     
-    public func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange,    replacementString string: String!) -> Bool {
+    public func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,    replacementString string: String) -> Bool {
         if textField == self.userIdValueTextField {
             
-            if ((identificationType?.type? == "number" && !Regex("^[0-9]$").test(string)) ||
-            (identificationType?.type? != "number" && Regex("^[0-9]$").test(string))) && string != "" {
+            if identificationType != nil && (((identificationType!.type! == "number" && !Regex("^[0-9]$").test(string)) ||
+            (identificationType!.type! != "number" && Regex("^[0-9]$").test(string))) && string != "") {
                 return false
             }
             var txtAfterUpdate:NSString = textField.text as NSString
@@ -67,7 +67,7 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
     
     public func setFormWithIndex(row: Int) {
         identificationType = identificationTypes[row]
-        if identificationType?.type? == "number" {
+        if identificationType != nil && identificationType!.type! == "number" {
             userIdValueTextField.keyboardType = UIKeyboardType.NumberPad
         } else {
             userIdValueTextField.keyboardType = UIKeyboardType.Default
@@ -90,14 +90,14 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         self.userIdValueTextField.delegate = self
     }
     
-    public func setIdentificationTypes(identificationTypes: [IdentificationType]?) {
+    public func _setIdentificationTypes(identificationTypes: [IdentificationType]?) {
         if identificationTypes != nil {
             self.identificationTypes = identificationTypes!
             setFormWithIndex(0)
         }
     }
     
-    required public override init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         pickerIdentificationType.hidden = true
     }

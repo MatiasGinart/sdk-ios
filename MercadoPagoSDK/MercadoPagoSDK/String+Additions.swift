@@ -24,7 +24,7 @@ extension String {
     
     subscript (i: Int) -> String {
         
-        if countElements(self) > i {
+        if count(self) > i {
             
             return String(Array(self)[i])
         }

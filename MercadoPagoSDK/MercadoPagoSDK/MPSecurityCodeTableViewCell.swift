@@ -14,7 +14,6 @@ public class MPSecurityCodeTableViewCell : ErrorTableViewCell {
     @IBOutlet weak private var securityCodeInfoLabel: UILabel!
     @IBOutlet weak public var securityCodeTextField: UITextField!
     @IBOutlet weak private var securityCodeImageView: UIImageView!
-    public var hasError : Bool = false
     
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,7 +24,7 @@ public class MPSecurityCodeTableViewCell : ErrorTableViewCell {
         // Initialization code
     }
     
-    required public override init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

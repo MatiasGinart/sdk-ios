@@ -6,23 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ebONcGfbduoDoQQveDwvfrfyxmk=
+		qS6TB/NOgkjEuL7ZiCi3b5iJthk=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell.nib</key>
 		<data>
-		JJkVXsFT6FmyIfqAYQ7JJOE1Ah8=
+		wpN6ARyG0PpZc4eS96uVokA4iBc=
 		</data>
 		<key>CongratsViewController.nib</key>
 		<data>
-		15yQoQ3oL1E97GalbHYjc0oS7f8=
+		u62MasKUAbm+7v1zy4eB7xbyMFY=
 		</data>
 		<key>CustomerCardsViewController.nib</key>
 		<data>
-		hPBcI5Qf3FELWAa1qR1RLo1BC8M=
+		yDJJGOfGayLakAHK0zuwQyJeWTk=
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		VjUTOygMtBNwgdxvFZvuK0amSzY=
+		Nxtcs4XRku7qYDNKEOy5OMlAMw8=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -30,63 +30,63 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2K8OygAkW7zF9HT4qL+yvxRqSAU=
+		TI12Erd2WgcU98IczKqbltSbfOc=
 		</data>
 		<key>InstallmentTableViewCell.nib</key>
 		<data>
-		Ue2hOGTU1ztmNR3d4iUw2qr27Yg=
+		knuRM1NANGxF/ohpKeDs5dfX5Gc=
 		</data>
 		<key>InstallmentsViewController.nib</key>
 		<data>
-		BPXIbQoTNqth4wK+D3WFmqTYbYk=
+		Dl76AWvn9HfBT7VqMBjXXthzzx4=
 		</data>
 		<key>IssuerTableViewCell.nib</key>
 		<data>
-		hLUGBJMGvGMSWAdcB6VM936tU14=
+		uaTZVnJfoLW/U2p+C4yXr5C3P+0=
 		</data>
 		<key>IssuersViewController.nib</key>
 		<data>
-		DbIJR6dTV6hF9fOO4kpnfBPYnPw=
+		XByh2E+D+gtSr/gxZ5bi+CmmFnc=
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		hVE4rek8iUbTj7mZym3Ilmxuz4U=
+		ksGG67+CTM79aiIppYXPhIEfI88=
 		</data>
 		<key>MPCardholderNameTableViewCell.nib</key>
 		<data>
-		F1dmDzS6kvDuVws3Vo6RQ2o72t8=
+		iU/H/XCN6fgxB9br/DX7YbrW1vE=
 		</data>
 		<key>MPExpirationDateTableViewCell.nib</key>
 		<data>
-		OUkHP8hSS9eeaW3G0ZPr2yKkuFE=
+		5c0nnqDqT6qGAsK2D/8TO1nyxDY=
 		</data>
 		<key>MPInstallmentsTableViewCell.nib</key>
 		<data>
-		WjHWdMgTlQ28wiF4bmnLF14/ETE=
+		8XhykBlohGbWMt0phnO6Ug7AhBc=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell.nib</key>
 		<data>
-		GgoT8ow4QqcabIjjXS4i4mEWiZc=
+		2bUS12suDC3LAiTUJ5UqH63yqA4=
 		</data>
 		<key>MPPaymentMethodTableViewCell.nib</key>
 		<data>
-		Na9s78GUMLN3xOAdvnhA/g+fNIw=
+		JkRG6QKWb4Dc/b10jxbjY8X+smM=
 		</data>
 		<key>MPSecurityCodeTableViewCell.nib</key>
 		<data>
-		Eo0hDXd99wp36PxlPt0B2KaqS3Y=
+		eaKUZKvSLYon5QRewjVHmqbrdn4=
 		</data>
 		<key>MPUserIdTableViewCell.nib</key>
 		<data>
-		i9gc9gY+Z1n0d/KN0TdpLeDYQNk=
+		I64r2sHJvY+Kg4sO6L8qyC2qgZY=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		KuZ0BNy+MeNCJ+MzGp+GqPc4+wk=
+		MCEpXnDhHVMChKthxZWacMrpgLM=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		5MT50mXU+Asih1L4ICtPPyuJO6o=
+		YM+2kFu+8ZFjOzCkgaOAgmtYXpo=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -102,54 +102,54 @@
 		</data>
 		<key>NewCardViewController.nib</key>
 		<data>
-		tHM/Z1FNc3/B1eUk/beVoefW0Uc=
+		jgk3o6Sd80a73PizgwkuWIWOmlQ=
 		</data>
 		<key>PaymentDateTableViewCell.nib</key>
 		<data>
-		ihgtQVRORHDfWEFZjl9VTxCF4+k=
+		3ddYwioH4GDtEfaUWRea/hUl5tg=
 		</data>
 		<key>PaymentIDTableViewCell.nib</key>
 		<data>
-		GdMyoUX5NofN2bMB6DDJ5vMNM0s=
+		3gnrYJb3MhNpsAY+Z/RTeT5yqZ4=
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		U94yELPZjwaJnERyNX2a1wj4J4A=
+		8LEVKMQSeOBGG5TXT5NItFYgk00=
 		</data>
 		<key>PaymentMethodsViewController.nib</key>
 		<data>
-		mkAcBa3CHVOGOrXJYk9bKmXYdEg=
+		fi2b9gUf7oUGvL74KbnOA2wtcL0=
 		</data>
 		<key>PaymentTotalTableViewCell.nib</key>
 		<data>
-		9LLHaCRxUPgf6qAy9wBeyDWgcgI=
+		8P0ReVwBjthW4nFXYCQMkxvHHTc=
 		</data>
 		<key>VaultViewController.nib</key>
 		<data>
-		ClL2t1bdrS14MkHdo/cDvJA+LD4=
+		gN1JdZ10W36H+yzrA9olvK+gN9s=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ebONcGfbduoDoQQveDwvfrfyxmk=
+		qS6TB/NOgkjEuL7ZiCi3b5iJthk=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell.nib</key>
 		<data>
-		JJkVXsFT6FmyIfqAYQ7JJOE1Ah8=
+		wpN6ARyG0PpZc4eS96uVokA4iBc=
 		</data>
 		<key>CongratsViewController.nib</key>
 		<data>
-		15yQoQ3oL1E97GalbHYjc0oS7f8=
+		u62MasKUAbm+7v1zy4eB7xbyMFY=
 		</data>
 		<key>CustomerCardsViewController.nib</key>
 		<data>
-		hPBcI5Qf3FELWAa1qR1RLo1BC8M=
+		yDJJGOfGayLakAHK0zuwQyJeWTk=
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		VjUTOygMtBNwgdxvFZvuK0amSzY=
+		Nxtcs4XRku7qYDNKEOy5OMlAMw8=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -157,59 +157,59 @@
 		</data>
 		<key>InstallmentTableViewCell.nib</key>
 		<data>
-		Ue2hOGTU1ztmNR3d4iUw2qr27Yg=
+		knuRM1NANGxF/ohpKeDs5dfX5Gc=
 		</data>
 		<key>InstallmentsViewController.nib</key>
 		<data>
-		BPXIbQoTNqth4wK+D3WFmqTYbYk=
+		Dl76AWvn9HfBT7VqMBjXXthzzx4=
 		</data>
 		<key>IssuerTableViewCell.nib</key>
 		<data>
-		hLUGBJMGvGMSWAdcB6VM936tU14=
+		uaTZVnJfoLW/U2p+C4yXr5C3P+0=
 		</data>
 		<key>IssuersViewController.nib</key>
 		<data>
-		DbIJR6dTV6hF9fOO4kpnfBPYnPw=
+		XByh2E+D+gtSr/gxZ5bi+CmmFnc=
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		hVE4rek8iUbTj7mZym3Ilmxuz4U=
+		ksGG67+CTM79aiIppYXPhIEfI88=
 		</data>
 		<key>MPCardholderNameTableViewCell.nib</key>
 		<data>
-		F1dmDzS6kvDuVws3Vo6RQ2o72t8=
+		iU/H/XCN6fgxB9br/DX7YbrW1vE=
 		</data>
 		<key>MPExpirationDateTableViewCell.nib</key>
 		<data>
-		OUkHP8hSS9eeaW3G0ZPr2yKkuFE=
+		5c0nnqDqT6qGAsK2D/8TO1nyxDY=
 		</data>
 		<key>MPInstallmentsTableViewCell.nib</key>
 		<data>
-		WjHWdMgTlQ28wiF4bmnLF14/ETE=
+		8XhykBlohGbWMt0phnO6Ug7AhBc=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell.nib</key>
 		<data>
-		GgoT8ow4QqcabIjjXS4i4mEWiZc=
+		2bUS12suDC3LAiTUJ5UqH63yqA4=
 		</data>
 		<key>MPPaymentMethodTableViewCell.nib</key>
 		<data>
-		Na9s78GUMLN3xOAdvnhA/g+fNIw=
+		JkRG6QKWb4Dc/b10jxbjY8X+smM=
 		</data>
 		<key>MPSecurityCodeTableViewCell.nib</key>
 		<data>
-		Eo0hDXd99wp36PxlPt0B2KaqS3Y=
+		eaKUZKvSLYon5QRewjVHmqbrdn4=
 		</data>
 		<key>MPUserIdTableViewCell.nib</key>
 		<data>
-		i9gc9gY+Z1n0d/KN0TdpLeDYQNk=
+		I64r2sHJvY+Kg4sO6L8qyC2qgZY=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		KuZ0BNy+MeNCJ+MzGp+GqPc4+wk=
+		MCEpXnDhHVMChKthxZWacMrpgLM=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		5MT50mXU+Asih1L4ICtPPyuJO6o=
+		YM+2kFu+8ZFjOzCkgaOAgmtYXpo=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -225,31 +225,31 @@
 		</data>
 		<key>NewCardViewController.nib</key>
 		<data>
-		tHM/Z1FNc3/B1eUk/beVoefW0Uc=
+		jgk3o6Sd80a73PizgwkuWIWOmlQ=
 		</data>
 		<key>PaymentDateTableViewCell.nib</key>
 		<data>
-		ihgtQVRORHDfWEFZjl9VTxCF4+k=
+		3ddYwioH4GDtEfaUWRea/hUl5tg=
 		</data>
 		<key>PaymentIDTableViewCell.nib</key>
 		<data>
-		GdMyoUX5NofN2bMB6DDJ5vMNM0s=
+		3gnrYJb3MhNpsAY+Z/RTeT5yqZ4=
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		U94yELPZjwaJnERyNX2a1wj4J4A=
+		8LEVKMQSeOBGG5TXT5NItFYgk00=
 		</data>
 		<key>PaymentMethodsViewController.nib</key>
 		<data>
-		mkAcBa3CHVOGOrXJYk9bKmXYdEg=
+		fi2b9gUf7oUGvL74KbnOA2wtcL0=
 		</data>
 		<key>PaymentTotalTableViewCell.nib</key>
 		<data>
-		9LLHaCRxUPgf6qAy9wBeyDWgcgI=
+		8P0ReVwBjthW4nFXYCQMkxvHHTc=
 		</data>
 		<key>VaultViewController.nib</key>
 		<data>
-		ClL2t1bdrS14MkHdo/cDvJA+LD4=
+		gN1JdZ10W36H+yzrA9olvK+gN9s=
 		</data>
 	</dict>
 	<key>rules</key>

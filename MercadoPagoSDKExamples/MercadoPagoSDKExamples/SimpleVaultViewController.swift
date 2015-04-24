@@ -85,15 +85,15 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     func declareAndInitCells() {
         var paymentMethodNib = UINib(nibName: "MPPaymentMethodTableViewCell", bundle: MercadoPago.getBundle())
         self.tableview.registerNib(paymentMethodNib, forCellReuseIdentifier: "paymentMethodCell")
-        self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as MPPaymentMethodTableViewCell
+        self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as! MPPaymentMethodTableViewCell
         
         var emptyPaymentMethodNib = UINib(nibName: "MPPaymentMethodEmptyTableViewCell", bundle: MercadoPago.getBundle())
         self.tableview.registerNib(emptyPaymentMethodNib, forCellReuseIdentifier: "emptyPaymentMethodCell")
-        self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as MPPaymentMethodEmptyTableViewCell
+        self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
 
         var securityCodeNib = UINib(nibName: "MPSecurityCodeTableViewCell", bundle: MercadoPago.getBundle())
         self.tableview.registerNib(securityCodeNib, forCellReuseIdentifier: "securityCodeCell")
-        self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as MPSecurityCodeTableViewCell
+        self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as! MPSecurityCodeTableViewCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -149,7 +149,7 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String)-> Bool {
         var txtAfterUpdate:NSString = self.securityCodeCell.securityCodeTextField.text as NSString
         txtAfterUpdate = txtAfterUpdate.stringByReplacingCharactersInRange(range, withString: string)
         

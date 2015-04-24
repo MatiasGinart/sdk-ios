@@ -37,7 +37,7 @@ public class SavedCardToken : NSObject {
     
     public func validateSecurityCode() -> Bool {
         let isEmptySecurityCode : Bool = String.isNullOrEmpty(self.securityCode)
-        return !isEmptySecurityCode && self.securityCode?.utf16Count >= 3 && self.securityCode?.utf16Count <= 4
+        return !isEmptySecurityCode && count(self.securityCode!) >= 3 && count(self.securityCode!) <= 4
     }
     
     public func toJSONString() -> String {

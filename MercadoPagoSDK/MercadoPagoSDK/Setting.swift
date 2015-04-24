@@ -29,11 +29,11 @@ public class Setting : Serializable {
     
     public class func fromJSON(json : NSDictionary) -> Setting {
         var setting : Setting = Setting()
-        setting.bin = Bin.fromJSON(json["bin"]!  as NSDictionary)
+        setting.bin = Bin.fromJSON(json["bin"]!  as! NSDictionary)
         if json["card_number"] != nil {
-            setting.cardNumber = CardNumber.fromJSON(json["card_number"]! as NSDictionary)
+            setting.cardNumber = CardNumber.fromJSON(json["card_number"]! as! NSDictionary)
         }
-        setting.securityCode = SecurityCode.fromJSON(json["security_code"]! as NSDictionary)
+        setting.securityCode = SecurityCode.fromJSON(json["security_code"]! as! NSDictionary)
         return setting
     }
 }

@@ -12,7 +12,6 @@ import UIKit
 public class MPCardholderNameTableViewCell : ErrorTableViewCell {
     @IBOutlet weak private var cardholderNameLabel: UILabel!
     @IBOutlet weak private var cardholderNameTextField: UITextField!
-    public var hasError : Bool = false
     
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,7 +23,7 @@ public class MPCardholderNameTableViewCell : ErrorTableViewCell {
     }
     
     
-    required public override init(coder aDecoder: NSCoder) {
+    required public  init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

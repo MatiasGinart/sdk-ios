@@ -13,7 +13,7 @@ public class CardToken : NSObject {
     
     let MIN_LENGTH_NUMBER : Int = 10
     let MAX_LENGTH_NUMBER : Int = 19
-    let now = NSCalendar.currentCalendar().components(.YearCalendarUnit | .MonthCalendarUnit, fromDate: NSDate())
+    let now = NSCalendar.currentCalendar().components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth, fromDate: NSDate())
     
     public var cardNumber : String?
     public var securityCode : String?
@@ -60,9 +60,9 @@ public class CardToken : NSObject {
         var userInfo : [String : String]?
         if String.isNullOrEmpty(cardNumber) {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["cardNumber" : "Ingresa el número de la tarjeta de crédito"])
-        } else if self.cardNumber?.utf16Count < MIN_LENGTH_NUMBER {
+        } else if count(self.cardNumber!) < MIN_LENGTH_NUMBER {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["cardNumber" : "Debes ingresar al menos \(MIN_LENGTH_NUMBER) números"])
-        } else if self.cardNumber?.utf16Count > MAX_LENGTH_NUMBER {
+        } else if count(self.cardNumber!) > MAX_LENGTH_NUMBER {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["cardNumber" : "Debes ingresar a lo sumo \(MAX_LENGTH_NUMBER) números"])
         } else {
             return nil
@@ -87,7 +87,7 @@ public class CardToken : NSObject {
             } else {
                 
                 // Validate card length
-                if (cardNumber?.utf16Count != setting?.cardNumber.length) {
+                if (count(cardNumber!) != setting?.cardNumber.length) {
                     if userInfo == nil {
                         userInfo = [String : String]()
                     }
@@ -118,7 +118,7 @@ public class CardToken : NSObject {
     public func validateSecurityCode(securityCode: String?) -> NSError? {
         if String.isNullOrEmpty(self.securityCode) {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["securityCode" : "Debes ingresar el código de seguridad"])
-        } else if self.securityCode?.utf16Count < 3 || self.securityCode?.utf16Count > 4 {
+        } else if count(self.securityCode!) < 3 || count(self.securityCode!) > 4 {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["securityCode" : "Debes ingresar un código de seguridad correcto"])
         } else {
             return nil
@@ -140,7 +140,7 @@ public class CardToken : NSObject {
         let setting : Setting? = Setting.getSettingByBin(paymentMethod.settings, bin: getBin())
         // Validate security code length
         let cvvLength = setting?.securityCode.length
-        if ((cvvLength != 0) && (securityCode.utf16Count != cvvLength)) {
+        if ((cvvLength != 0) && (count(securityCode) != cvvLength)) {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["securityCode" : "Ingresa los \(cvvLength) números del código de seguridad"])
         } else {
             return nil
@@ -223,7 +223,7 @@ public class CardToken : NSObject {
     public func validateIdentificationNumber(identificationType: IdentificationType?) -> NSError? {
         if identificationType != nil {
             if cardholder?.identification != nil && cardholder?.identification?.number != nil {
-                let len = cardholder?.identification?.number?.utf16Count
+                let len = count(cardholder!.identification!.number!)
                 let min = identificationType!.minLength
                 let max = identificationType!.maxLength
                 if min != nil && max != nil {
@@ -278,11 +278,11 @@ public class CardToken : NSObject {
     public func checkLuhn(cardNumber : String) -> Bool {
         var sum : Int = 0
         var alternate = false
-        if cardNumber.utf16Count == 0 {
+        if count(cardNumber) == 0 {
             return false
         }
         
-        for var index = (cardNumber.utf16Count-1); index >= 0; index-- {
+        for var index = (count(cardNumber)-1); index >= 0; index-- {
             let range = NSRange(location: index, length: 1)
             var s = cardNumber as NSString
             s = s.substringWithRange(NSRange(location: index, length: 1))
@@ -304,7 +304,7 @@ public class CardToken : NSObject {
     
     public func getBin() -> String? {
         let range = Range(start: cardNumber!.startIndex, end: advance(cardNumber!.startIndex, 6))
-        var bin :String? = cardNumber?.utf16Count >= 6 ? cardNumber!.substringWithRange(range) : nil
+        var bin :String? = count(cardNumber!) >= 6 ? cardNumber!.substringWithRange(range) : nil
         return bin
     }
     

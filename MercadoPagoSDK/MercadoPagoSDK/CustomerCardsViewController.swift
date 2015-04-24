@@ -57,7 +57,7 @@ public class CustomerCardsViewController : UIViewController, UITableViewDataSour
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var pmcell : PaymentMethodTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("paymentMethodCell") as PaymentMethodTableViewCell
+        var pmcell : PaymentMethodTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("paymentMethodCell") as! PaymentMethodTableViewCell
         
         let paymentRow : PaymentMethodRow = items[indexPath.row]
         pmcell.setLabel(paymentRow.label!)

@@ -13,4 +13,13 @@ Pod::Spec.new do |s|
   s.resources = "MercadoPagoSDK/MercadoPagoSDK/*.xcassets"
   s.source_files = 'MercadoPagoSDK/MercadoPagoSDK/*'
 
+  s.subspec 'Localization' do |t|
+    %w|pt es es-MX es-CO|.map {|localename|
+      t.subspec localename do |u|
+        u.ios.resources = "MercadoPagoSDK/MercadoPagoSDK/#{localename}.lproj"
+        u.ios.preserve_paths = "MercadoPagoSDK/MercadoPagoSDK/#{localename}.lproj" 
+     end
+    }
+  end
+
 end

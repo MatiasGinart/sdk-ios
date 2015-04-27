@@ -20,7 +20,7 @@ CocoaPods is distributed as a ruby gem, and is installed by running the followin
 
 > Depending on your Ruby installation, you may not have to run as `sudo` to install the cocoapods gem.
 
-###v Step 2: Create a Podfile
+#### Step 2: Create a Podfile
 
 Project dependencies to be managed by CocoaPods are specified in a file called `Podfile`. Create this file in the same directory as your Xcode project (`.xcodeproj`) file:
 

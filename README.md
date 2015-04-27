@@ -1,15 +1,52 @@
 # MercadoPago iOS (Swift) SDK
 The MercadoPago iOS SDK make it easy to collect your users' credit card details inside your iOS app. By creating tokens, MercadoPago handles the bulk of PCI compliance by preventing sensitive card data from hitting your server.
 
-It is developed for iOS 7 or sooner.
-
-## Examples
-
-![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png?token=AEMe-evtNJbwTxgKnHqB79kI889JOuxzks5VLocBwA%3D%3D)
+![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png)
 
 ## Installation
 
 There are two ways to add MercadoPago to your project:
+
+### CocoaPods
+
+#### Step 1: Download CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries like MercadoPagoSDK in your projects.
+
+CocoaPods is distributed as a ruby gem, and is installed by running the following commands in Terminal.app:
+
+    $ sudo gem install cocoapods
+    $ pod setup
+
+> Depending on your Ruby installation, you may not have to run as `sudo` to install the cocoapods gem.
+
+#### Step 2: Create a Podfile
+
+Project dependencies to be managed by CocoaPods are specified in a file called `Podfile`. Create this file in the same directory as your Xcode project (`.xcodeproj`) file:
+
+    $ touch Podfile
+    $ open -a Xcode Podfile
+
+You just created the pod file and opened it using Xcode! Ready to add some content to the empty pod file?
+
+Copy and paste the following lines into the TextEdit window:  
+    
+    source 'https://github.com/CocoaPods/Specs.git'
+    use_frameworks!
+    platform :ios, '8.0'
+    pod 'MercadoPagoSDK', '~> 0.1.3'
+
+> You shouldn’t use TextEdit to edit the pod file because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
+
+#### Step 3: Install Dependencies
+
+Now you can install the dependencies in your project:
+
+    $ pod install
+
+From now on, be sure to always open the generated Xcode workspace (`.xcworkspace`) instead of the project file when building your project:
+
+    $ open <YourProjectName>.xcworkspace
 
 ### Copy manually
 
@@ -20,21 +57,14 @@ There are two ways to add MercadoPago to your project:
 - Expand the "Target Dependencies" group, and add MercadoPagoSDK.framework.
 - Click on the + button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add MercadoPagoSDK.framework.
 
-### CocoaPods
-
-Coming soon.
-
-Usage
+##Usage
 -----
 - Add import MercadoPagoSDK for Swift 
 
         func initMercadoPagoVault() {
-                let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card"]
-        
-                let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", 
-                merchantBaseUrl: nil, merchantGetCustomerUri: nil, merchantAccessToken: nil, amount: 10.0, 
-                supportedPaymentTypes: supportedPaymentTypes) { 
-                (paymentMethod, token, cardIssuerId, installments) -> Void in
+                let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
+		
+		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", merchantBaseUrl: "https://www.mercadopago.com", merchantGetCustomerUri: "/checkout/examples/getCustomer", merchantAccessToken: "mla-cards-data", amount: 10.0, supportedPaymentTypes: supportedPaymentTypes) { (paymentMethod, tokenId, issuerId, installments) -> Void in
                         let alert = UIAlertController()
                         alert.title = "Payment Info"
                 
@@ -60,3 +90,26 @@ Usage
                 // Put vaultController at the top of navigator.
                 self.nav!.pushViewController(vaultViewController, animated: false)
         }
+        
+## Examples
+
+This project includes five examples you can follow to understand how MercadoPago SDK works:
+
+1. Start with a simple card form payment flow
+2. Add your customers' cards to the flow
+3. Manage installments and bank issuers
+4. Pay with other payment types (ticket, atm)
+5. Let MercadoPago SDK do steps 1-4 for you!
+
+## Documentation
+
++ [Read more about this 5 steps integration.](http://labs.mercadopago.com.ar/developers/es/solutions/payments/custom-checkout/charge-with-creditcard/ios/)
++ [Check out MercadoPago Developers Site!](http://labs.mercadopago.com.ar/developers)
+
+## Feedback
+
+You can join the MercadoPago Developers Community on MercadoPago Developers Site:
+
++ [English](http://developers.mercadopago.com/developers-forum?lang=en_US)
++ [Español](http://developers.mercadopago.com/foro-de-desarrolladores?lang=es_AR)
++ [Português](http://developers.mercadopago.com/foro-de-desenvolvedores?lang=pt_BR)

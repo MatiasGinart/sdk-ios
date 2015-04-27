@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CongratsViewController" customModule="MercadoPagoSDK" customModuleProvider="target">
@@ -18,8 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rejected" translatesAutoresizingMaskIntoConstraints="NO" id="rdH-hv-mZl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pending" translatesAutoresizingMaskIntoConstraints="NO" id="rdH-hv-mZl">
                     <rect key="frame" x="245" y="52" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="esV-s0-O7C"/>
+                        <constraint firstAttribute="height" constant="110" id="uYF-qx-aaY"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ups! Ocurrió un problema" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PC-s9-2rh">
                     <rect key="frame" x="8" y="182" width="584" height="23"/>
@@ -43,11 +47,10 @@
                 <constraint firstItem="rdH-hv-mZl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="0Ug-Bs-cJk"/>
                 <constraint firstItem="b5C-q0-FIL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="57K-94-8dC"/>
                 <constraint firstAttribute="trailing" secondItem="b5C-q0-FIL" secondAttribute="trailing" constant="8" id="94U-mw-R4V"/>
-                <constraint firstAttribute="trailing" secondItem="rdH-hv-mZl" secondAttribute="trailing" constant="245" id="9nk-oq-DGX"/>
-                <constraint firstItem="rdH-hv-mZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="245" id="E0s-fq-JUq"/>
                 <constraint firstItem="4PC-s9-2rh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="IZb-2y-36h"/>
                 <constraint firstAttribute="trailing" secondItem="hr8-09-9hQ" secondAttribute="trailing" id="PMr-qr-nNX"/>
                 <constraint firstAttribute="centerY" secondItem="rdH-hv-mZl" secondAttribute="centerY" constant="193" id="QoX-8i-fUM"/>
+                <constraint firstAttribute="centerX" secondItem="rdH-hv-mZl" secondAttribute="centerX" id="SPu-B3-QrR"/>
                 <constraint firstAttribute="trailing" secondItem="4PC-s9-2rh" secondAttribute="trailing" constant="8" id="X5d-mQ-p7c"/>
                 <constraint firstItem="hr8-09-9hQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xe2-pv-0N5"/>
                 <constraint firstItem="b5C-q0-FIL" firstAttribute="top" secondItem="4PC-s9-2rh" secondAttribute="bottom" constant="8" id="ach-XD-3Fz"/>
@@ -59,6 +62,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_rejected" width="72" height="72"/>
+        <image name="ic_pending" width="72" height="72"/>
     </resources>
 </document>

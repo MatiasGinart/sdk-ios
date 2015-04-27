@@ -225,10 +225,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK5Cause")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK34CongratsPaymentMethodTableViewCell")
 @interface CongratsPaymentMethodTableViewCell : UITableViewCell
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UITableView;
@@ -504,7 +504,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK29MPExpirationDateTableViewCell")
 - (void)awakeFromNib;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)setTextFieldDelegate:(id <UITextFieldDelegate> __nonnull)delegate;
-- (BOOL)textField:(UITextField * __null_unspecified)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * __null_unspecified)string;
+- (BOOL)textField:(UITextField * __nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * __nonnull)string;
 @end
 
 
@@ -553,6 +553,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21MPUserIdTableViewCell")
 @property (nonatomic) IBOutlet UIPickerView * __null_unspecified pickerIdentificationType;
 @property (nonatomic, copy) NSArray * __nonnull identificationTypes;
 @property (nonatomic) IdentificationType * __nullable identificationType;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;
 - (NSInteger)pickerView:(UIPickerView * __nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
 - (NSString * __null_unspecified)pickerView:(UIPickerView * __nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
@@ -560,7 +561,6 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21MPUserIdTableViewCell")
 - (BOOL)textFieldShouldBeginEditing:(UITextField * __nonnull)textField;
 - (BOOL)textField:(UITextField * __nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * __nonnull)string;
 - (void)setFormWithIndex:(NSInteger)row;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)_setIdentificationTypes:(NSArray * __nullable)identificationTypes;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -641,7 +641,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21NewCardViewController")
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)prepareTableView;
-- (IBAction)submitForm;
+- (void)submitForm;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
@@ -699,19 +699,19 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK7Payment")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK24PaymentDateTableViewCell")
 @interface PaymentDateTableViewCell : UITableViewCell
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK22PaymentIDTableViewCell")
 @interface PaymentIDTableViewCell : UITableViewCell
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -772,10 +772,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK14PaymentService")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK25PaymentTotalTableViewCell")
 @interface PaymentTotalTableViewCell : UITableViewCell
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

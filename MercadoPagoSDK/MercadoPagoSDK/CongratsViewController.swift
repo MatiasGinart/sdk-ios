@@ -107,13 +107,13 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     
     public func _setTitle(payment: Payment) {
         if payment.status == "approved" {
-            self.lblTitle.text = "¡Felicitaciones!"
+            self.lblTitle.text = "¡Felicitaciones!".localized
         } else if payment.status == "pending" {
-            self.lblTitle.text = "Hemos procesado tu pago"
+            self.lblTitle.text = "Se aprobó tu pago.".localized
         } else if payment.status == "in_process" {
-            self.lblTitle.text = "Estamos procesando el pago"
+            self.lblTitle.text = "Estamos procesando el pago".localized
         } else if payment.status == "rejected" {
-            self.lblTitle.text = "¡Ups! Ocurrió un problema"
+            self.lblTitle.text = "¡Ups! Ocurrió un problema".localized
         }
     }
     
@@ -131,13 +131,13 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     
     public func setDescription(payment: Payment) {
         if payment.status == "approved" {
-            self.lblDescription.text = "Se aprobó tu pago."
+            self.lblDescription.text = "Se aprobó tu pago.".localized
         } else if payment.status == "pending" {
-            self.lblDescription.text = "Imprime el cupón y paga. Se acreditará en 1 a 3 días hábiles."
+            self.lblDescription.text = "Imprime el cupón y paga. Se acreditará en 1 a 3 días hábiles.".localized
         } else if payment.status == "in_process" {
-            self.lblDescription.text = "En unos minutos te enviaremos por e-mail el resultado."
+            self.lblDescription.text = "En unos minutos te enviaremos por e-mail el resultado.".localized
         } else if payment.status == "rejected" {
-            self.lblDescription.text = "No se pudo realizar el pago."
+            self.lblDescription.text = "No se pudo realizar el pago.".localized
         }
     }
     
@@ -156,7 +156,7 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     
     public func setPaymentMethodDescription(payment: Payment) {
         if payment.card != nil && payment.card.paymentMethod != nil {
-        self.congratsPaymentMethodCell!.lblPaymentInfo.text = " terminada en " + payment.card!.lastFourDigits!
+        self.congratsPaymentMethodCell!.lblPaymentInfo.text = "terminada en".localized + " " + payment.card!.lastFourDigits!
             self.congratsPaymentMethodCell.imgPayment.image = UIImage(named: "icoTc_" + payment.card!.paymentMethod!.id, inBundle: bundle, compatibleWithTraitCollection:nil)
         } else if self.paymentMethod != nil {
             self.congratsPaymentMethodCell!.lblPaymentInfo.text = self.paymentMethod!.name
@@ -172,11 +172,11 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     }
     
     public func setButtonText(payment: Payment) {
-        var title = "Imprimir cupon"
+        var title = "Imprimir cupón".localized
         if payment.status == "pending" {
             // TODO couponUrl = payment.transactionDetails.externalResourceUrl
         } else {
-            title = "Terminar"
+            title = "Continuar".localized
             // TODO couponUrl = nil
         }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")

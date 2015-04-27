@@ -19,7 +19,12 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
     
     public var identificationTypes : [IdentificationType] = [IdentificationType]()
     public var identificationType : IdentificationType?
-   
+	
+	override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		pickerIdentificationType.hidden = true
+	}
+	
     // returns the number of 'columns' to display.
     public func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -75,13 +80,10 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         userIdTypeTextField.text = identificationTypes[row].name
     }
     
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        pickerIdentificationType.hidden = true
-    }
-    
     override public func awakeFromNib() {
         super.awakeFromNib()
+		self.userIdTypeLabel.text = "Tipo".localized
+		self.userIdValueLabel.text = "Documento".localized
         pickerIdentificationType = UIPickerView()
         pickerIdentificationType.delegate = self
         pickerIdentificationType.dataSource = self

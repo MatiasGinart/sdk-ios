@@ -62,7 +62,7 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Realiza tu pago"
+        self.title = "Pagar"
         
         self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
         self.view.addSubview(self.loadingView)
@@ -128,7 +128,7 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 1) {
-            return 115
+            return 143
         }
         return 65
     }

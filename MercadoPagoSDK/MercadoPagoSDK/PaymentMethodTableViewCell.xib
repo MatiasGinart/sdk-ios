@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -13,28 +13,28 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOR-g2-9K8" id="Gjp-Cg-nf7">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoTc_tarshop" translatesAutoresizingMaskIntoConstraints="NO" id="XPK-rV-ZnW">
+                        <rect key="frame" x="8" y="11" width="32" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="XGj-l7-HWU"/>
+                            <constraint firstAttribute="height" constant="22" id="xg1-P4-r3z"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tarjeta Shopping terminada en 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bi-RQ-WZv">
-                        <rect key="frame" x="60" y="12" width="288" height="21"/>
+                        <rect key="frame" x="48" y="11" width="288" height="22"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoTc_tarshop" translatesAutoresizingMaskIntoConstraints="NO" id="XPK-rV-ZnW">
-                        <rect key="frame" x="20" y="11" width="32" height="22"/>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="4Bi-RQ-WZv" secondAttribute="bottom" constant="2" id="Cgc-02-i9Z"/>
-                    <constraint firstItem="XPK-rV-ZnW" firstAttribute="leading" secondItem="Gjp-Cg-nf7" secondAttribute="leadingMargin" constant="12" id="EQb-Y8-fIe"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="XPK-rV-ZnW" secondAttribute="bottom" constant="2" id="I7F-Je-9YE"/>
-                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="top" secondItem="Gjp-Cg-nf7" secondAttribute="topMargin" constant="4" id="NYZ-Ys-FCe"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4Bi-RQ-WZv" secondAttribute="trailing" constant="3" id="iNu-XX-1Yp"/>
-                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="leading" secondItem="XPK-rV-ZnW" secondAttribute="trailing" constant="8" id="o0N-YJ-yg3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4Bi-RQ-WZv" secondAttribute="trailing" constant="3" id="olb-7V-Ydo"/>
-                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="leading" secondItem="XPK-rV-ZnW" secondAttribute="trailing" constant="8" id="pPW-B7-mlr"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="4Bi-RQ-WZv" secondAttribute="bottom" constant="2" id="rWb-vw-GST"/>
-                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="top" secondItem="Gjp-Cg-nf7" secondAttribute="topMargin" constant="4" id="sGE-3a-E3P"/>
-                    <constraint firstItem="XPK-rV-ZnW" firstAttribute="top" secondItem="Gjp-Cg-nf7" secondAttribute="topMargin" constant="3" id="v0E-Eu-H5M"/>
+                    <constraint firstItem="XPK-rV-ZnW" firstAttribute="height" secondItem="4Bi-RQ-WZv" secondAttribute="height" id="KoM-MC-ICS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4Bi-RQ-WZv" secondAttribute="trailing" constant="15" id="SsV-3j-DHj"/>
+                    <constraint firstItem="XPK-rV-ZnW" firstAttribute="top" secondItem="Gjp-Cg-nf7" secondAttribute="topMargin" constant="3" id="Yya-M4-8RW"/>
+                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="leading" secondItem="XPK-rV-ZnW" secondAttribute="trailing" constant="8" id="ZBl-FM-a92"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XPK-rV-ZnW" secondAttribute="bottom" constant="2" id="bHb-An-XB7"/>
+                    <constraint firstItem="XPK-rV-ZnW" firstAttribute="leading" secondItem="Gjp-Cg-nf7" secondAttribute="leadingMargin" id="wE0-VT-3M1"/>
+                    <constraint firstItem="4Bi-RQ-WZv" firstAttribute="top" secondItem="Gjp-Cg-nf7" secondAttribute="topMargin" constant="3" id="wJd-Km-gFp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

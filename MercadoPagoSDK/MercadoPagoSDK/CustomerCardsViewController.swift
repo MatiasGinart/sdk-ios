@@ -35,12 +35,13 @@ public class CustomerCardsViewController : UIViewController, UITableViewDataSour
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Tarjetas guardadas"
-        self.navigationItem.backBarButtonItem?.title = "Atrás"
+        self.title = "Medios de pago".localized
+
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "newCard")
 
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         var paymentMethodNib = UINib(nibName: "PaymentMethodTableViewCell", bundle: self.bundle)
@@ -79,7 +80,7 @@ public class CustomerCardsViewController : UIViewController, UITableViewDataSour
         for (card) in cards! {
             var paymentMethodRow = PaymentMethodRow()
             paymentMethodRow.card = card
-            paymentMethodRow.label = card.paymentMethod!.name + " terminada en " + card.lastFourDigits!
+            paymentMethodRow.label = card.paymentMethod!.name + " " + "terminada en".localized + " " + card.lastFourDigits!
             paymentMethodRow.icon = "icoTc_" + card.paymentMethod!.id
             self.items.append(paymentMethodRow)
         }

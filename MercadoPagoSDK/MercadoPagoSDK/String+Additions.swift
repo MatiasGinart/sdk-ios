@@ -9,6 +9,15 @@
 import Foundation
 
 extension String {
+	
+	var localized: String {
+		var bundle : NSBundle? = MercadoPago.getBundle()
+		if bundle == nil {
+			bundle = NSBundle.mainBundle()
+		}
+		return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+	}
+	
     static public func isNullOrEmpty(value: String?) -> Bool
     {
         return value == nil || value!.isEmpty

@@ -46,9 +46,9 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Bancos"
+        self.title = "Banco".localized
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
         mercadoPago.getIssuers(self.paymentMethod!.id, success: { (issuers: [Issuer]?) -> Void in
@@ -57,7 +57,7 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
                 self.loadingView.removeFromSuperview()
             }, failure: nil)
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         var issuerNib = UINib(nibName: "IssuerTableViewCell", bundle: self.bundle)

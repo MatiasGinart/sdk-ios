@@ -21,7 +21,7 @@ public class MPSecurityCodeTableViewCell : ErrorTableViewCell {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.securityCodeLabel.text = "security_code".localized
     }
     
     required public init(coder aDecoder: NSCoder) {
@@ -35,9 +35,19 @@ public class MPSecurityCodeTableViewCell : ErrorTableViewCell {
     public func fillWithPaymentMethod(pm : PaymentMethod) {
         self.securityCodeImageView.image = UIImage(named: "imgTc_" + pm.id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection: nil)
         if pm.id == "amex" {
-            self.securityCodeInfoLabel.text = "4 números al frente de la tarjeta"
+			var amexCvvLength = 4
+			if pm.settings != nil && pm.settings.count > 0 {
+				amexCvvLength = pm.settings[0].securityCode!.length
+			}
+			
+            self.securityCodeInfoLabel.text = ("cod_seg_desc_amex".localized as NSString).stringByReplacingOccurrencesOfString("%1$s", withString: "\(amexCvvLength)")
         } else {
-            self.securityCodeInfoLabel.text = "Últimos 3 números al dorso de la tarjeta"
+			var cvvLength = 3
+			if pm.settings != nil && pm.settings.count > 0 {
+				cvvLength = pm.settings[0].securityCode!.length
+			}
+			
+            self.securityCodeInfoLabel.text = ("cod_seg_desc".localized as NSString).stringByReplacingOccurrencesOfString("%1$s", withString: "\(cvvLength)")
         }
         
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -35,6 +35,10 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoTc_master" translatesAutoresizingMaskIntoConstraints="NO" id="Jlz-4R-Dpd">
                         <rect key="frame" x="20" y="31" width="32" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="oQw-Bg-Utu"/>
+                            <constraint firstAttribute="width" constant="32" id="qLC-F2-b9O"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -62,6 +66,7 @@
             <connections>
                 <outlet property="cardIcon" destination="Jlz-4R-Dpd" id="8YO-e9-GCx"/>
                 <outlet property="cardTextLabel" destination="jB8-UH-WmL" id="QhU-Tb-Vgv"/>
+                <outlet property="paymentMethodTitleLabel" destination="czz-Ed-bTA" id="j6e-T9-7Z5"/>
             </connections>
             <point key="canvasLocation" x="410" y="88.5"/>
         </tableViewCell>

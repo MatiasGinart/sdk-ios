@@ -19,6 +19,8 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
     
     override public func awakeFromNib() {
         super.awakeFromNib()
+		self.expirationDateLabel.text = "Válida hasta".localized
+		self.expirationDateTextField.placeholder = "Mes / Año".localized
         self.expirationDateTextField.delegate = self
         self.expirationDateTextField.keyboardType = UIKeyboardType.NumberPad
     }

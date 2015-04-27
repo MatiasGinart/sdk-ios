@@ -19,7 +19,7 @@ public class MPInstallmentsTableViewCell : UITableViewCell {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.rowTitle.text = "Cuotas".localized
     }
     
     required public init(coder aDecoder: NSCoder) {
@@ -28,7 +28,7 @@ public class MPInstallmentsTableViewCell : UITableViewCell {
     
     public func fillWithPayerCost(payerCost : PayerCost?, amount: Double) {
         if payerCost == nil {
-            installmentsLabel.text = "Seleccione la cantidad de cuotas"
+            installmentsLabel.text = "Selecciona la cantidad de cuotas".localized
             installmentsLabel.textColor = UIColor.blackColor()
         } else {
             installmentsLabel.text = payerCost!.recommendedMessage

@@ -30,7 +30,7 @@ public class CurrenciesUtil {
             var formatter : NSNumberFormatter = NSNumberFormatter()
             formatter.decimalSeparator = String(currency!.decimalSeparator)
             formatter.groupingSeparator = String(currency!.thousandsSeparator)
-            formatter.numberStyle = .CurrencyStyle
+            formatter.numberStyle = .NoStyle
             formatter.maximumFractionDigits = currency!.decimalPlaces
             // return formatted string
             let number = amount as NSNumber

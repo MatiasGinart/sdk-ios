@@ -71,13 +71,13 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Pagar"
+        self.title = "Pagar".localized
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         
         declareAndInitCells()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
         self.navigationItem.rightBarButtonItem?.enabled = false
         
         self.tableview.delegate = self
@@ -163,7 +163,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 2) {
-            return 115
+            return 143
         }
         return 65
     }
@@ -172,8 +172,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
         if indexPath.row == 0 {
             let paymentMethodsViewController = getPaymentMethodsViewController()
 
-            if self.cards != nil {
-                if self.cards!.count > 0 {
+            if self.cards != nil && self.cards!.count > 0 {
                     let customerPaymentMethodsViewController = MercadoPago.startCustomerCardsViewController(self.cards!, callback: {(selectedCard: Card?) -> Void in
                         if selectedCard != nil {
                             self.selectedCard = selectedCard
@@ -190,9 +189,6 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
                         }
                     })
                     showViewController(customerPaymentMethodsViewController, sender: self)
-                } else {
-                    showViewController(paymentMethodsViewController, sender: self)
-                }
             } else {
                 showViewController(paymentMethodsViewController, sender: self)
             }
@@ -220,17 +216,19 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     }
     
     public func submitForm() {
-        
+		
+		self.securityCodeCell.securityCodeTextField.resignFirstResponder()
+		
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
         
         var canContinue = true
         if self.securityCodeRequired {
             let securityCode = self.securityCodeCell.getSecurityCode()
             if String.isNullOrEmpty(securityCode) {
-                self.securityCodeCell.setError("El código de seguridad es requerido")
+                self.securityCodeCell.setError("invalid_field".localized)
                 canContinue = false
             } else if count(securityCode) != securityCodeLength {
-                self.securityCodeCell.setError("Ingresa los \(securityCodeLength) caracteres del código de seguridad")
+                self.securityCodeCell.setError(("invalid_cvv_length".localized as NSString).stringByReplacingOccurrencesOfString("%1$s", withString: "\(securityCodeLength)"))
                 canContinue = false
             }
         }

@@ -19,7 +19,7 @@ public class MPCardholderNameTableViewCell : ErrorTableViewCell {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.cardholderNameLabel.text = "Nombre y apellido impreso en la tarjeta".localized
     }
     
     

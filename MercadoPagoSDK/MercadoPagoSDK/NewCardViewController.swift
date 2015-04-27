@@ -60,13 +60,13 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         
-        self.title = "Datos tarjeta"
+        self.title = "Datos de tu tarjeta".localized
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: self, action: nil)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Listo", style: UIBarButtonItemStyle.Plain, target: nil, action: "submitForm")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
         
         var mercadoPago : MercadoPago
         mercadoPago = MercadoPago(keyType: self.keyType, key: self.key)
@@ -118,7 +118,7 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
         self.tableView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
     }
     
-    @IBAction public func submitForm() {
+    public func submitForm() {
         
         var cardToken = CardToken(cardNumber: self.cardNumberCell.getCardNumber(), expirationMonth: self.expirationDateCell.getExpirationMonth(), expirationYear: self.expirationDateCell.getExpirationYear(), securityCode: nil, cardholderName: self.cardholderNameCell.getCardholderName(), docType: self.userIdCell.getUserIdType(), docNumber: self.userIdCell.getUserIdValue())
         

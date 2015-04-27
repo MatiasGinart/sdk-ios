@@ -19,7 +19,8 @@ public class MPPaymentMethodEmptyTableViewCell: UITableViewCell {
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		cardTextLabel.text = "Selecciona un medio de pago...".localized
+		titleLabel.text = "Medio de pago".localized
     }
     
     required public init(coder aDecoder: NSCoder) {

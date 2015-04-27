@@ -61,8 +61,9 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.navigationItem.backBarButtonItem?.title = "Atrás"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Ok", style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar", style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
+
+		var loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
         var mercadoPago = MercadoPago(publicKey: self.publicKey!)
         mercadoPago.getIdentificationTypes({(identificationTypes: [IdentificationType]?) -> Void in
                 self.identificationTypes = identificationTypes
@@ -81,15 +82,12 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func submitForm() {
         
         let cardToken = CardToken(cardNumber: self.cardNumberCell.getCardNumber(), expirationMonth: self.expirationDateCell.getExpirationMonth(), expirationYear: self.expirationDateCell.getExpirationYear(), securityCode: self.securityCodeCell.getSecurityCode(), cardholderName: self.cardholderNameCell.getCardholderName(), docType: self.userIdCell.getUserIdType(), docNumber: self.userIdCell.getUserIdValue())
-        
-      //  self.view.addSubview(self.loadingView)
-        
+		
         if validateForm(cardToken) {
             createToken(cardToken)
         } else {
             self.hasError = true
             self.tableView.reloadData()
-         //   self.loadingView.removeFromSuperview()
         }
     }
     

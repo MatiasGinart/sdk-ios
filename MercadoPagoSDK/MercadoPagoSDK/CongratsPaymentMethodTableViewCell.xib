@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,20 +15,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Medio de pago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0E5-w8-XTk">
-                        <rect key="frame" x="15" y="13" width="102" height="20"/>
+                        <rect key="frame" x="8" y="13" width="244" height="20"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoTc_visa" translatesAutoresizingMaskIntoConstraints="NO" id="iuw-oc-erW">
-                        <rect key="frame" x="15" y="33" width="32" height="22"/>
+                        <rect key="frame" x="8" y="33" width="32" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="32" id="HE1-sz-Pxu"/>
                             <constraint firstAttribute="height" constant="22" id="Rr3-zB-41j"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terminada en 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5J-zC-Ow5">
-                        <rect key="frame" x="55" y="34" width="114" height="17"/>
+                        <rect key="frame" x="48" y="34" width="204" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -36,12 +36,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="0E5-w8-XTk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="0QQ-Rx-cYe"/>
-                    <constraint firstItem="iuw-oc-erW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="4dh-7p-Vpp"/>
+                    <constraint firstItem="iuw-oc-erW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4dh-7p-Vpp"/>
                     <constraint firstItem="iuw-oc-erW" firstAttribute="top" secondItem="0E5-w8-XTk" secondAttribute="bottom" id="4rN-ym-p3c"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="0E5-w8-XTk" secondAttribute="trailing" constant="195" id="8P6-2F-bHq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0E5-w8-XTk" secondAttribute="trailing" constant="60" id="8P6-2F-bHq"/>
                     <constraint firstItem="Z5J-zC-Ow5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="26" id="Do3-kG-ghB"/>
-                    <constraint firstItem="0E5-w8-XTk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="KzP-96-Yij"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Z5J-zC-Ow5" secondAttribute="trailing" constant="143" id="QHv-nW-Xmx"/>
+                    <constraint firstItem="0E5-w8-XTk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KzP-96-Yij"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Z5J-zC-Ow5" secondAttribute="trailing" constant="60" id="QHv-nW-Xmx"/>
                     <constraint firstItem="Z5J-zC-Ow5" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Rkg-I6-dXb"/>
                     <constraint firstAttribute="bottomMargin" secondItem="iuw-oc-erW" secondAttribute="bottom" constant="-4" id="aW2-nC-mSY"/>
                     <constraint firstItem="0E5-w8-XTk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="w2w-el-Oem"/>

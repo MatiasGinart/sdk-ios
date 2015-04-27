@@ -133,7 +133,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 2) {
-            return 115
+            return 143
         }
         return 65
     }

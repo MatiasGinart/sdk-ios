@@ -46,11 +46,11 @@ public class PaymentMethodsViewController : UIViewController, UITableViewDataSou
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Medio de pago"
+        self.title = "Medio de pago".localized
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)

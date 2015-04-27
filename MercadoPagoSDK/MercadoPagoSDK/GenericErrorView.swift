@@ -42,9 +42,9 @@ public class GenericErrorView : UIView {
 
     }
 
-    required public init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+	required public init(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+	}
  
     public func setErrorMessage(errorMessage: String) {
         var maxSize : CGSize = CGSizeMake(self.errorLabel.frame.size.width, CGFloat.max)

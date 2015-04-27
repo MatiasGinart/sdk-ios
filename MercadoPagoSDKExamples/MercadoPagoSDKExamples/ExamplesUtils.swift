@@ -11,10 +11,12 @@ import MercadoPagoSDK
 
 class ExamplesUtils {
     class var MERCHANT_PUBLIC_KEY : String {
-        return "444a9ef5-8a6b-429f-abdf-587639155d88" // AR
-        //return "mlb-cards-data" // BR
-        //return "6c0d81bc-99c1-4de8-9976-c8d1d62cd4f2" // MX
-        //return "ba25c9fc-863b-4100-a122-99d458df9ddc" // VZ
+		return "444a9ef5-8a6b-429f-abdf-587639155d88"
+		// "444a9ef5-8a6b-429f-abdf-587639155d88" // AR
+		// "APP_USR-f163b2d7-7462-4e7b-9bd5-9eae4a7f99c3" // BR
+		// "6c0d81bc-99c1-4de8-9976-c8d1d62cd4f2" // MX
+		// "2b66598b-8b0f-4588-bd2f-c80ca21c6d18" // VZ
+		// "aa371283-ad00-4d5d-af5d-ed9f58e139f1" // CO
     }
     class var MERCHANT_MOCK_BASE_URL : String {
         return "https://www.mercadopago.com"
@@ -31,7 +33,13 @@ class ExamplesUtils {
     }
 
     class var MERCHANT_ACCESS_TOKEN : String {
-        return "mla-cards-data" // With cards
+        return "mla-cards-data"
+		// "mla-cards-data" // AR
+		// "mlb-cards-data" // BR
+		// "mlm-cards-data" // MX
+		// "mlv-cards-data" // VZ
+		// "mco-cards-data" // CO
+		// "mla-cards-data-tarshop" // NO CVV
         // return "mla-cards-data-tarshop" // No CVV
     }
     class var AMOUNT : Double {
@@ -72,7 +80,6 @@ class ExamplesUtils {
             unitPrice: ExamplesUtils.ITEM_UNIT_PRICE)
 
         // Set merchant payment
-        
         let payment : MerchantPayment = MerchantPayment(item: item, installments: installments, cardIssuerId: cardIssuerId, token: token, paymentMethodId: paymentMethod.id, campaignId: nil, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN)
         
         // Create payment

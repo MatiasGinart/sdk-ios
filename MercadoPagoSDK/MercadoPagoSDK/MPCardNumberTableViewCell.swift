@@ -21,7 +21,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
     
     override public func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.cardNumberLabel.text = "Número de tarjeta".localized
     }
     
     required public init(coder aDecoder: NSCoder) {

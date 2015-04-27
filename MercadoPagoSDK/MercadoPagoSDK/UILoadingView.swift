@@ -10,7 +10,7 @@ import UIKit
 
 public class UILoadingView : UIView {
     
-    public init(frame rect: CGRect, text: NSString = "Cargando...") {
+    public init(frame rect: CGRect, text: NSString = "Cargando...".localized) {
         super.init(frame: rect)
         self.backgroundColor = UIColor.whiteColor()
         self.label.text = text as String

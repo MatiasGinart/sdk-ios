@@ -10,11 +10,11 @@
 		</data>
 		<key>CongratsPaymentMethodTableViewCell.nib</key>
 		<data>
-		wpN6ARyG0PpZc4eS96uVokA4iBc=
+		q5Mg8SDW1uPOdHQOloP2862fqto=
 		</data>
 		<key>CongratsViewController.nib</key>
 		<data>
-		u62MasKUAbm+7v1zy4eB7xbyMFY=
+		u593rVpCUb7jElIrzJ026+G3KWk=
 		</data>
 		<key>CustomerCardsViewController.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		Nxtcs4XRku7qYDNKEOy5OMlAMw8=
+		wVisCZjLxE6Re0zqwR+/DWsAfJs=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		ksGG67+CTM79aiIppYXPhIEfI88=
+		KQfdSrIC7vLpuLDqqhRbcCFWmFA=
 		</data>
 		<key>MPCardholderNameTableViewCell.nib</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>MPPaymentMethodTableViewCell.nib</key>
 		<data>
-		JkRG6QKWb4Dc/b10jxbjY8X+smM=
+		VcEHWUMixJD8G71n+jodRWycX5I=
 		</data>
 		<key>MPSecurityCodeTableViewCell.nib</key>
 		<data>
-		eaKUZKvSLYon5QRewjVHmqbrdn4=
+		iBahgk7m2wUPYxk5LSOz/0b7LC8=
 		</data>
 		<key>MPUserIdTableViewCell.nib</key>
 		<data>
@@ -86,15 +86,15 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		YM+2kFu+8ZFjOzCkgaOAgmtYXpo=
+		rUa1Oexg5IxYDf6fWwRa9a5R8Fk=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		KuZ0BNy+MeNCJ+MzGp+GqPc4+wk=
+		6jGYzMGWOLya2vONjtaOcxr+XBs=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		t9VlU9Y53n1cp/I5TyXIPmuKmC0=
+		gtw43zPWVdhunsT5Zg8KngJYjLE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		8LEVKMQSeOBGG5TXT5NItFYgk00=
+		QbEsyZide8DDsmxmcjYdVQyz/s0=
 		</data>
 		<key>PaymentMethodsViewController.nib</key>
 		<data>
@@ -128,6 +128,42 @@
 		<data>
 		gN1JdZ10W36H+yzrA9olvK+gN9s=
 		</data>
+		<key>es-CO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F/FjfCiindn6osaIPgxWAi76enQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es-MX.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ytI3+4P223W88gIvo7D9SaJ7Jeg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mOJGaiy0FsJzgs1W5L0oHrOA65I=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ruZVGuGw9TN5dA6SodLbyusdOpg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -137,11 +173,11 @@
 		</data>
 		<key>CongratsPaymentMethodTableViewCell.nib</key>
 		<data>
-		wpN6ARyG0PpZc4eS96uVokA4iBc=
+		q5Mg8SDW1uPOdHQOloP2862fqto=
 		</data>
 		<key>CongratsViewController.nib</key>
 		<data>
-		u62MasKUAbm+7v1zy4eB7xbyMFY=
+		u593rVpCUb7jElIrzJ026+G3KWk=
 		</data>
 		<key>CustomerCardsViewController.nib</key>
 		<data>
@@ -149,7 +185,7 @@
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		Nxtcs4XRku7qYDNKEOy5OMlAMw8=
+		wVisCZjLxE6Re0zqwR+/DWsAfJs=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -173,7 +209,7 @@
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		ksGG67+CTM79aiIppYXPhIEfI88=
+		KQfdSrIC7vLpuLDqqhRbcCFWmFA=
 		</data>
 		<key>MPCardholderNameTableViewCell.nib</key>
 		<data>
@@ -193,11 +229,11 @@
 		</data>
 		<key>MPPaymentMethodTableViewCell.nib</key>
 		<data>
-		JkRG6QKWb4Dc/b10jxbjY8X+smM=
+		VcEHWUMixJD8G71n+jodRWycX5I=
 		</data>
 		<key>MPSecurityCodeTableViewCell.nib</key>
 		<data>
-		eaKUZKvSLYon5QRewjVHmqbrdn4=
+		iBahgk7m2wUPYxk5LSOz/0b7LC8=
 		</data>
 		<key>MPUserIdTableViewCell.nib</key>
 		<data>
@@ -209,15 +245,15 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		YM+2kFu+8ZFjOzCkgaOAgmtYXpo=
+		rUa1Oexg5IxYDf6fWwRa9a5R8Fk=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		KuZ0BNy+MeNCJ+MzGp+GqPc4+wk=
+		6jGYzMGWOLya2vONjtaOcxr+XBs=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		t9VlU9Y53n1cp/I5TyXIPmuKmC0=
+		gtw43zPWVdhunsT5Zg8KngJYjLE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -237,7 +273,7 @@
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		8LEVKMQSeOBGG5TXT5NItFYgk00=
+		QbEsyZide8DDsmxmcjYdVQyz/s0=
 		</data>
 		<key>PaymentMethodsViewController.nib</key>
 		<data>
@@ -251,6 +287,42 @@
 		<data>
 		gN1JdZ10W36H+yzrA9olvK+gN9s=
 		</data>
+		<key>es-CO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F/FjfCiindn6osaIPgxWAi76enQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es-MX.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ytI3+4P223W88gIvo7D9SaJ7Jeg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mOJGaiy0FsJzgs1W5L0oHrOA65I=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ruZVGuGw9TN5dA6SodLbyusdOpg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

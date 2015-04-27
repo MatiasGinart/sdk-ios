@@ -48,7 +48,7 @@ public class InstallmentsViewController : UIViewController, UITableViewDataSourc
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Cuotas"
+        self.title = "Cuotas".localized
 
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         

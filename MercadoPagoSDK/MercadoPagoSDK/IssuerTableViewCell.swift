@@ -25,7 +25,7 @@ public class IssuerTableViewCell: UITableViewCell {
     }
  
     public func fillWithIssuer(issuer : Issuer) {
-        issuerLabel.text = issuer.name == "default" ? "Otro banco" : issuer.name
+        issuerLabel.text = issuer.name == "default" ? "Otro banco".localized : issuer.name
     }
     
 }

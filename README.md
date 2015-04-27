@@ -1,10 +1,6 @@
 # MercadoPago iOS (Swift) SDK
 The MercadoPago iOS SDK make it easy to collect your users' credit card details inside your iOS app. By creating tokens, MercadoPago handles the bulk of PCI compliance by preventing sensitive card data from hitting your server.
 
-It is developed for iOS 8 or sooner.
-
-## Examples
-
 ![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png)
 
 ## Installation
@@ -13,7 +9,7 @@ There are two ways to add MercadoPago to your project:
 
 ### CocoaPods
 
-## Step 1: Download CocoaPods
+#### Step 1: Download CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries like MercadoPagoSDK in your projects.
 
@@ -24,7 +20,7 @@ CocoaPods is distributed as a ruby gem, and is installed by running the followin
 
 > Depending on your Ruby installation, you may not have to run as `sudo` to install the cocoapods gem.
 
-## Step 2: Create a Podfile
+###v Step 2: Create a Podfile
 
 Project dependencies to be managed by CocoaPods are specified in a file called `Podfile`. Create this file in the same directory as your Xcode project (`.xcodeproj`) file:
 
@@ -42,7 +38,7 @@ Copy and paste the following lines into the TextEdit window:
 
 > You shouldn’t use TextEdit to edit the pod file because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
-## Step 3: Install Dependencies
+#### Step 3: Install Dependencies
 
 Now you can install the dependencies in your project:
 
@@ -61,7 +57,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 - Expand the "Target Dependencies" group, and add MercadoPagoSDK.framework.
 - Click on the + button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add MercadoPagoSDK.framework.
 
-Usage
+##Usage
 -----
 - Add import MercadoPagoSDK for Swift 
 

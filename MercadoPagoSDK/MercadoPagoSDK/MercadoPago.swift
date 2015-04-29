@@ -31,8 +31,7 @@ public class MercadoPago : NSObject {
     }
     
     let BIN_LENGTH : Int = 6
-    
-    let VAULT_BASE_URL : String = "https://pagamento.mercadopago.com"
+	
     let MP_API_BASE_URL : String = "https://api.mercadopago.com"
     public var privateKey : String?
     public var publicKey : String?
@@ -93,7 +92,7 @@ public class MercadoPago : NSObject {
         
         if self.publicKey != nil {
             cardToken.device = Device()
-            let service : GatewayService = GatewayService(baseURL: VAULT_BASE_URL)
+            let service : GatewayService = GatewayService(baseURL: MP_API_BASE_URL)
             service.getToken(public_key: self.publicKey!, cardToken: cardToken, success: {(jsonResult: AnyObject?) -> Void in
                 var token : Token? = nil
                 if let tokenDic = jsonResult as? NSDictionary {
@@ -119,7 +118,7 @@ public class MercadoPago : NSObject {
         if self.publicKey != nil {
             savedCardToken.device = Device()
             
-            let service : GatewayService = GatewayService(baseURL: VAULT_BASE_URL)
+            let service : GatewayService = GatewayService(baseURL: MP_API_BASE_URL)
             service.getToken(public_key: self.publicKey!, savedCardToken: savedCardToken, success: {(jsonResult: AnyObject?) -> Void in
                 var token : Token? = nil
                 if let tokenDic = jsonResult as? NSDictionary {

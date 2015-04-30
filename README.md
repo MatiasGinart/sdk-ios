@@ -59,8 +59,9 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 
 ##Usage
 -----
-- Add import MercadoPagoSDK for Swift 
+- Swift 
 
+        import MercadoPagoSDK
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
 		

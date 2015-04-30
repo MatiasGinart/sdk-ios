@@ -55,15 +55,15 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
-        self.title = "Datos de la tarjeta"
+		self.title = "Datos de tu tarjeta".localized
         
         self.navigationItem.backBarButtonItem?.title = "Atrás"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar", style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
 
-		var loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+		var loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         var mercadoPago = MercadoPago(publicKey: self.publicKey!)
         mercadoPago.getIdentificationTypes({(identificationTypes: [IdentificationType]?) -> Void in
                 self.identificationTypes = identificationTypes

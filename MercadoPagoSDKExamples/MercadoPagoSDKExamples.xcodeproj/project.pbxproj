@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0E94E61AF1778600BAA087 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0E94E51AF1778600BAA087 /* MercadoPagoSDK.framework */; };
-		0F0E94E71AF1778600BAA087 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0E94E51AF1778600BAA087 /* MercadoPagoSDK.framework */; };
 		0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */; };
 		0F9884FF1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */; };
 		0F9885011AD2BCB900F750F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885001AD2BCB900F750F0 /* ViewController.swift */; };
@@ -38,6 +36,12 @@
 		0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
 		0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
 		0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
+		0FCE50A41AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
+		0FCE50A51AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
+		0FFDB7261AF2B1F600F7AF9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */; };
+		0FFDB7271AF2B1F600F7AF9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */; };
+		0FFDB72F1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFDB72E1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework */; };
+		0FFDB7301AF2BD0D00F7AF9D /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFDB72E1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F0E94E51AF1778600BAA087 /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
 		0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9884FA1AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +89,12 @@
 		0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedVaultViewController.swift; sourceTree = "<group>"; };
 		0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalVaultViewController.swift; sourceTree = "<group>"; };
 		0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		0FCE50A31AF2B05600A30177 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		0FFDB72A1AF2B1FA00F7AF9D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FFDB72B1AF2B21A00F7AF9D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FFDB72C1AF2B59700F7AF9D /* es-CO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CO"; path = "es-CO.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0FFDB72D1AF2B5BB00F7AF9D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0FFDB72E1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0E94E61AF1778600BAA087 /* MercadoPagoSDK.framework in Frameworks */,
+				0FFDB72F1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0E94E71AF1778600BAA087 /* MercadoPagoSDK.framework in Frameworks */,
+				0FFDB7301AF2BD0D00F7AF9D /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +120,8 @@
 		0F9884ED1AD2BCB900F750F0 = {
 			isa = PBXGroup;
 			children = (
-				0F0E94E51AF1778600BAA087 /* MercadoPagoSDK.framework */,
+				0FFDB72E1AF2BD0D00F7AF9D /* MercadoPagoSDK.framework */,
+				0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */,
 				0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
 				0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,
 				0F9884F71AD2BCB900F750F0 /* Products */,
@@ -216,6 +226,7 @@
 		0F9885291AD2BD2200F750F0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0FCE50A31AF2B05600A30177 /* String+Additions.swift */,
 				0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */,
 			);
 			name = Utils;
@@ -326,8 +337,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				pt,
+				es,
+				"es-CO",
+				"es-MX",
 			);
 			mainGroup = 0F9884ED1AD2BCB900F750F0;
 			productRefGroup = 0F9884F71AD2BCB900F750F0 /* Products */;
@@ -348,6 +361,7 @@
 				0F98853C1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */,
 				0F9885271AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */,
 				0F9885361AD2BD8700F750F0 /* CardViewController.xib in Resources */,
+				0FFDB7261AF2B1F600F7AF9D /* Localizable.strings in Resources */,
 				0F9885421AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */,
 				0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */,
 				0F9885061AD2BCB900F750F0 /* Images.xcassets in Resources */,
@@ -359,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */,
+				0FFDB7271AF2B1F600F7AF9D /* Localizable.strings in Resources */,
 				0F98853D1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */,
 				0F9885371AD2BD8700F750F0 /* CardViewController.xib in Resources */,
 				0F9885281AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */,
@@ -383,6 +398,7 @@
 				0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */,
 				0F9885481AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */,
 				0F9885401AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */,
+				0FCE50A41AF2B05600A30177 /* String+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +411,7 @@
 				0F9885461AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */,
 				0F9885261AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */,
 				0F9885411AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */,
+				0FCE50A51AF2B05600A30177 /* String+Additions.swift in Sources */,
 				0F98852C1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */,
 				0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */,
 				0F98853B1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */,
@@ -410,6 +427,20 @@
 			targetProxy = 0F98850F1AD2BCB900F750F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0FFDB72A1AF2B1FA00F7AF9D /* pt */,
+				0FFDB72B1AF2B21A00F7AF9D /* es */,
+				0FFDB72C1AF2B59700F7AF9D /* es-CO */,
+				0FFDB72D1AF2B5BB00F7AF9D /* es-MX */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0F9885161AD2BCB900F750F0 /* Debug */ = {
@@ -446,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

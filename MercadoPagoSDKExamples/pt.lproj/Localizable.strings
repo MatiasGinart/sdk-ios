@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  MercadoPagoSDKExamples
+
+  Created by Matias Gualino on 30/4/15.
+  Copyright (c) 2015 MercadoPago. All rights reserved.
+*/
+
+"Cargando..." = "Carregando...";
+"security_code" = "Código de segurança";
+"Datos de tu tarjeta" = "Dados do seu cartão";
+
+"step1_description" = "Fluxo que valida os dados digitados com base nas regras do meio de pagamento.";
+"step2_description" = "Fluxo de pagamento que permite selecionar os cartões salvos do usuário.";
+"step3_description" = "Fluxo de pagamento para que o comprador escolha o parcelamento desejado e qual é a administradora do cartão.";
+"step4_description" = "Fluxo que inclui os meios offline como meios de pagamento disponíveis.";
+"step5_description" = "Fluxo de pagamento padrão. Inclui todos os módulos de pagamento.";
+
+"step1_title" = "Formulário simples";
+"step2_title" = "Cartões salvos";
+"step3_title" = "Pagamento parcelado";
+"step4_title" = "Pagamentos com meios offline";
+"step5_title" = "Fluxo de pagamento completo";
+
+"Información" = "Informação";

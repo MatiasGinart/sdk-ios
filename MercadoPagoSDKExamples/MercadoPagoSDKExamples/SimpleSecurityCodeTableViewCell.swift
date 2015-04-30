@@ -19,7 +19,7 @@ class SimpleSecurityCodeTableViewCell: ErrorTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+		self.securityCodeLabel.text = "security_code".localized
     }
     
     required init(coder aDecoder: NSCoder) {

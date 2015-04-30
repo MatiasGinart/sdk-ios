@@ -7,7 +7,7 @@ The MercadoPago iOS SDK make it easy to collect your users' credit card details 
 
 There are two ways to add MercadoPago to your project:
 
-### CocoaPods
+### CocoaPods (iOS 8.0 or later)
 
 #### Step 1: Download CocoaPods
 
@@ -48,7 +48,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 
     $ open <YourProjectName>.xcworkspace
 
-### Copy manually
+### Copy manually (iOS 7.0 or later)
 
 - Open the MercadoPagoSDK folder, and drag MercadoPagoSDK.xcodeproj into the file navigator of your app project.
 - In Xcode, navigate to the target configuration window by clicking on the blue project icon, and selecting the application target under the "Targets" heading in the sidebar.

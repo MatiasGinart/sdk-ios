@@ -65,7 +65,13 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
 		
-		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", merchantBaseUrl: "https://www.mercadopago.com", merchantGetCustomerUri: "/checkout/examples/getCustomer", merchantAccessToken: "mla-cards-data", amount: 10.0, supportedPaymentTypes: supportedPaymentTypes) { (paymentMethod, tokenId, issuerId, installments) -> Void in
+		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88",
+		merchantBaseUrl: "https://www.mercadopago.com", 
+		merchantGetCustomerUri: "/checkout/examples/getCustomer", 
+		merchantAccessToken: "mla-cards-data", 
+		amount: 10.0, 
+		supportedPaymentTypes: supportedPaymentTypes) { 
+			(paymentMethod, tokenId, issuerId, installments) -> Void in
                         let alert = UIAlertController()
                         alert.title = "Payment Info"
                 

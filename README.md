@@ -1,4 +1,4 @@
-# MercadoPago iOS (Swift) SDK
+# MercadoPago iOS (Swift 1.2) SDK
 The MercadoPago iOS SDK make it easy to collect your users' credit card details inside your iOS app. By creating tokens, MercadoPago handles the bulk of PCI compliance by preventing sensitive card data from hitting your server.
 
 ![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png)
@@ -66,34 +66,34 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
 		
 		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88",
-		merchantBaseUrl: "https://www.mercadopago.com", 
-		merchantGetCustomerUri: "/checkout/examples/getCustomer", 
-		merchantAccessToken: "mla-cards-data", 
-		amount: 10.0, 
-		supportedPaymentTypes: supportedPaymentTypes) { 
+			merchantBaseUrl: "https://www.mercadopago.com", 
+			merchantGetCustomerUri: "/checkout/examples/getCustomer", 
+			merchantAccessToken: "mla-cards-data", 
+			amount: 10.0, 
+			supportedPaymentTypes: supportedPaymentTypes) { 
 			(paymentMethod, tokenId, issuerId, installments) -> Void in
-                        let alert = UIAlertController()
-                        alert.title = "Payment Info"
+                        	let alert = UIAlertController()
+                        	alert.title = "Payment Info"
                 
-                        var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
-                        msg = msg + " Installments = \(installments!)."
-                        msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
+                        	var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
+                        	msg = msg + " Installments = \(installments!)."
+                        	msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
                 
-                        alert.message = msg
-                        alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
-                          switch action.style{
-                            case .Default:
-                              self.nav!.popToRootViewControllerAnimated(true)
-                              self.nav!.popViewControllerAnimated(true)
-                              self.initViewController()
-                            case .Cancel:
-                              println("cancel")
-                            case .Destructive:
-                              println("destructive")
-                          }
-                        }))
-                        self.nav!.presentViewController(alert, animated: true, completion: nil)
-                    }
+                        	alert.message = msg
+                        	alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
+                          	switch action.style{
+                            	case .Default:
+                              		self.nav!.popToRootViewControllerAnimated(true)
+                              		self.nav!.popViewControllerAnimated(true)
+                              		self.initViewController()
+                            	case .Cancel:
+                              		println("cancel")
+                            	case .Destructive:
+                              		println("destructive")
+                          	}
+                        	}))
+                        	self.nav!.presentViewController(alert, animated: true, completion: nil)
+                    	}
                 // Put vaultController at the top of navigator.
                 self.nav!.pushViewController(vaultViewController, animated: false)
         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -50,11 +50,9 @@
                     <constraint firstItem="ldV-cQ-hzn" firstAttribute="top" secondItem="bHN-KV-nr0" secondAttribute="topMargin" constant="-7" id="A2w-30-Q4U"/>
                     <constraint firstItem="d8b-2x-9De" firstAttribute="top" secondItem="ldV-cQ-hzn" secondAttribute="bottom" constant="8" id="BFJ-W9-N9S"/>
                     <constraint firstItem="bA6-bw-aIQ" firstAttribute="leading" secondItem="bHN-KV-nr0" secondAttribute="leadingMargin" id="DAk-cS-hws"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="bA6-bw-aIQ" secondAttribute="trailing" constant="216" id="Eyx-Cc-NjM"/>
                     <constraint firstItem="ldV-cQ-hzn" firstAttribute="leading" secondItem="bHN-KV-nr0" secondAttribute="leadingMargin" constant="109" id="QlI-5Y-Bt6"/>
                     <constraint firstItem="ldV-cQ-hzn" firstAttribute="top" secondItem="bHN-KV-nr0" secondAttribute="topMargin" constant="-7" id="RHj-Qz-JC1"/>
                     <constraint firstItem="d8b-2x-9De" firstAttribute="leading" secondItem="bHN-KV-nr0" secondAttribute="leadingMargin" constant="109" id="Ugx-JF-83C"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="MbA-4b-Avc" secondAttribute="trailing" constant="216" id="cMY-97-gHf"/>
                     <constraint firstItem="d8b-2x-9De" firstAttribute="leading" secondItem="bA6-bw-aIQ" secondAttribute="trailing" constant="21" id="eaS-UT-90w"/>
                     <constraint firstItem="bA6-bw-aIQ" firstAttribute="top" secondItem="MbA-4b-Avc" secondAttribute="bottom" constant="8" id="gn0-aY-tEJ"/>
                     <constraint firstItem="ldV-cQ-hzn" firstAttribute="trailing" secondItem="bHN-KV-nr0" secondAttribute="trailingMargin" id="t6N-pR-RGc"/>

@@ -72,6 +72,11 @@
                     <constraint firstItem="fBX-rU-zLv" firstAttribute="leading" secondItem="89W-xQ-I2H" secondAttribute="leadingMargin" constant="12" id="x4j-sq-Dbc"/>
                     <constraint firstItem="zNY-2V-LQD" firstAttribute="top" secondItem="89W-xQ-I2H" secondAttribute="topMargin" constant="3" id="yxZ-9B-DAF"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="a4p-6x-Q68"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="securityCodeImageView" destination="g2o-lM-ZSu" id="6gD-f2-tk7"/>

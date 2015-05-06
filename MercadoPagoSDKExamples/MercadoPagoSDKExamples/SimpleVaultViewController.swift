@@ -62,12 +62,12 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Pagar"
+        self.title = "Pagar".localized
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...")
+        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
         self.navigationItem.rightBarButtonItem?.enabled = false
         
         self.tableview.delegate = self

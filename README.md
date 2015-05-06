@@ -1,4 +1,4 @@
-# MercadoPago iOS (Swift) SDK
+# MercadoPago iOS (Swift 1.2) SDK
 The MercadoPago iOS SDK make it easy to collect your users' credit card details inside your iOS app. By creating tokens, MercadoPago handles the bulk of PCI compliance by preventing sensitive card data from hitting your server.
 
 ![MercadoPagoSDK: Examples](https://raw.githubusercontent.com/mercadopago/sdk-ios/master/Screenshots/mercadopagosdk.png)
@@ -7,7 +7,7 @@ The MercadoPago iOS SDK make it easy to collect your users' credit card details 
 
 There are two ways to add MercadoPago to your project:
 
-### CocoaPods
+### CocoaPods (iOS 8.0 or later)
 
 #### Step 1: Download CocoaPods
 
@@ -34,7 +34,7 @@ Copy and paste the following lines into the TextEdit window:
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
     platform :ios, '8.0'
-    pod 'MercadoPagoSDK', '~> 0.1.3'
+    pod 'MercadoPagoSDK', '~> 0.1.5'
 
 > You shouldn’t use TextEdit to edit the pod file because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
@@ -48,7 +48,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 
     $ open <YourProjectName>.xcworkspace
 
-### Copy manually
+### Copy manually (iOS 7.0 or later)
 
 - Open the MercadoPagoSDK folder, and drag MercadoPagoSDK.xcodeproj into the file navigator of your app project.
 - In Xcode, navigate to the target configuration window by clicking on the blue project icon, and selecting the application target under the "Targets" heading in the sidebar.
@@ -65,29 +65,35 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
 		
-		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88", merchantBaseUrl: "https://www.mercadopago.com", merchantGetCustomerUri: "/checkout/examples/getCustomer", merchantAccessToken: "mla-cards-data", amount: 10.0, supportedPaymentTypes: supportedPaymentTypes) { (paymentMethod, tokenId, issuerId, installments) -> Void in
-                        let alert = UIAlertController()
-                        alert.title = "Payment Info"
+		let vaultViewController = MercadoPago.startVaultViewController("444a9ef5-8a6b-429f-abdf-587639155d88",
+			merchantBaseUrl: "https://www.mercadopago.com", 
+			merchantGetCustomerUri: "/checkout/examples/getCustomer", 
+			merchantAccessToken: "mla-cards-data", 
+			amount: 10.0, 
+			supportedPaymentTypes: supportedPaymentTypes) { 
+			(paymentMethod, tokenId, issuerId, installments) -> Void in
+                        	let alert = UIAlertController()
+                        	alert.title = "Payment Info"
                 
-                        var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
-                        msg = msg + " Installments = \(installments!)."
-                        msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
+                        	var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
+                        	msg = msg + " Installments = \(installments!)."
+                        	msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
                 
-                        alert.message = msg
-                        alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
-                          switch action.style{
-                            case .Default:
-                              self.nav!.popToRootViewControllerAnimated(true)
-                              self.nav!.popViewControllerAnimated(true)
-                              self.initViewController()
-                            case .Cancel:
-                              println("cancel")
-                            case .Destructive:
-                              println("destructive")
-                          }
-                        }))
-                        self.nav!.presentViewController(alert, animated: true, completion: nil)
-                    }
+                        	alert.message = msg
+                        	alert.addAction(UIAlertAction(title: "Finish", style: .Default, handler: { action in
+                          	switch action.style{
+                            	case .Default:
+                              		self.nav!.popToRootViewControllerAnimated(true)
+                              		self.nav!.popViewControllerAnimated(true)
+                              		self.initViewController()
+                            	case .Cancel:
+                              		println("cancel")
+                            	case .Destructive:
+                              		println("destructive")
+                          	}
+                        	}))
+                        	self.nav!.presentViewController(alert, animated: true, completion: nil)
+                    	}
                 // Put vaultController at the top of navigator.
                 self.nav!.pushViewController(vaultViewController, animated: false)
         }

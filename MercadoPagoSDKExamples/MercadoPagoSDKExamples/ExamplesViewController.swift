@@ -12,9 +12,9 @@ import MercadoPagoSDK
 class ExamplesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak private var tableview : UITableView!
-    
-    let examples : [String] = ["Formulario simple", "Tarjetas guardadas", "Cuotas y Bancos", "Medios Off y Descuentos",
-    "Interfaz de usuario por defecto"]
+	
+    let examples : [String] = ["step1_title".localized, "step2_title".localized, "step3_title".localized, "step4_title".localized,
+    "step5_title".localized]
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -86,24 +86,10 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        var message : String? = nil
-        switch indexPath.row {
-        case 0:
-            message = "Formulario simple con entendimiento del medio de pago."
-        case 1:
-            message = "Flujo de pagos que permite seleccionar las tarjetas guardadas del usuario."
-        case 2:
-            message = "Flujo de pagos que considera solicitar cuotas."
-        case 3:
-            message = "Flujo de pagos que considera solicitar cuotas."
-        case 4:
-            message = "Flujo de pagos que considera solicitar cuotas."
-        default:
-            message = "Invalid option"
-        }
+        var message : String = "step\(indexPath.row+1)_description".localized
 
         let alert = UIAlertView()
-        alert.title = "Ejemplo \(indexPath.row + 1) Info"
+        alert.title = "Información".localized
         alert.message = message
         alert.addButtonWithTitle("OK")
         alert.show()

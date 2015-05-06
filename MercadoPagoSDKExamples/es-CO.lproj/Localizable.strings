@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MercadoPagoSDKExamples
+
+  Created by Matias Gualino on 30/4/15.
+  Copyright (c) 2015 MercadoPago. All rights reserved.
+*/
+
+"step3_title" = "Pagos con mensualidades";
+"step3_description" = "Flujo de pagos con mensualidades y manejo de bancos.";

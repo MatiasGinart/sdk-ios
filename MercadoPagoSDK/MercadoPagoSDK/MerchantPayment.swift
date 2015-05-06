@@ -41,6 +41,7 @@ public class MerchantPayment : NSObject {
             "merchant_access_token" : self.merchantAccessToken == nil ? JSON.null : self.merchantAccessToken!,
             "payment_method_id" : self.paymentMethodId == nil ? JSON.null : self.paymentMethodId!
         ]
+		println(obj)
         return JSON(obj).toString()
     }
     

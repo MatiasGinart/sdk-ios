@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  MercadoPagoSDKExamples
+
+  Created by Matias Gualino on 30/4/15.
+  Copyright (c) 2015 MercadoPago. All rights reserved.
+*/
+
+"security_code" = "Código de seguridad";
+
+"step1_description" = "Flujo de pagos que valida los datos ingresados contra las reglas del medio de pago.";
+"step2_description" = "Flujo de pagos que permite seleccionar las tarjetas guardadas del usuario.";
+"step3_description" = "Flujo de pagos con cuotas y manejo de bancos.";
+"step4_description" = "Flujo de pagos que incluye los medios off-line como medios de pago disponibles.";
+"step5_description" = "Flujo de pagos por defecto. Incluye todos los módulos de pago.";
+
+"step1_title" = "Formulario simple";
+"step2_title" = "Tarjetas guardadas";
+"step3_title" = "Pagos con cuotas";
+"step4_title" = "Pagos con medios off-line";
+"step5_title" = "Flujo de pagos completo";

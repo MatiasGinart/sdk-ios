@@ -27,7 +27,7 @@ public class Address : NSObject {
         var address : Address = Address()
         address.streetName = JSON(json["street_name"]!).asString
         if json["street_number"] != nil {
-            address.streetNumber = (json["street_number"] as? NSNumber)?.longLongValue
+            address.streetNumber = (json["street_number"] as? NSString)?.longLongValue
         }
         address.zipCode = JSON(json["zip_code"]!).asString
         return address

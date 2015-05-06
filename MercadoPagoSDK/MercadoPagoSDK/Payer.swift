@@ -16,7 +16,7 @@ public class Payer {
     
     public class func fromJSON(json : NSDictionary) -> Payer {
         var payer : Payer = Payer()
-        payer.id = (json["id"] as? NSNumber)?.longLongValue
+        payer.id = (json["id"] as? NSString)?.longLongValue
         payer.email = JSON(json["email"]!).asString
         payer.type = JSON(json["type"]!).asString
         if let identificationDic = json["identification"] as? NSDictionary {

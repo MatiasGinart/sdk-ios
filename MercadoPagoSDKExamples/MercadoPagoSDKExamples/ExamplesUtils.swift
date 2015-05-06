@@ -43,7 +43,7 @@ class ExamplesUtils {
         // return "mla-cards-data-tarshop" // No CVV
     }
     class var AMOUNT : Double {
-        return 100.50
+        return 110.50
     }
     
     class var ITEM_ID : String {

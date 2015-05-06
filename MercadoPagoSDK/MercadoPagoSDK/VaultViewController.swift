@@ -155,6 +155,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
             return self.installmentsCell
         } else if indexPath.row == 2 {
             self.securityCodeCell = self.tableview.dequeueReusableCellWithIdentifier("securityCodeCell") as! MPSecurityCodeTableViewCell
+			self.securityCodeCell.height = 143
             self.securityCodeCell.fillWithPaymentMethod(self.selectedPaymentMethod!)
             return self.securityCodeCell
         }
@@ -163,7 +164,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 2) {
-            return 143
+			return self.securityCodeCell != nil ? self.securityCodeCell.getHeight() : 143
         }
         return 65
     }

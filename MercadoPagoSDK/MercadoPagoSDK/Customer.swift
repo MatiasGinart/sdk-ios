@@ -34,7 +34,7 @@ public class Customer : NSObject {
         customer.firstName = json["first_name"] as? String!
         customer.lastName = json["last_name"] as? String!
         customer._description = json["description"] as? String!
-        customer.defaultCard = (json["default_card"] as? NSNumber)?.longLongValue
+        customer.defaultCard = (json["default_card"] as? NSString)?.longLongValue
         if let identificationDic = json["identification"] as? NSDictionary {
             customer.identification = Identification.fromJSON(identificationDic)
         }

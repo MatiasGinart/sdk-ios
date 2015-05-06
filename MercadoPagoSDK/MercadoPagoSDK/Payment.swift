@@ -102,7 +102,7 @@ public class Payment : NSObject {
         }
         payment.collectorId = json["collector_id"] as? String
         payment.couponAmount = json["coupon_amount"] as? Double
-        payment.differentialPricingId = (json["differential_pricing_id"] as? NSNumber)?.longLongValue
+        payment.differentialPricingId = (json["differential_pricing_id"] as? NSString)?.longLongValue
         payment.issuerId = json["issuer_id"] as? Int
         return payment
     }

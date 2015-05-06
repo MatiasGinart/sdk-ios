@@ -32,9 +32,6 @@ public class MercadoPagoService : NSObject {
             request.HTTPBody = (body as! NSString).dataUsingEncoding(NSUTF8StringEncoding)
         }
         
-        var urlConnection: NSURLConnection = NSURLConnection(request: request,
-            delegate: self)!
-        
         NSURLConnection.sendAsynchronousRequest(request, queue:
             NSOperationQueue.mainQueue(), completionHandler: {(response:
                 NSURLResponse!,data: NSData!,error: NSError!) -> Void in

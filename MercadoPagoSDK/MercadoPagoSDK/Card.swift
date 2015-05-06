@@ -35,7 +35,9 @@ public class Card : NSObject {
         }
         card.expirationMonth = JSON(json["expiration_month"]!).asInt
         card.expirationYear = JSON(json["expiration_year"]!).asInt
-        card.id = (json["id"] as? NSNumber)?.longLongValue
+		if json["id"] != nil {
+				card.id = (json["id"]! as? NSString)?.longLongValue
+		}
         card.lastFourDigits = JSON(json["last_four_digits"]!).asString
         card.firstSixDigits = JSON(json["first_six_digits"]!).asString
         if let issuerDic = json["issuer"] as? NSDictionary {

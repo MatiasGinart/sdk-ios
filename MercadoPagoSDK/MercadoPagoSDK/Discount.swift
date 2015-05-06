@@ -18,8 +18,8 @@ public class Discount : NSObject {
     
     public class func fromJSON(json : NSDictionary) -> Discount {
         var discount : Discount = Discount()
-        discount.amountOff = (json["amount_off"] as? NSNumber)?.longLongValue
-        discount.couponAmount = (json["coupon_amount"] as? NSNumber)?.longLongValue
+        discount.amountOff = (json["amount_off"] as? NSString)?.longLongValue
+        discount.couponAmount = (json["coupon_amount"] as? NSString)?.longLongValue
         discount.currencyId = JSON(json["currency_id"]!).asString
         discount.id = json["id"]! as? Int
         discount.name = JSON(json["name"]!).asString

@@ -10,16 +10,16 @@ import Foundation
 
 public class Currency : NSObject {
     
-    public var id : String!
+    public var _id : String!
     public var _description : String!
     public var symbol : String!
-    public var decimalPlaces : Int!
+    public var decimalPlaces : Int = 0
     public var decimalSeparator : Character!
     public var thousandsSeparator : Character!
     
-    public init(id: String, description: String, symbol: String, decimalPlaces: Int, decimalSeparator: Character, thousandSeparator: Character) {
+    public init(_id: String, description: String, symbol: String, decimalPlaces: Int, decimalSeparator: Character, thousandSeparator: Character) {
         super.init()
-        self.id = id
+        self._id = _id
         self._description = description
         self.symbol = symbol
         self.decimalPlaces = decimalPlaces

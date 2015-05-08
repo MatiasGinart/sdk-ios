@@ -168,9 +168,9 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
             if selectedCard != nil {
                 self.selectedCard = selectedCard
                 self.selectedPaymentMethod = self.selectedCard!.paymentMethod
-                self.securityCodeRequired = self.selectedCard!.securityCode!.length! != 0
+                self.securityCodeRequired = self.selectedCard!.securityCode!.length != 0
                 self.newCard = false
-                self.securityCodeLength = self.selectedCard!.securityCode!.length!
+                self.securityCodeLength = self.selectedCard!.securityCode!.length
                 self.bin = self.selectedCard!.firstSixDigits
                 self.tableview.reloadData()
                 self.navigationController!.popViewControllerAnimated(true)
@@ -186,8 +186,8 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
             self.newCard = true
             self.selectedPaymentMethod = paymentMethod
             if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
-                self.securityCodeLength = paymentMethod.settings![0].securityCode!.length!
-                self.securityCodeRequired = self.securityCodeLength != 0
+                self.securityCodeLength = paymentMethod.settings![0].securityCode!.length
+				self.securityCodeRequired = self.securityCodeLength != 0
             }
             self.showViewController(MercadoPago.startNewCardViewController(MercadoPago.PUBLIC_KEY, key: self.publicKey!, paymentMethod: self.selectedPaymentMethod!, requireSecurityCode: self.securityCodeRequired, callback: self.getNewCardCallback()), sender: self)
         }
@@ -198,8 +198,8 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
             self.selectedCardToken = cardToken
             self.bin = self.selectedCardToken!.getBin()
             if self.selectedPaymentMethod!.settings != nil && self.selectedPaymentMethod!.settings.count > 0 {
-                self.securityCodeRequired = self.selectedPaymentMethod!.settings[0].securityCode!.length! != 0
-                self.securityCodeLength = self.selectedPaymentMethod!.settings[0].securityCode!.length!
+                self.securityCodeRequired = self.selectedPaymentMethod!.settings[0].securityCode!.length != 0
+                self.securityCodeLength = self.selectedPaymentMethod!.settings[0].securityCode!.length
             }
             self.tableview.reloadData()
             self.navigationController!.popToViewController(self, animated: true)
@@ -220,7 +220,7 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
         if selectedCard != nil {
             let securityCode = self.securityCodeRequired ? securityCodeCell.securityCodeTextField.text : nil
             
-            let savedCardToken : SavedCardToken = SavedCardToken(cardId: String(format:"%ld",selectedCard!.id!), securityCode: securityCode, securityCodeRequired: self.securityCodeRequired)
+            let savedCardToken : SavedCardToken = SavedCardToken(cardId: String(format:"%ld",selectedCard!._id), securityCode: securityCode, securityCodeRequired: self.securityCodeRequired)
             
             if savedCardToken.validate() {
                 // Send card id to get token id

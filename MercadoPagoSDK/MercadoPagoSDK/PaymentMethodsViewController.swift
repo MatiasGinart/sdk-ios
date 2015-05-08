@@ -91,7 +91,7 @@ public class PaymentMethodsViewController : UIViewController, UITableViewDataSou
         
         let paymentMethod : PaymentMethod = items[indexPath.row]
         pmcell.setLabel(paymentMethod.name)
-        pmcell.setImageWithName("icoTc_" + paymentMethod.id)
+        pmcell.setImageWithName("icoTc_" + paymentMethod._id)
         
         return pmcell
     }

@@ -142,7 +142,7 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     }
     
     public func setAmount(payment: Payment) {
-        if payment.transactionDetails != nil && payment.transactionDetails.totalPaidAmount != nil && payment.currencyId != nil {
+        if payment.currencyId != nil {
             let formattedAmount : String? = CurrenciesUtil.formatNumber(payment.transactionDetails.totalPaidAmount, currencyId: payment.currencyId)
             if formattedAmount != nil {
                 self.paymentTotalCell.lblTotal.text = formattedAmount
@@ -151,16 +151,16 @@ public class CongratsViewController : UIViewController, UITableViewDataSource, U
     }
     
     public func setPaymentId(payment: Payment) {
-        self.paymentIDCell!.lblID.text = String(payment.id)
+        self.paymentIDCell!.lblID.text = String(payment._id)
     }
     
     public func setPaymentMethodDescription(payment: Payment) {
         if payment.card != nil && payment.card.paymentMethod != nil {
         self.congratsPaymentMethodCell!.lblPaymentInfo.text = "terminada en".localized + " " + payment.card!.lastFourDigits!
-            self.congratsPaymentMethodCell.imgPayment.image = UIImage(named: "icoTc_" + payment.card!.paymentMethod!.id, inBundle: bundle, compatibleWithTraitCollection:nil)
+            self.congratsPaymentMethodCell.imgPayment.image = UIImage(named: "icoTc_" + payment.card!.paymentMethod!._id, inBundle: bundle, compatibleWithTraitCollection:nil)
         } else if self.paymentMethod != nil {
             self.congratsPaymentMethodCell!.lblPaymentInfo.text = self.paymentMethod!.name
-            self.congratsPaymentMethodCell.imgPayment.image = UIImage(named: "icoTc_" + self.paymentMethod.id, inBundle: bundle, compatibleWithTraitCollection:nil)
+            self.congratsPaymentMethodCell.imgPayment.image = UIImage(named: "icoTc_" + self.paymentMethod._id, inBundle: bundle, compatibleWithTraitCollection:nil)
         }
     }
     

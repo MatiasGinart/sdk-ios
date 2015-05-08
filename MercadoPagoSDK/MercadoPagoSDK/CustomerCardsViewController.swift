@@ -81,7 +81,7 @@ public class CustomerCardsViewController : UIViewController, UITableViewDataSour
             var paymentMethodRow = PaymentMethodRow()
             paymentMethodRow.card = card
             paymentMethodRow.label = card.paymentMethod!.name + " " + "terminada en".localized + " " + card.lastFourDigits!
-            paymentMethodRow.icon = "icoTc_" + card.paymentMethod!.id
+            paymentMethodRow.icon = "icoTc_" + card.paymentMethod!._id
             self.items.append(paymentMethodRow)
         }
         self.tableView.reloadData()

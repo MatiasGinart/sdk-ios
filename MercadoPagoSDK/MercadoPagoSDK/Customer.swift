@@ -18,7 +18,7 @@ public class Customer : NSObject {
     public var dateLastUpdated : NSDate?
     public var email : String?
     public var firstName : String?
-    public var id : String?
+    public var _id : String?
     public var identification : Identification?
     public var lastName : String?
     public var liveMode : Bool?
@@ -28,7 +28,7 @@ public class Customer : NSObject {
     
     public class func fromJSON(json : NSDictionary) -> Customer {
         var customer : Customer = Customer()
-        customer.id = json["id"] as! String!
+        customer._id = json["id"] as! String!
         customer.liveMode = json["live_mode"] as? Bool!
         customer.email = json["email"] as? String!
         customer.firstName = json["first_name"] as? String!

@@ -9,8 +9,8 @@
 import Foundation
 
 public class FeesDetail : NSObject {
-    public var amount : Double!
-    public var amountRefunded : Double!
+    public var amount : Double = 0
+    public var amountRefunded : Double = 0
     public var feePayer : String!
     public var type : String!
     
@@ -18,9 +18,11 @@ public class FeesDetail : NSObject {
         var fd : FeesDetail = FeesDetail()
         fd.type = JSON(json["type"]!).asString
         fd.feePayer = JSON(json["fee_payer"]!).asString
-        fd.amount = JSON(json["amount"]!).asDouble
-        if json["amount_refunded"] != nil {
-            fd.amountRefunded = JSON(json["amount_refunded"]!).asDouble
+		if json["amount"] != nil && !(json["amount"]! is NSNull) {
+			fd.amount = JSON(json["amount"]!).asDouble!
+		}
+        if json["amount_refunded"] != nil && !(json["amount_refunded"]! is NSNull) {
+            fd.amountRefunded = JSON(json["amount_refunded"]!).asDouble!
         }
         return fd
     }

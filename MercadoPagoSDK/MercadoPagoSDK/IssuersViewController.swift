@@ -51,7 +51,7 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
-        mercadoPago.getIssuers(self.paymentMethod!.id, success: { (issuers: [Issuer]?) -> Void in
+        mercadoPago.getIssuers(self.paymentMethod!._id, success: { (issuers: [Issuer]?) -> Void in
                 self.items = issuers
                 self.tableView.reloadData()
                 self.loadingView.removeFromSuperview()

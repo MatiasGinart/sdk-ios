@@ -15,10 +15,10 @@ public class Card : NSObject {
     public var customerId : String?
     public var dateCreated : NSDate?
     public var dateLastUpdated : NSDate?
-    public var expirationMonth : Int?
-    public var expirationYear : Int?
+    public var expirationMonth : Int = 0
+    public var expirationYear : Int = 0
     public var firstSixDigits : String?
-    public var id : Int64?
+    public var _id : Int64 = 0
     public var lastFourDigits : String?
     public var paymentMethod : PaymentMethod?
     public var issuer : Issuer?
@@ -30,13 +30,17 @@ public class Card : NSObject {
     
    public class func fromJSON(json : NSDictionary) -> Card {
         var card : Card = Card()
-        if json["customer_id"] != nil {
+        if json["customer_id"] != nil && !(json["customer_id"]! is NSNull) {
             card.customerId = JSON(json["customer_id"]!).asString
         }
-        card.expirationMonth = JSON(json["expiration_month"]!).asInt
-        card.expirationYear = JSON(json["expiration_year"]!).asInt
-		if json["id"] != nil {
-				card.id = (json["id"]! as? NSString)?.longLongValue
+		if json["expiration_month"] != nil && !(json["expiration_month"]! is NSNull) {
+			card.expirationMonth = JSON(json["expiration_month"]!).asInt!
+		}
+		if json["expiration_year"] != nil && !(json["expiration_year"]! is NSNull) {
+			card.expirationMonth = JSON(json["expiration_year"]!).asInt!
+		}
+		if json["id"] != nil && !(json["id"]! is NSNull) {
+				card._id = (json["id"]! as? NSString)!.longLongValue
 		}
         card.lastFourDigits = JSON(json["last_four_digits"]!).asString
         card.firstSixDigits = JSON(json["first_six_digits"]!).asString

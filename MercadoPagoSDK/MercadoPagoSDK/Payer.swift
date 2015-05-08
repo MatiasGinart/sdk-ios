@@ -10,13 +10,15 @@ import Foundation
 
 public class Payer {
     public var email : String!
-    public var id : Int64!
+    public var _id : Int64 = 0
     public var identification : Identification!
     public var type : String!
     
     public class func fromJSON(json : NSDictionary) -> Payer {
         var payer : Payer = Payer()
-        payer.id = (json["id"] as? NSString)?.longLongValue
+		if json["id"] != nil && !(json["id"]! is NSNull) {
+			payer._id = (json["id"] as? NSString)!.longLongValue
+		}
         payer.email = JSON(json["email"]!).asString
         payer.type = JSON(json["type"]!).asString
         if let identificationDic = json["identification"] as? NSDictionary {

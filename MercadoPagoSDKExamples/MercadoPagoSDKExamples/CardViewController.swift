@@ -97,7 +97,7 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.registerNib(cardNumberNib, forCellReuseIdentifier: "cardNumberCell")
         self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as! MPCardNumberTableViewCell
         self.cardNumberCell.height = 55.0
-        self.cardNumberCell.setIcon(self.paymentMethod.id)
+        self.cardNumberCell.setIcon(self.paymentMethod._id)
         self.cardNumberCell._setSetting(self.paymentMethod.settings[0])
 
         var expirationDateNib = UINib(nibName: "MPExpirationDateTableViewCell", bundle: MercadoPago.getBundle())

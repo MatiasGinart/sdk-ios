@@ -66,21 +66,23 @@ class ExamplesUtils {
         return SimpleVaultViewController(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, supportedPaymentTypes: supportedPaymentTypes, callback: callback)
     }
     
-    class func startAdvancedVaultActivity(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void) -> AdvancedVaultViewController {
+    class func startAdvancedVaultActivity(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void) -> AdvancedVaultViewController {
         return AdvancedVaultViewController(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, amount: amount, supportedPaymentTypes: supportedPaymentTypes, callback: callback)
     }
     
-    class func startFinalVaultActivity(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void) -> FinalVaultViewController {
+    class func startFinalVaultActivity(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void) -> FinalVaultViewController {
         return FinalVaultViewController(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, amount: amount, supportedPaymentTypes: supportedPaymentTypes, callback: callback)
     }
     
-    class func createPayment(token: String, installments: Int?, cardIssuerId: Int64?, paymentMethod: PaymentMethod, callback: (payment: Payment) -> Void) {
+    class func createPayment(token: String, installments: Int, cardIssuerId: Int64?, paymentMethod: PaymentMethod, callback: (payment: Payment) -> Void) {
         // Set item
-        let item : Item = Item(id: ExamplesUtils.ITEM_ID, quantity: ExamplesUtils.ITEM_QUANTITY,
+        let item : Item = Item(_id: ExamplesUtils.ITEM_ID, quantity: ExamplesUtils.ITEM_QUANTITY,
             unitPrice: ExamplesUtils.ITEM_UNIT_PRICE)
 
+		let issuerId : Int64 = cardIssuerId == nil ? 0 : cardIssuerId!
+		
         // Set merchant payment
-        let payment : MerchantPayment = MerchantPayment(item: item, installments: installments, cardIssuerId: cardIssuerId, token: token, paymentMethodId: paymentMethod.id, campaignId: nil, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN)
+        let payment : MerchantPayment = MerchantPayment(item: item, installments: installments, cardIssuerId: issuerId, token: token, paymentMethodId: paymentMethod._id, campaignId: 0, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN)
         
         // Create payment
         MerchantServer.createPayment(ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantPaymentUri: ExamplesUtils.MERCHANT_MOCK_CREATE_PAYMENT_URI, payment: payment, success: callback, failure: nil)

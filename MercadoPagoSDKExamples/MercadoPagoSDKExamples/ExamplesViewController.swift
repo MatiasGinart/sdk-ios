@@ -61,23 +61,23 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
         case 0:
             self.showViewController(MercadoPago.startPaymentMethodsViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card"], callback: { (paymentMethod: PaymentMethod) -> Void in
                 self.showViewController(ExamplesUtils.startCardActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, paymentMethod: paymentMethod, callback: {(token: Token?) -> Void in
-                    self.createPayment(token!.id, paymentMethod: paymentMethod, installments: 1, cardIssuerId: nil, discount: nil)
+                    self.createPayment(token!._id, paymentMethod: paymentMethod, installments: 1, cardIssuerId: nil, discount: nil)
                 }), sender: self)}), sender: self)
         case 1:
             self.showViewController(ExamplesUtils.startSimpleVaultActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card"], callback: {(paymentMethod: PaymentMethod, token: Token?) -> Void in
-                    self.createPayment(token!.id, paymentMethod: paymentMethod, installments: 1, cardIssuerId: nil, discount: nil)
+                    self.createPayment(token!._id, paymentMethod: paymentMethod, installments: 1, cardIssuerId: nil, discount: nil)
             } ), sender: self)
             
         case 2:
-            self.showViewController(ExamplesUtils.startAdvancedVaultActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void in
+            self.showViewController(ExamplesUtils.startAdvancedVaultActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void in
                 self.createPayment(token, paymentMethod: paymentMethod, installments: installments, cardIssuerId: issuerId, discount: nil)
             }), sender: self)
         case 3:
-            self.showViewController(ExamplesUtils.startFinalVaultActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void in
+            self.showViewController(ExamplesUtils.startFinalVaultActivity(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void in
                 self.createPayment(token, paymentMethod: paymentMethod, installments: installments, cardIssuerId: issuerId, discount: nil)
             }), sender: self)
         case 4:
-            self.showViewController(MercadoPago.startVaultViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void in
+            self.showViewController(MercadoPago.startVaultViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: ExamplesUtils.MERCHANT_MOCK_BASE_URL, merchantGetCustomerUri: ExamplesUtils.MERCHANT_MOCK_GET_CUSTOMER_URI, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void in
                     self.createPayment(token, paymentMethod: paymentMethod, installments: installments, cardIssuerId: issuerId, discount: nil)
             }), sender: self)
         default:
@@ -96,7 +96,7 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
 
     }
 
-    func createPayment(token: String?, paymentMethod: PaymentMethod, installments: Int?, cardIssuerId: Int64?, discount: Discount?) {
+    func createPayment(token: String?, paymentMethod: PaymentMethod, installments: Int, cardIssuerId: Int64?, discount: Discount?) {
         if token != nil {
             ExamplesUtils.createPayment(token!, installments: installments, cardIssuerId: cardIssuerId, paymentMethod: paymentMethod, callback: { (payment: Payment) -> Void in
                 self.showViewController(MercadoPago.startCongratsViewController(payment, paymentMethod: paymentMethod), sender: self)

@@ -9,13 +9,13 @@
 import Foundation
 
 public class CardIssuer : NSObject {
-    public var id : String!
+    public var _id : String!
     public var name : String!
     public var labels : [String]!
     
-    public init (id: String, name: String?, labels: [String]) {
+    public init (_id: String, name: String?, labels: [String]) {
         super.init()
-        self.id = id
+        self._id = _id
         self.name = name
         self.labels = labels
     }

@@ -17,12 +17,12 @@ public class CardToken : NSObject {
     
     public var cardNumber : String?
     public var securityCode : String?
-    public var expirationMonth : Int?
-    public var expirationYear : Int?
+    public var expirationMonth : Int = 0
+    public var expirationYear : Int = 0
     public var cardholder : Cardholder?
     public var device : Device?
     
-    public init (cardNumber: String?, expirationMonth: Int?, expirationYear: Int?,
+    public init (cardNumber: String?, expirationMonth: Int, expirationYear: Int,
         securityCode: String?, cardholderName: String, docType: String, docNumber: String) {
             super.init()
             self.cardholder = Cardholder()
@@ -147,7 +147,7 @@ public class CardToken : NSObject {
         return validateExpiryDate(expirationMonth, year: expirationYear)
     }
     
-    public func validateExpiryDate(month: Int?, year: Int?) -> NSError? {
+    public func validateExpiryDate(month: Int, year: Int) -> NSError? {
         if !validateExpMonth(month) {
 			return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["expiryDate" : "invalid_field".localized])
         }
@@ -155,25 +155,19 @@ public class CardToken : NSObject {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["expiryDate" : "invalid_field".localized])
         }
         
-        if hasMonthPassed(self.expirationYear!, month: self.expirationMonth!) {
+        if hasMonthPassed(self.expirationYear, month: self.expirationMonth) {
             return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["expiryDate" : "invalid_field".localized])
         }
         
         return nil
     }
     
-    public func validateExpMonth(month: Int?) -> Bool {
-        if month == nil {
-            return false
-        }
-        return (month! >= 1 && month! <= 12)
+    public func validateExpMonth(month: Int) -> Bool {
+        return (month >= 1 && month <= 12)
     }
     
-    public func validateExpYear(year: Int?) -> Bool {
-        if year == nil {
-            return false
-        }
-        return !hasYearPassed(year!)
+    public func validateExpYear(year: Int) -> Bool {
+        return !hasYearPassed(year)
     }
     
     public func validateIdentification() -> NSError? {
@@ -214,7 +208,7 @@ public class CardToken : NSObject {
                 let len = count(cardholder!.identification!.number!)
                 let min = identificationType!.minLength
                 let max = identificationType!.maxLength
-                if min != nil && max != nil {
+                if min != 0 && max != 0 {
                     if len > max && len < min {
                         return NSError(domain: "mercadopago.sdk.card.error", code: 1, userInfo: ["identification" : "invalid_field".localized])
                     } else {
@@ -239,9 +233,8 @@ public class CardToken : NSObject {
         }
     }
 
-    public func hasYearPassed(year: Int?) -> Bool {
-        let aux : Int? = normalizeYear(year)
-        let normalized : Int = aux == nil ? Int.min : aux!
+    public func hasYearPassed(year: Int) -> Bool {
+        let normalized : Int = normalizeYear(year)
         return normalized < now.year
     }
     
@@ -249,16 +242,13 @@ public class CardToken : NSObject {
         return hasYearPassed(year) || normalizeYear(year) == now.year && month < (now.month + 1)
     }
     
-    public func normalizeYear(year: Int?) -> Int? {
-        if year == nil {
-            return nil
-        }
+    public func normalizeYear(year: Int) -> Int {
         if year < 100 && year >= 0 {
             let currentYear : String = String(now.year)
             let range = Range(start: currentYear.startIndex,
                 end: advance(currentYear.endIndex, -2))
             let prefix : String = currentYear.substringWithRange(range)
-            return String(prefix + String(year!)).toInt()!
+            return String(prefix + String(year)).toInt()!
         }
         return year
     }
@@ -300,8 +290,8 @@ public class CardToken : NSObject {
         let obj:[String:AnyObject] = [
             "card_number": String.isNullOrEmpty(self.cardNumber) ? JSON.null : self.cardNumber!,
             "security_code" : String.isNullOrEmpty(self.securityCode) ? JSON.null : self.securityCode!,
-            "expiration_month" : self.expirationMonth == nil ? JSON.null : self.expirationMonth!,
-            "expiration_year" : self.expirationYear == nil ? JSON.null : self.expirationYear!,
+            "expiration_month" : self.expirationMonth,
+            "expiration_year" : self.expirationYear,
             "cardholder" : self.cardholder == nil ? JSON.null : JSON.parse(self.cardholder!.toJSONString()).mutableCopyOfTheObject(),
             "device" : self.device == nil ? JSON.null : self.device!.toJSONString()
         ]

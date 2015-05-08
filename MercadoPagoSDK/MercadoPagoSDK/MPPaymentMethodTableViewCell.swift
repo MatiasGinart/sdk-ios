@@ -37,7 +37,7 @@ public class MPPaymentMethodTableViewCell : UITableViewCell {
 			setEmptyPaymentMethod()
         } else {
             self.cardTextLabel.text = card!.paymentMethod!.name + " " + "terminada en".localized + " " + card!.lastFourDigits!
-            self.cardIcon.image = UIImage(named: "icoTc_" + card!.paymentMethod!.id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
+            self.cardIcon.image = UIImage(named: "icoTc_" + card!.paymentMethod!._id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
         }
     }
     
@@ -49,7 +49,7 @@ public class MPPaymentMethodTableViewCell : UITableViewCell {
                 end: card!.cardNumber!.endIndex)
             let lastFourDigits : String = card!.cardNumber!.substringWithRange(range)
             self.cardTextLabel.text = paymentMethod!.name + " terminada en ".localized + lastFourDigits
-            self.cardIcon.image = UIImage(named: "icoTc_" + paymentMethod!.id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
+            self.cardIcon.image = UIImage(named: "icoTc_" + paymentMethod!._id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
         }
     }
     
@@ -58,7 +58,7 @@ public class MPPaymentMethodTableViewCell : UITableViewCell {
 			setEmptyPaymentMethod()
         } else {
            self.cardTextLabel.text = paymentMethod!.name
-            self.cardIcon.image = UIImage(named: "icoTc_" + paymentMethod!.id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
+            self.cardIcon.image = UIImage(named: "icoTc_" + paymentMethod!._id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
         }
     }
     

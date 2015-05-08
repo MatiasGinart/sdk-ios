@@ -9,13 +9,13 @@
 import Foundation
 
 public class Issuer : NSObject {
-    public var id : Int64?
+    public var _id : Int64?
     public var name : String?
     
     public class func fromJSON(json : NSDictionary) -> Issuer {
         var issuer : Issuer = Issuer()
-        if json["id"] != nil {
-            issuer.id = (json["id"]! as? NSString)?.longLongValue
+        if json["id"] != nil && !(json["id"]! is NSNull) {
+            issuer._id = (json["id"]! as? NSString)?.longLongValue
         }
         issuer.name = JSON(json["name"]!).asString
         return issuer

@@ -17,7 +17,7 @@ public class GenericErrorView : UIView {
     
     var backgroundImageView : UIImageView!
     var errorLabel : UILabel!
-    var minimumHeight : CGFloat!
+    var minimumHeight : CGFloat = 0
     var bundle : NSBundle? = MercadoPago.getBundle()
     
     public override init(frame: CGRect) {

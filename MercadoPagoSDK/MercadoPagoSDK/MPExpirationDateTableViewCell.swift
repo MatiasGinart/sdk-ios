@@ -29,9 +29,9 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
         super.init(coder: aDecoder)
     }
     
-    public func getExpirationMonth() -> Int? {
+    public func getExpirationMonth() -> Int {
         if String.isNullOrEmpty(self.expirationDateTextField.text) {
-            return nil
+            return 0
         }
         
         var monthStr = split(self.expirationDateTextField.text!) {$0 == "/"}[0] as NSString
@@ -39,9 +39,9 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
         return monthStr.integerValue
     }
     
-    public func getExpirationYear() -> Int? {
+    public func getExpirationYear() -> Int {
         if String.isNullOrEmpty(self.expirationDateTextField.text) {
-            return nil
+            return 0
         }
         
         var yearStr = split(self.expirationDateTextField.text!) {$0 == "/"}[1] as NSString

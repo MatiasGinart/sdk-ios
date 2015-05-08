@@ -9,22 +9,22 @@
 import Foundation
 
 public class Item : NSObject {
-    public var id : String!
-    public var quantity : Int!
-    public var unitPrice : Double!
+    public var _id : String!
+    public var quantity : Int = 0
+    public var unitPrice : Double = 0
     
-    public init(id: String, quantity: Int, unitPrice: Double) {
+    public init(_id: String, quantity: Int, unitPrice: Double) {
         super.init()
-        self.id = id
+        self._id = _id
         self.quantity = quantity
         self.unitPrice = unitPrice
     }
     
     public func toJSONString() -> String {
         let obj:[String:AnyObject] = [
-            "id": self.id!,
-            "quantity" : self.quantity!,
-            "unit_price" : self.unitPrice!
+            "id": self._id!,
+            "quantity" : self.quantity,
+            "unit_price" : self.unitPrice
         ]
         return JSON(obj).toString()
     }

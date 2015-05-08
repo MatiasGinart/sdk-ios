@@ -17,13 +17,13 @@ class AdvancedVaultViewController : SimpleVaultViewController {
     var amount : Double = 0
     
     var selectedIssuer : Issuer? = nil
-    var advancedCallback : ((paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void)?
+    var advancedCallback : ((paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void)?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    init(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: ((paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int?) -> Void)?) {
+    init(merchantPublicKey: String, merchantBaseUrl: String, merchantGetCustomerUri: String, merchantAccessToken: String, amount: Double, supportedPaymentTypes: [String], callback: ((paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void)?) {
         super.init(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, supportedPaymentTypes: supportedPaymentTypes, callback: nil)
         advancedCallback = callback
         self.amount = amount
@@ -35,7 +35,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
             self.newCard = true
             self.selectedPaymentMethod = paymentMethod
             if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
-                self.securityCodeLength = paymentMethod.settings![0].securityCode!.length!
+                self.securityCodeLength = paymentMethod.settings![0].securityCode!.length
                 self.securityCodeRequired = self.securityCodeLength != 0
             }
             let newCardViewController = MercadoPago.startNewCardViewController(MercadoPago.PUBLIC_KEY, key: ExamplesUtils.MERCHANT_PUBLIC_KEY, paymentMethod: self.selectedPaymentMethod!, requireSecurityCode: self.securityCodeRequired, callback: self.getNewCardCallback())
@@ -59,8 +59,8 @@ class AdvancedVaultViewController : SimpleVaultViewController {
             self.selectedCardToken = cardToken
             self.bin = self.selectedCardToken?.getBin()
             if self.selectedPaymentMethod!.settings != nil && self.selectedPaymentMethod!.settings.count > 0 {
-                self.securityCodeLength = self.selectedPaymentMethod!.settings![0].securityCode!.length!
-                self.securityCodeRequired = self.securityCodeLength != 0
+                self.securityCodeLength = self.selectedPaymentMethod!.settings![0].securityCode!.length
+				self.securityCodeRequired = self.securityCodeLength != 0
             }
             self.loadPayerCosts()
             self.navigationController!.popToViewController(self, animated: true)
@@ -142,7 +142,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
         self.view.addSubview(self.loadingView)
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
         
-        let issuerId = self.selectedIssuer != nil ? self.selectedIssuer!.id : nil
+        let issuerId = self.selectedIssuer != nil ? self.selectedIssuer!._id : nil
      
         mercadoPago.getInstallments(self.bin!, amount: self.amount, issuerId: issuerId, paymentTypeId: self.selectedPaymentMethod!.paymentTypeId!, success: {(installments: [Installment]?) -> Void in
             if installments != nil {
@@ -173,13 +173,16 @@ class AdvancedVaultViewController : SimpleVaultViewController {
         // Create token
         if selectedCard != nil {
             
-            let savedCardToken : SavedCardToken = SavedCardToken(cardId: String(format:"%ld",selectedCard!.id!), securityCode: securityCodeCell.securityCodeTextField.text)
+            let savedCardToken : SavedCardToken = SavedCardToken(cardId: String(format:"%ld",selectedCard!._id), securityCode: securityCodeCell.securityCodeTextField.text)
             
             if savedCardToken.validate() {
                 // Send card id to get token id
                 self.view.addSubview(self.loadingView)
+				
+				var installments = self.selectedPayerCost == nil ? 0 : self.selectedPayerCost!.installments
+				
                 mercadoPago.createToken(savedCardToken, success: {(token: Token?) -> Void in
-                    self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?.id, issuerId: self.selectedIssuer?.id, installments: self.selectedPayerCost?.installments)
+                    self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?._id, issuerId: self.selectedIssuer?._id, installments: installments)
                 }, failure: nil)
             } else {
                 println("Invalid data")
@@ -188,8 +191,11 @@ class AdvancedVaultViewController : SimpleVaultViewController {
         } else {
             self.selectedCardToken!.securityCode = self.securityCodeCell.securityCodeTextField.text
             self.view.addSubview(self.loadingView)
+			
+			var installments = self.selectedPayerCost == nil ? 0 : self.selectedPayerCost!.installments
+			
             mercadoPago.createNewCardToken(self.selectedCardToken!, success: {(token: Token?) -> Void in
-                    self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?.id, issuerId: self.selectedIssuer?.id, installments: self.selectedPayerCost?.installments)
+                    self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?._id, issuerId: self.selectedIssuer?._id, installments: installments)
             }, failure: nil)
         }
     }

@@ -9,12 +9,14 @@
 import Foundation
 
 public class Order : NSObject {
-    public var id : Int!
+    public var _id : Int = 0
     public var type : String!
     
     public class func fromJSON(json : NSDictionary) -> Order {
         var order : Order = Order()
-        order.id = json["id"] as? Int
+		if json["id"] != nil && !(json["id"]! is NSNull) {
+			order._id = (json["id"] as? Int)!
+		}
         order.type = json["type"] as? String
         return order
     }

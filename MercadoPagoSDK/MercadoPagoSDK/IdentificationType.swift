@@ -9,19 +9,25 @@
 import Foundation
 
 public class IdentificationType : NSObject {
-    public var id : String?
+    public var _id : String?
     public var name : String?
     public var type : String?
-    public var minLength : Int?
-    public var maxLength : Int?
+    public var minLength : Int = 0
+    public var maxLength : Int = 0
     
     public class func fromJSON(json : NSDictionary) -> IdentificationType {
         var identificationType : IdentificationType = IdentificationType()
-        identificationType.id = JSON(json["id"]!).asString
+        identificationType._id = JSON(json["id"]!).asString
         identificationType.name = JSON(json["name"]!).asString
         identificationType.type = JSON(json["type"]!).asString
-        identificationType.minLength = json["min_length"] as? Int
-        identificationType.maxLength = json["max_length"] as? Int
+		
+		if json["min_length"] != nil && !(json["min_length"]! is NSNull) {
+			identificationType.minLength = (json["min_length"] as? Int)!
+		}
+		if json["max_length"] != nil && !(json["max_length"]! is NSNull) {
+			identificationType.maxLength = (json["max_length"] as? Int)!
+		}
+		
         return identificationType
     }
 }

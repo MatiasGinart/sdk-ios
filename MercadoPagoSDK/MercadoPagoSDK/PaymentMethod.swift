@@ -9,7 +9,7 @@
 import Foundation
 
 public class PaymentMethod : Serializable {
-    public var id : String!
+    public var _id : String!
     public var name : String!
     public var paymentTypeId : String!
     public var settings : [Setting]!
@@ -42,7 +42,7 @@ public class PaymentMethod : Serializable {
     
     public class func fromJSON(json : NSDictionary) -> PaymentMethod {
         var paymentMethod : PaymentMethod = PaymentMethod()
-        paymentMethod.id = JSON(json["id"]!).asString
+        paymentMethod._id = JSON(json["id"]!).asString
         paymentMethod.name = JSON(json["name"]!).asString
         paymentMethod.paymentTypeId = JSON(json["payment_type_id"]!).asString
         var settings : [Setting] = [Setting]()

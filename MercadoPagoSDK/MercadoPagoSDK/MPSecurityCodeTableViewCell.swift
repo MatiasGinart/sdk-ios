@@ -33,8 +33,8 @@ public class MPSecurityCodeTableViewCell : ErrorTableViewCell {
     }
     
     public func fillWithPaymentMethod(pm : PaymentMethod) {
-        self.securityCodeImageView.image = UIImage(named: "imgTc_" + pm.id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection: nil)
-        if pm.id == "amex" {
+        self.securityCodeImageView.image = UIImage(named: "imgTc_" + pm._id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection: nil)
+        if pm._id == "amex" {
 			var amexCvvLength = 4
 			if pm.settings != nil && pm.settings.count > 0 {
 				amexCvvLength = pm.settings[0].securityCode!.length

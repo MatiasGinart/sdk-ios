@@ -9,13 +9,15 @@
 import Foundation
 
 public class CardNumber : Serializable {
-    public var length : Int!
+    public var length : Int = 0
     public var validation : String!
     
     public class func fromJSON(json : NSDictionary) -> CardNumber {
         var cardNumber : CardNumber = CardNumber()
         cardNumber.validation = JSON(json["validation"]!).asString
-        cardNumber.length = JSON(json["length"]!).asInt
+		if json["length"] != nil && !(json["length"]! is NSNull) {
+			cardNumber.length = JSON(json["length"]!).asInt!
+		}
         return cardNumber
     }
     

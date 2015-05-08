@@ -20,8 +20,8 @@ public class Payment : NSObject {
     public var _description : String!
     public var externalReference : String!
     public var feesDetails : [FeesDetail]!
-    public var id : Int!
-    public var installments : Int!
+    public var _id : Int = 0
+    public var installments : Int = 0
     public var liveMode : Bool!
     public var metadata : NSObject!
     public var moneyReleaseDate : NSDate!
@@ -34,22 +34,25 @@ public class Payment : NSObject {
     public var statementDescriptor : String!
     public var status : String!
     public var statusDetail : String!
-    public var transactionAmount : Double!
-    public var transactionAmountRefunded : Double!
+    public var transactionAmount : Double = 0
+    public var transactionAmountRefunded : Double = 0
     public var transactionDetails : TransactionDetails!
     public var collectorId : String!
-    public var couponAmount : Double!
-    public var differentialPricingId : Int64!
-    public var issuerId : Int!
+    public var couponAmount : Double = 0
+    public var differentialPricingId : Int64 = 0
+    public var issuerId : Int = 0
     
     public class func fromJSON(json : NSDictionary) -> Payment {
         var payment : Payment = Payment()
-        
-        payment.id = json["id"] as? Int
-        if json["binary_mode"] != nil {
+		
+		if json["id"] != nil && !(json["id"]! is NSNull) {
+			payment._id = (json["id"]! as? Int)!
+		}
+		
+        if json["binary_mode"] != nil && !(json["binary_mode"]! is NSNull) {
             payment.binaryMode = JSON(json["binary_mode"]!).asBool
         }
-        if json["captured"] != nil {
+        if json["captured"] != nil && !(json["captured"]! is NSNull) {
             payment.captured = JSON(json["captured"]!).asBool
         }
         
@@ -60,7 +63,9 @@ public class Payment : NSObject {
         payment.dateApproved = getDateFromString(json["date_approved"] as? String)
         payment._description = JSON(json["description"]!).asString
         payment.externalReference = JSON(json["external_reference"]!).asString
-        payment.installments = json["installments"] as? Int
+		if json["installments"] != nil && !(json["installments"]! is NSNull) {
+			payment.installments = (json["installments"] as? Int	)!
+		}
         payment.liveMode = JSON(json["live_mode"]!).asBool
         payment.notificationUrl = JSON(json["notification_url"]!).asString
         var feesDetails : [FeesDetail] = [FeesDetail]()
@@ -95,15 +100,26 @@ public class Payment : NSObject {
         payment.statementDescriptor = JSON(json["statement_descriptor"]!).asString
         payment.status = JSON(json["status"]!).asString
         payment.statusDetail = JSON(json["status_detail"]!).asString
-        payment.transactionAmount = JSON(json["transaction_amount"]!).asDouble
-        payment.transactionAmountRefunded = JSON(json["transaction_amount_refunded"]!).asDouble
+		if json["transaction_amount"] != nil && !(json["transaction_amount"]! is NSNull) {
+			payment.transactionAmount = JSON(json["transaction_amount"]!).asDouble!
+		}
+		if json["transaction_amount_refunded"] != nil && !(json["transaction_amount_refunded"]! is NSNull) {
+			payment.transactionAmountRefunded = JSON(json["transaction_amount_refunded"]!).asDouble!
+		}
         if let tdDic = json["transaction_details"] as? NSDictionary {
             payment.transactionDetails = TransactionDetails.fromJSON(tdDic)
         }
         payment.collectorId = json["collector_id"] as? String
-        payment.couponAmount = json["coupon_amount"] as? Double
-        payment.differentialPricingId = (json["differential_pricing_id"] as? NSString)?.longLongValue
-        payment.issuerId = json["issuer_id"] as? Int
+		if json["coupon_amount"] != nil && !(json["coupon_amount"]! is NSNull) {
+			payment.couponAmount = JSON(json["coupon_amount"]!).asDouble!
+		}
+		if json["differential_pricing_id"] != nil && !(json["differential_pricing_id"]! is NSNull) {
+			payment.differentialPricingId = (json["differential_pricing_id"] as? NSString)!.longLongValue
+		}
+		
+		if json["issuer_id"] != nil && !(json["issuer_id"]! is NSNull) {
+			payment.issuerId = (json["issuer_id"] as? NSString)!.integerValue
+		}
         return payment
     }
     

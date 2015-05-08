@@ -108,6 +108,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK12ApiException")
 @property (nonatomic) Cause * __null_unspecified cause;
 @property (nonatomic, copy) NSString * __null_unspecified error;
 @property (nonatomic, copy) NSString * __null_unspecified message;
+@property (nonatomic) NSInteger status;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -144,7 +145,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK4Card")
 @property (nonatomic, copy) NSString * __nullable customerId;
 @property (nonatomic) NSDate * __nullable dateCreated;
 @property (nonatomic) NSDate * __nullable dateLastUpdated;
+@property (nonatomic) NSInteger expirationMonth;
+@property (nonatomic) NSInteger expirationYear;
 @property (nonatomic, copy) NSString * __nullable firstSixDigits;
+@property (nonatomic) int64_t _id;
 @property (nonatomic, copy) NSString * __nullable lastFourDigits;
 @property (nonatomic) PaymentMethod * __nullable paymentMethod;
 @property (nonatomic) Issuer * __nullable issuer;
@@ -157,15 +161,16 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK4Card")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK10CardIssuer")
 @interface CardIssuer : NSObject
-@property (nonatomic, copy) NSString * __null_unspecified id;
+@property (nonatomic, copy) NSString * __null_unspecified _id;
 @property (nonatomic, copy) NSString * __null_unspecified name;
 @property (nonatomic, copy) NSArray * __null_unspecified labels;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithId:(NSString * __nonnull)id name:(NSString * __nullable)name labels:(NSArray * __nonnull)labels OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWith_id:(NSString * __nonnull)_id name:(NSString * __nullable)name labels:(NSArray * __nonnull)labels OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK10CardNumber")
 @interface CardNumber : Serializable
+@property (nonatomic) NSInteger length;
 @property (nonatomic, copy) NSString * __null_unspecified validation;
 + (CardNumber * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -179,8 +184,11 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK9CardToken")
 @interface CardToken : NSObject
 @property (nonatomic, copy) NSString * __nullable cardNumber;
 @property (nonatomic, copy) NSString * __nullable securityCode;
+@property (nonatomic) NSInteger expirationMonth;
+@property (nonatomic) NSInteger expirationYear;
 @property (nonatomic) Cardholder * __nullable cardholder;
 @property (nonatomic) Device * __nullable device;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCardNumber:(NSString * __nullable)cardNumber expirationMonth:(NSInteger)expirationMonth expirationYear:(NSInteger)expirationYear securityCode:(NSString * __nullable)securityCode cardholderName:(NSString * __nonnull)cardholderName docType:(NSString * __nonnull)docType docNumber:(NSString * __nonnull)docNumber OBJC_DESIGNATED_INITIALIZER;
 - (NSString * __nullable)normalizeCardNumber:(NSString * __nullable)number;
 - (BOOL)validate;
 - (BOOL)validate:(BOOL)includeSecurityCode;
@@ -191,12 +199,17 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK9CardToken")
 - (NSError * __nullable)validateSecurityCodeWithPaymentMethod:(PaymentMethod * __nonnull)paymentMethod;
 - (NSError * __nullable)validateSecurityCodeWithPaymentMethod:(NSString * __nonnull)securityCode paymentMethod:(PaymentMethod * __nonnull)paymentMethod bin:(NSString * __nonnull)bin;
 - (NSError * __nullable)validateExpiryDate;
+- (NSError * __nullable)validateExpiryDate:(NSInteger)month year:(NSInteger)year;
+- (BOOL)validateExpMonth:(NSInteger)month;
+- (BOOL)validateExpYear:(NSInteger)year;
 - (NSError * __nullable)validateIdentification;
 - (NSError * __nullable)validateIdentificationType;
 - (NSError * __nullable)validateIdentificationNumber;
 - (NSError * __nullable)validateIdentificationNumber:(IdentificationType * __nullable)identificationType;
 - (NSError * __nullable)validateCardholderName;
+- (BOOL)hasYearPassed:(NSInteger)year;
 - (BOOL)hasMonthPassed:(NSInteger)year month:(NSInteger)month;
+- (NSInteger)normalizeYear:(NSInteger)year;
 - (BOOL)checkLuhn:(NSString * __nonnull)cardNumber;
 - (NSString * __nullable)getBin;
 - (NSString * __nonnull)toJSONString;
@@ -257,9 +270,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK22CongratsViewController")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK8Currency")
 @interface Currency : NSObject
-@property (nonatomic, copy) NSString * __null_unspecified id;
+@property (nonatomic, copy) NSString * __null_unspecified _id;
 @property (nonatomic, copy) NSString * __null_unspecified _description;
 @property (nonatomic, copy) NSString * __null_unspecified symbol;
+@property (nonatomic) NSInteger decimalPlaces;
 @end
 
 @class Phone;
@@ -273,7 +287,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK8Customer")
 @property (nonatomic) NSDate * __nullable dateLastUpdated;
 @property (nonatomic, copy) NSString * __nullable email;
 @property (nonatomic, copy) NSString * __nullable firstName;
-@property (nonatomic, copy) NSString * __nullable id;
+@property (nonatomic, copy) NSString * __nullable _id;
 @property (nonatomic) Identification * __nullable identification;
 @property (nonatomic, copy) NSString * __nullable lastName;
 @property (nonatomic) NSDictionary * __nullable metadata;
@@ -310,8 +324,12 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK6Device")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK8Discount")
 @interface Discount : NSObject
+@property (nonatomic) int64_t amountOff;
+@property (nonatomic) int64_t couponAmount;
 @property (nonatomic, copy) NSString * __null_unspecified currencyId;
+@property (nonatomic) NSInteger _id;
 @property (nonatomic, copy) NSString * __null_unspecified name;
+@property (nonatomic) int64_t percentOff;
 + (Discount * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -330,6 +348,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK18ErrorTableViewCell")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK10FeesDetail")
 @interface FeesDetail : NSObject
+@property (nonatomic) double amount;
+@property (nonatomic) double amountRefunded;
 @property (nonatomic, copy) NSString * __null_unspecified feePayer;
 @property (nonatomic, copy) NSString * __null_unspecified type;
 + (FeesDetail * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
@@ -388,9 +408,11 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21IdentificationService")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK18IdentificationType")
 @interface IdentificationType : NSObject
-@property (nonatomic, copy) NSString * __nullable id;
+@property (nonatomic, copy) NSString * __nullable _id;
 @property (nonatomic, copy) NSString * __nullable name;
 @property (nonatomic, copy) NSString * __nullable type;
+@property (nonatomic) NSInteger minLength;
+@property (nonatomic) NSInteger maxLength;
 + (IdentificationType * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -465,8 +487,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21IssuersViewController")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK4Item")
 @interface Item : NSObject
-@property (nonatomic, copy) NSString * __null_unspecified id;
-- (SWIFT_NULLABILITY(nonnull) instancetype)initWithId:(NSString * __nonnull)id quantity:(NSInteger)quantity unitPrice:(double)unitPrice OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * __null_unspecified _id;
+@property (nonatomic) NSInteger quantity;
+@property (nonatomic) double unitPrice;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWith_id:(NSString * __nonnull)_id quantity:(NSInteger)quantity unitPrice:(double)unitPrice OBJC_DESIGNATED_INITIALIZER;
 - (NSString * __nonnull)toJSONString;
 @end
 
@@ -503,6 +527,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK29MPExpirationDateTableViewCell")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (NSInteger)getExpirationMonth;
+- (NSInteger)getExpirationYear;
 - (void)setTextFieldDelegate:(id <UITextFieldDelegate> __nonnull)delegate;
 - (BOOL)textField:(UITextField * __nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * __nonnull)string;
 @end
@@ -607,11 +633,15 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK11MercadoPago")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK15MerchantPayment")
 @interface MerchantPayment : NSObject
+@property (nonatomic) int64_t cardIssuerId;
 @property (nonatomic, copy) NSString * __null_unspecified cardToken;
+@property (nonatomic) NSInteger campaignId;
+@property (nonatomic) NSInteger installments;
 @property (nonatomic) Item * __null_unspecified item;
 @property (nonatomic, copy) NSString * __null_unspecified merchantAccessToken;
 @property (nonatomic, copy) NSString * __null_unspecified paymentMethodId;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithItem:(Item * __nonnull)item installments:(NSInteger)installments cardIssuerId:(int64_t)cardIssuerId token:(NSString * __nonnull)token paymentMethodId:(NSString * __nonnull)paymentMethodId campaignId:(NSInteger)campaignId merchantAccessToken:(NSString * __nonnull)merchantAccessToken OBJC_DESIGNATED_INITIALIZER;
 - (NSString * __nonnull)toJSONString;
 @end
 
@@ -651,6 +681,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21NewCardViewController")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK5Order")
 @interface Order : NSObject
+@property (nonatomic) NSInteger _id;
 @property (nonatomic, copy) NSString * __null_unspecified type;
 + (Order * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -659,8 +690,15 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK5Order")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK9PayerCost")
 @interface PayerCost : NSObject
+@property (nonatomic) NSInteger installments;
+@property (nonatomic) double installmentRate;
 @property (nonatomic, copy) NSArray * __null_unspecified labels;
+@property (nonatomic) double minAllowedAmount;
+@property (nonatomic) double maxAllowedAmount;
 @property (nonatomic, copy) NSString * __null_unspecified recommendedMessage;
+@property (nonatomic) double installmentAmount;
+@property (nonatomic) double totalAmount;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithInstallments:(NSInteger)installments installmentRate:(double)installmentRate labels:(NSArray * __nonnull)labels minAllowedAmount:(double)minAllowedAmount maxAllowedAmount:(double)maxAllowedAmount recommendedMessage:(NSString * __null_unspecified)recommendedMessage installmentAmount:(double)installmentAmount totalAmount:(double)totalAmount OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (PayerCost * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 @end
@@ -679,6 +717,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK7Payment")
 @property (nonatomic, copy) NSString * __null_unspecified _description;
 @property (nonatomic, copy) NSString * __null_unspecified externalReference;
 @property (nonatomic, copy) NSArray * __null_unspecified feesDetails;
+@property (nonatomic) NSInteger _id;
+@property (nonatomic) NSInteger installments;
 @property (nonatomic) NSObject * __null_unspecified metadata;
 @property (nonatomic) NSDate * __null_unspecified moneyReleaseDate;
 @property (nonatomic, copy) NSString * __null_unspecified notificationUrl;
@@ -689,8 +729,13 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK7Payment")
 @property (nonatomic, copy) NSString * __null_unspecified statementDescriptor;
 @property (nonatomic, copy) NSString * __null_unspecified status;
 @property (nonatomic, copy) NSString * __null_unspecified statusDetail;
+@property (nonatomic) double transactionAmount;
+@property (nonatomic) double transactionAmountRefunded;
 @property (nonatomic) TransactionDetails * __null_unspecified transactionDetails;
 @property (nonatomic, copy) NSString * __null_unspecified collectorId;
+@property (nonatomic) double couponAmount;
+@property (nonatomic) int64_t differentialPricingId;
+@property (nonatomic) NSInteger issuerId;
 + (Payment * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 + (NSDate * __null_unspecified)getDateFromString:(NSString * __null_unspecified)string;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -717,7 +762,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK22PaymentIDTableViewCell")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK13PaymentMethod")
 @interface PaymentMethod : Serializable
-@property (nonatomic, copy) NSString * __null_unspecified id;
+@property (nonatomic, copy) NSString * __null_unspecified _id;
 @property (nonatomic, copy) NSString * __null_unspecified name;
 @property (nonatomic, copy) NSString * __null_unspecified paymentTypeId;
 @property (nonatomic, copy) NSArray * __null_unspecified settings;
@@ -790,8 +835,11 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK5Phone")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK6Refund")
 @interface Refund : NSObject
+@property (nonatomic) double amount;
 @property (nonatomic) NSDate * __null_unspecified dateCreated;
+@property (nonatomic) NSInteger _id;
 @property (nonatomic) NSObject * __null_unspecified metadata;
+@property (nonatomic) NSInteger paymentId;
 @property (nonatomic, copy) NSString * __null_unspecified source;
 @property (nonatomic, copy) NSString * __null_unspecified uniqueSequenceNumber;
 + (Refund * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
@@ -816,6 +864,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK14SavedCardToken")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK12SecurityCode")
 @interface SecurityCode : Serializable
+@property (nonatomic) NSInteger length;
 @property (nonatomic, copy) NSString * __null_unspecified cardLocation;
 @property (nonatomic, copy) NSString * __null_unspecified mode;
 + (SecurityCode * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
@@ -837,24 +886,34 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK7Setting")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK5Token")
 @interface Token : NSObject
-@property (nonatomic, copy) NSString * __null_unspecified id;
+@property (nonatomic, copy) NSString * __null_unspecified _id;
 @property (nonatomic, copy) NSString * __null_unspecified publicKey;
 @property (nonatomic, copy) NSString * __null_unspecified cardId;
 @property (nonatomic, copy) NSString * __null_unspecified luhnValidation;
 @property (nonatomic, copy) NSString * __null_unspecified status;
 @property (nonatomic, copy) NSString * __null_unspecified usedDate;
+@property (nonatomic) NSInteger cardNumberLength;
 @property (nonatomic) NSDate * __null_unspecified creationDate;
 @property (nonatomic, copy) NSString * __null_unspecified truncCardNumber;
+@property (nonatomic) NSInteger securityCodeLength;
+@property (nonatomic) NSInteger expirationMonth;
+@property (nonatomic) NSInteger expirationYear;
 @property (nonatomic) NSDate * __null_unspecified lastModifiedDate;
 @property (nonatomic) NSDate * __null_unspecified dueDate;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWith_id:(NSString * __nonnull)_id publicKey:(NSString * __nonnull)publicKey cardId:(NSString * __null_unspecified)cardId luhnValidation:(NSString * __null_unspecified)luhnValidation status:(NSString * __null_unspecified)status usedDate:(NSString * __null_unspecified)usedDate cardNumberLength:(NSInteger)cardNumberLength creationDate:(NSDate * __null_unspecified)creationDate truncCardNumber:(NSString * __null_unspecified)truncCardNumber securityCodeLength:(NSInteger)securityCodeLength expirationMonth:(NSInteger)expirationMonth expirationYear:(NSInteger)expirationYear lastModifiedDate:(NSDate * __null_unspecified)lastModifiedDate dueDate:(NSDate * __nullable)dueDate OBJC_DESIGNATED_INITIALIZER;
 + (Token * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 @end
 
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK18TransactionDetails")
 @interface TransactionDetails : NSObject
+@property (nonatomic) double couponAmount;
 @property (nonatomic, copy) NSString * __null_unspecified externalResourceUrl;
 @property (nonatomic, copy) NSString * __null_unspecified financialInstitution;
+@property (nonatomic) double installmentAmount;
+@property (nonatomic) double netReceivedAmount;
+@property (nonatomic) double overpaidAmount;
+@property (nonatomic) double totalPaidAmount;
 + (TransactionDetails * __nonnull)fromJSON:(NSDictionary * __nonnull)json;
 - (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

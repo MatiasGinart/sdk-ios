@@ -60,7 +60,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 ##Usage
 -----
 - Swift 
-
+```swift
         import MercadoPagoSDK
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
@@ -97,7 +97,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
                 // Put vaultController at the top of navigator.
                 self.nav!.pushViewController(vaultViewController, animated: false)
         }
-
+```
 - Objective-C
 
 	**IMPORTANT: "Embedded Content Contains Swift Code" flag in the Build Settings that needs to be set to YES**

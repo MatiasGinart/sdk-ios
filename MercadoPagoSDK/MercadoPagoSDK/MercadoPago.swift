@@ -82,7 +82,11 @@ public class MercadoPago : NSObject {
     public class func startCongratsViewController(payment: Payment, paymentMethod: PaymentMethod) -> CongratsViewController {
         return CongratsViewController(payment: payment, paymentMethod: paymentMethod)
     }
-    
+	
+	public class func startPromosViewController(merchantPublicKey: String) -> PromoViewController {
+		return PromoViewController(publicKey: merchantPublicKey)
+	}
+	
     public class func startVaultViewController(merchantPublicKey: String, merchantBaseUrl: String?, merchantGetCustomerUri: String?, merchantAccessToken: String?, amount: Double, supportedPaymentTypes: [String], callback: (paymentMethod: PaymentMethod, tokenId: String?, issuerId: Int64?, installments: Int) -> Void) -> VaultViewController {
         
         return VaultViewController(merchantPublicKey: merchantPublicKey, merchantBaseUrl: merchantBaseUrl, merchantGetCustomerUri: merchantGetCustomerUri, merchantAccessToken: merchantAccessToken, amount: amount, supportedPaymentTypes: supportedPaymentTypes, callback: callback)
@@ -263,14 +267,32 @@ public class MercadoPago : NSObject {
             }
         }
     }
-    
+	
+	public func getPromos(success: (promos: [Promo]?) -> Void, failure: ((error: NSError) -> Void)?) {
+		// TODO: Está hecho para MLA fijo porque va a cambiar la URL para que dependa de una API y una public key
+		let service : PromosService = PromosService(baseURL: "https://www.mercadopago.com")
+		service.getPromos(success: { (jsonResult) -> Void in
+			var promosArray = jsonResult as? NSArray?
+			var promos : [Promo] = [Promo]()
+			if promosArray != nil {
+				for var i = 0; i < promosArray!!.count; i++ {
+					if let promoDic = promosArray!![i] as? NSDictionary {
+						promos.append(Promo.fromJSON(promoDic))
+					}
+				}
+			}
+			success(promos: promos)
+		}, failure: failure)
+
+	}
+
     public class func isCardPaymentType(paymentTypeId: String) -> Bool {
         if paymentTypeId == "credit_card" || paymentTypeId == "debit_card" || paymentTypeId == "prepaid_card" {
             return true
         }
         return false
     }
-    
+	
     public class func getBundle() -> NSBundle? {
         var bundle : NSBundle? = nil
         var privatePath = NSBundle.mainBundle().privateFrameworksPath

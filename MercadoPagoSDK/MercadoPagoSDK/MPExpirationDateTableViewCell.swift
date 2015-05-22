@@ -11,8 +11,28 @@ import UIKit
 
 public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDelegate {
     @IBOutlet weak private var expirationDateLabel: UILabel!
-    @IBOutlet weak private var expirationDateTextField: UITextField!
-    
+    @IBOutlet weak public var expirationDateTextField: UITextField!
+	
+	public var keyboardDelegate : KeyboardDelegate!
+	
+	func next() {
+		keyboardDelegate?.next(self)
+	}
+	
+	func prev() {
+		keyboardDelegate?.prev(self)
+	}
+	
+	func done() {
+		keyboardDelegate?.done(self)
+	}
+	
+	public func focus() {
+		if !self.expirationDateTextField.isFirstResponder() {
+			self.expirationDateTextField.becomeFirstResponder()
+		}
+	}
+	
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -23,6 +43,7 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
 		self.expirationDateTextField.placeholder = "Mes / Año".localized
         self.expirationDateTextField.delegate = self
         self.expirationDateTextField.keyboardType = UIKeyboardType.NumberPad
+		self.expirationDateTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Válida hasta".localized)
     }
     
     required public  init(coder aDecoder: NSCoder) {

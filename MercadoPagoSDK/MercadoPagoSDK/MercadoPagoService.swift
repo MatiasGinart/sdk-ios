@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class MercadoPagoService : NSObject {
 
@@ -31,12 +32,16 @@ public class MercadoPagoService : NSObject {
         if body != nil {
             request.HTTPBody = (body as! NSString).dataUsingEncoding(NSUTF8StringEncoding)
         }
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue:
+
+		UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+		
+		NSURLConnection.sendAsynchronousRequest(request, queue:
             NSOperationQueue.mainQueue(), completionHandler: {(response:
                 NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-                
-                if error == nil {
+				
+				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+				
+				if error == nil {
                     success(jsonResult: NSJSONSerialization.JSONObjectWithData(data,
                         options:NSJSONReadingOptions.MutableContainers, error: nil))
                 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class NewCardViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+public class NewCardViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, KeyboardDelegate {
     
     // ViewController parameters
     var key : String?
@@ -59,7 +59,10 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		IQKeyboardManager.sharedManager().enable = true
+		IQKeyboardManager.sharedManager().enableAutoToolbar = true
+		
         self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
         
         self.title = "Datos de tu tarjeta".localized
@@ -87,31 +90,73 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
         )
         
     }
+	
+	public func prev(object: AnyObject) {
+		if let cell = object as? MPExpirationDateTableViewCell {
+			self.cardNumberCell.focus()
+		} else if let cell = object as? MPCardholderNameTableViewCell {
+			self.expirationDateCell.focus()
+		} else if let cell = object as? MPUserIdTableViewCell {
+			self.cardholderNameCell.focus()
+		}
+	}
+	
+	public func next(object: AnyObject) {
+		if let cell = object as? MPCardNumberTableViewCell {
+			self.expirationDateCell.focus()
+		} else if let cell = object as? MPExpirationDateTableViewCell {
+			self.cardholderNameCell.focus()
+		} else if let cell = object as? MPCardholderNameTableViewCell {
+			self.userIdCell.focus()
+		}
+	}
+	
+	public func done(object: AnyObject) {
+		if let cell = object as? MPCardNumberTableViewCell {
+			self.cardNumberCell.cardNumberTextField.resignFirstResponder()
+		} else if let cell = object as? MPExpirationDateTableViewCell {
+			self.expirationDateCell.expirationDateTextField.resignFirstResponder()
+		} else if let cell = object as? MPCardholderNameTableViewCell {
+			self.cardholderNameCell.cardholderNameTextField.resignFirstResponder()
+		} else if let cell = object as? MPUserIdTableViewCell {
+			self.userIdCell.userIdValueTextField.resignFirstResponder()
+			self.userIdCell.userIdTypeTextField.resignFirstResponder()
+		}
+	}
     
     public func prepareTableView() {
         var cardNumberNib = UINib(nibName: "MPCardNumberTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(cardNumberNib, forCellReuseIdentifier: "cardNumberCell")
         self.cardNumberCell = self.tableView.dequeueReusableCellWithIdentifier("cardNumberCell") as! MPCardNumberTableViewCell
         self.cardNumberCell.height = 55
-        self.cardNumberCell.setIcon(self.paymentMethod!._id)
+		self.cardNumberCell.setIcon(self.paymentMethod!._id)
         self.cardNumberCell._setSetting(self.paymentMethod!.settings?[0])
+		self.cardNumberCell.keyboardDelegate = self
+		self.cardNumberCell.cardNumberTextField.setEnablePrevious(false, isNextEnabled: true)
 
         var expirationDateNib = UINib(nibName: "MPExpirationDateTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(expirationDateNib, forCellReuseIdentifier: "expirationDateCell")
         self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as! MPExpirationDateTableViewCell
         self.expirationDateCell.height = 55
-        
+		self.expirationDateCell.keyboardDelegate = self
+		self.expirationDateCell.expirationDateTextField.setEnablePrevious(true, isNextEnabled: true)
+		
         var cardholderNameNib = UINib(nibName: "MPCardholderNameTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(cardholderNameNib, forCellReuseIdentifier: "cardholderNameCell")
         self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as! MPCardholderNameTableViewCell
         self.cardholderNameCell.height = 55
-
+		self.cardholderNameCell.keyboardDelegate = self
+		self.cardholderNameCell.cardholderNameTextField.setEnablePrevious(true, isNextEnabled: true)
+		
         var userIdNib = UINib(nibName: "MPUserIdTableViewCell", bundle: self.bundle)
         self.tableView.registerNib(userIdNib, forCellReuseIdentifier: "userIdCell")
         self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as! MPUserIdTableViewCell
         self.userIdCell._setIdentificationTypes(self.identificationTypes)
         self.userIdCell.height = 55
-        
+		self.userIdCell.keyboardDelegate = self
+		self.userIdCell.userIdTypeTextField.setEnablePrevious(true, isNextEnabled: true)
+		self.userIdCell.userIdValueTextField.setEnablePrevious(true, isNextEnabled: false)
+		
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.autoresizesSubviews = true

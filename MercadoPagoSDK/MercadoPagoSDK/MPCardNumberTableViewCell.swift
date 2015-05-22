@@ -14,7 +14,27 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
     @IBOutlet weak private var cardNumberImageView: UIImageView!
     @IBOutlet weak public var cardNumberTextField: UITextField!
     public var setting : Setting!
-    
+	
+	public var keyboardDelegate : KeyboardDelegate!
+	
+	func next() {
+		keyboardDelegate?.next(self)
+	}
+	
+	func prev() {
+		keyboardDelegate?.prev(self)
+	}
+	
+	func done() {
+		keyboardDelegate?.done(self)
+	}
+	
+	public func focus() {
+		if !self.cardNumberTextField.isFirstResponder() {
+			self.cardNumberTextField.becomeFirstResponder()
+		}
+	}
+	
     override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -22,6 +42,9 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
     override public func awakeFromNib() {
         super.awakeFromNib()
 		self.cardNumberLabel.text = "Número de tarjeta".localized
+		
+		self.cardNumberTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Número de tarjeta".localized)
+		
     }
     
     required public init(coder aDecoder: NSCoder) {

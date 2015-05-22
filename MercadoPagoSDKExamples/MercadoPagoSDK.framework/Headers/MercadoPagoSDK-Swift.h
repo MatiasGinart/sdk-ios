@@ -388,6 +388,83 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK16GenericErrorView")
 - (void)setErrorMessage:(NSString * __nonnull)errorMessage;
 @end
 
+@class UIImage;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK15IQBarButtonItem")
+@interface IQBarButtonItem : UIBarButtonItem
++ (void)initialize;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithImage:(UIImage * __nullable)image style:(UIBarButtonItemStyle)style target:(id __nullable)target action:(SEL __null_unspecified)action OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithImage:(UIImage * __nullable)image landscapeImagePhone:(UIImage * __nullable)landscapeImagePhone style:(UIBarButtonItemStyle)style target:(id __nullable)target action:(SEL __null_unspecified)action OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithTitle:(NSString * __nullable)title style:(UIBarButtonItemStyle)style target:(id __nullable)target action:(SEL __null_unspecified)action OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(id __nullable)target action:(SEL __null_unspecified)action OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCustomView:(UIView * __nonnull)customView OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIGestureRecognizer;
+@class UITouch;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK17IQKeyboardManager")
+@interface IQKeyboardManager : NSObject <UIGestureRecognizerDelegate>
+@property (nonatomic) BOOL enable;
++ (IQKeyboardManager * __nonnull)sharedManager;
+@property (nonatomic) BOOL enableAutoToolbar;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * __nonnull)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer * __nonnull)otherGestureRecognizer;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * __nonnull)gestureRecognizer shouldReceiveTouch:(UITouch * __nonnull)touch;
+@end
+
+@class UITextField;
+@class UITextView;
+@class NSURL;
+@class NSTextAttachment;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK26IQKeyboardReturnKeyHandler")
+@interface IQKeyboardReturnKeyHandler : NSObject <UITextFieldDelegate, UITextViewDelegate>
+- (BOOL)textFieldShouldBeginEditing:(UITextField * __nonnull)textField;
+- (BOOL)textFieldShouldEndEditing:(UITextField * __nonnull)textField;
+- (void)textFieldDidBeginEditing:(UITextField * __nonnull)textField;
+- (void)textFieldDidEndEditing:(UITextField * __nonnull)textField;
+- (BOOL)textField:(UITextField * __nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * __nonnull)string;
+- (BOOL)textFieldShouldClear:(UITextField * __nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textField;
+- (BOOL)textViewShouldBeginEditing:(UITextView * __nonnull)textView;
+- (BOOL)textViewShouldEndEditing:(UITextView * __nonnull)textView;
+- (void)textViewDidBeginEditing:(UITextView * __nonnull)textView;
+- (void)textViewDidEndEditing:(UITextView * __nonnull)textView;
+- (BOOL)textView:(UITextView * __nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * __nonnull)text;
+- (void)textViewDidChange:(UITextView * __nonnull)textView;
+- (void)textViewDidChangeSelection:(UITextView * __nonnull)textView;
+- (BOOL)textView:(UITextView * __nonnull)textView shouldInteractWithURL:(NSURL * __nonnull)URL inRange:(NSRange)characterRange;
+- (BOOL)textView:(UITextView * __nonnull)textView shouldInteractWithTextAttachment:(NSTextAttachment * __nonnull)textAttachment inRange:(NSRange)characterRange;
+@end
+
+@class UIFont;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK10IQTextView")
+@interface IQTextView : UITextView
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy, getter=text, setter=setText:) NSString * __null_unspecified text;
+@property (nonatomic, getter=font, setter=setFont:) UIFont * __nullable font;
+@property (nonatomic, getter=delegate, setter=setDelegate:) id <UITextViewDelegate> __nullable delegate;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK20IQTitleBarButtonItem")
+@interface IQTitleBarButtonItem : UIBarButtonItem
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIColor;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK9IQToolbar")
+@interface IQToolbar : UIToolbar <UIInputViewAudioFeedback>
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (CGSize)sizeThatFits:(CGSize)size;
+@property (nonatomic, getter=tintColor, setter=setTintColor:) UIColor * __null_unspecified tintColor;
+@property (nonatomic, readonly) BOOL enableInputClicksWhenVisible;
+@end
+
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK14Identification")
 @interface Identification : NSObject
@@ -495,12 +572,12 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK4Item")
 @end
 
 @class Setting;
-@class UITextField;
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK25MPCardNumberTableViewCell")
 @interface MPCardNumberTableViewCell : ErrorTableViewCell <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified cardNumberTextField;
 @property (nonatomic) Setting * __null_unspecified setting;
+- (void)focus;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -514,6 +591,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK25MPCardNumberTableViewCell")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK29MPCardholderNameTableViewCell")
 @interface MPCardholderNameTableViewCell : ErrorTableViewCell
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified cardholderNameTextField;
+- (void)focus;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -524,6 +603,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK29MPCardholderNameTableViewCell")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK29MPExpirationDateTableViewCell")
 @interface MPExpirationDateTableViewCell : ErrorTableViewCell <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified expirationDateTextField;
+- (void)focus;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -576,9 +657,12 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK27MPSecurityCodeTableViewCell")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK21MPUserIdTableViewCell")
 @interface MPUserIdTableViewCell : ErrorTableViewCell <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified userIdTypeTextField;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified userIdValueTextField;
 @property (nonatomic) IBOutlet UIPickerView * __null_unspecified pickerIdentificationType;
 @property (nonatomic, copy) NSArray * __nonnull identificationTypes;
 @property (nonatomic) IdentificationType * __nullable identificationType;
+- (void)focus;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;
 - (NSInteger)pickerView:(UIPickerView * __nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
@@ -597,6 +681,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21MPUserIdTableViewCell")
 
 @class NewCardViewController;
 @class PaymentMethodsViewController;
+@class PromoViewController;
 @class Token;
 @class UINavigationController;
 
@@ -619,11 +704,13 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK11MercadoPago")
 + (IssuersViewController * __nonnull)startIssuersViewController:(NSString * __nonnull)merchantPublicKey paymentMethod:(PaymentMethod * __nonnull)paymentMethod callback:(void (^ __nonnull)(Issuer * __nonnull))callback;
 + (InstallmentsViewController * __nonnull)startInstallmentsViewController:(NSArray * __nonnull)payerCosts amount:(double)amount callback:(void (^ __nonnull)(PayerCost * __nullable))callback;
 + (CongratsViewController * __nonnull)startCongratsViewController:(Payment * __nonnull)payment paymentMethod:(PaymentMethod * __nonnull)paymentMethod;
++ (PromoViewController * __nonnull)startPromosViewController:(NSString * __nonnull)merchantPublicKey;
 - (void)createNewCardToken:(CardToken * __nonnull)cardToken success:(void (^ __nonnull)(Token * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 - (void)createToken:(SavedCardToken * __nonnull)savedCardToken success:(void (^ __nonnull)(Token * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 - (void)getPaymentMethods:(void (^ __nonnull)(NSArray * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 - (void)getIdentificationTypes:(void (^ __nonnull)(NSArray * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 - (void)getIssuers:(NSString * __nonnull)paymentMethodId success:(void (^ __nonnull)(NSArray * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
+- (void)getPromos:(void (^ __nonnull)(NSArray * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 + (BOOL)isCardPaymentType:(NSString * __nonnull)paymentTypeId;
 + (NSBundle * __nullable)getBundle;
 + (void)showAlertViewWithError:(NSError * __nullable)error nav:(UINavigationController * __nullable)nav;
@@ -663,6 +750,15 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK15MerchantService")
 @end
 
 
+@interface NSArray (SWIFT_EXTENSION(MercadoPagoSDK))
+@end
+
+
+@interface NSObject (SWIFT_EXTENSION(MercadoPagoSDK))
+- (NSString * __nonnull)_IQDescription;
+@end
+
+
 SWIFT_CLASS("_TtC14MercadoPagoSDK21NewCardViewController")
 @interface NewCardViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -670,6 +766,9 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21NewCardViewController")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
+- (void)prev:(id __nonnull)object;
+- (void)next:(id __nonnull)object;
+- (void)done:(id __nonnull)object;
 - (void)prepareTableView;
 - (void)submitForm;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
@@ -833,6 +932,80 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK5Phone")
 @end
 
 
+SWIFT_CLASS("_TtC14MercadoPagoSDK23PromoEmptyTableViewCell")
+@interface PromoEmptyTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImageView;
+@class UILabel;
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK18PromoTableViewCell")
+@interface PromoTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified issuerImageView;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified sharesSubtitle;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified paymentMethodsSubtitle;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __null_unspecified)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (void)awakeFromNib;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK27PromoTyCDetailTableViewCell")
+@interface PromoTyCDetailTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (void)setLabelWithIssuerName:(NSString * __nonnull)issuer legals:(NSString * __nonnull)legals;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK19PromoViewController")
+@interface PromoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithPublicKey:(NSString * __nonnull)publicKey OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK13PromosService")
+@interface PromosService : MercadoPagoService
+- (void)getPromosWithUrl:(NSString * __nonnull)url method:(NSString * __nonnull)method success:(void (^ __nonnull)(id __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK22PromosTyCTableViewCell")
+@interface PromosTyCTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14MercadoPagoSDK23PromosTyCViewController")
+@interface PromosTyCViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithPromos:(NSArray * __nonnull)promos OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+@end
+
+
 SWIFT_CLASS("_TtC14MercadoPagoSDK6Refund")
 @interface Refund : NSObject
 @property (nonatomic) double amount;
@@ -940,7 +1113,6 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK18TransactionDetails")
 @interface UIDevice (SWIFT_EXTENSION(MercadoPagoSDK))
 @end
 
-@class UILabel;
 @class UIActivityIndicatorView;
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK13UILoadingView")
@@ -950,6 +1122,22 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK13UILoadingView")
 @property (nonatomic) UILabel * __nonnull label;
 @property (nonatomic) UIActivityIndicatorView * __nonnull spinner;
 - (void)layoutSubviews;
+@end
+
+
+@interface UIView (SWIFT_EXTENSION(MercadoPagoSDK))
+@end
+
+
+@interface UIView (SWIFT_EXTENSION(MercadoPagoSDK))
+- (void)addPreviousNextDoneOnKeyboardWithTarget:(id __nullable)target previousAction:(SEL __null_unspecified)previousAction nextAction:(SEL __null_unspecified)nextAction doneAction:(SEL __null_unspecified)doneAction;
+- (void)addPreviousNextDoneOnKeyboardWithTarget:(id __nullable)target previousAction:(SEL __null_unspecified)previousAction nextAction:(SEL __null_unspecified)nextAction doneAction:(SEL __null_unspecified)doneAction titleText:(NSString * __nullable)titleText;
+- (void)addPreviousNextDoneOnKeyboardWithTarget:(id __nullable)target previousAction:(SEL __null_unspecified)previousAction nextAction:(SEL __null_unspecified)nextAction doneAction:(SEL __null_unspecified)doneAction shouldShowPlaceholder:(BOOL)shouldShowPlaceholder;
+- (void)setEnablePrevious:(BOOL)isPreviousEnabled isNextEnabled:(BOOL)isNextEnabled;
+@end
+
+
+@interface UIWindow (SWIFT_EXTENSION(MercadoPagoSDK))
 @end
 
 

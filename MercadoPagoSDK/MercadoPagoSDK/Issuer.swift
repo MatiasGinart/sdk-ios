@@ -15,7 +15,11 @@ public class Issuer : NSObject {
     public class func fromJSON(json : NSDictionary) -> Issuer {
         var issuer : Issuer = Issuer()
         if json["id"] != nil && !(json["id"]! is NSNull) {
-            issuer._id = (json["id"]! as? NSString)?.longLongValue
+			if let issuerIdStr = json["id"]! as? NSString {
+				issuer._id = issuerIdStr.longLongValue
+			} else {
+				issuer._id = (json["id"] as? NSNumber)?.longLongValue
+			}
         }
         issuer.name = JSON(json["name"]!).asString
         return issuer

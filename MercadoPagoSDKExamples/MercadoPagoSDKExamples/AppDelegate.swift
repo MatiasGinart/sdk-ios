@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.nav!.pushViewController(exmaplesViewController, animated: false)
         
         self.window?.rootViewController = self.nav
-        
+
         self.window?.makeKeyAndVisible()
         return true
     }

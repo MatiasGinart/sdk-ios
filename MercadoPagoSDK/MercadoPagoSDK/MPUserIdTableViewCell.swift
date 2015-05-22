@@ -12,13 +12,33 @@ import UIKit
 public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak private var userIdTypeLabel: UILabel!
     @IBOutlet weak private var userIdValueLabel: UILabel!
-    @IBOutlet weak private var userIdTypeTextField: UITextField!
-    @IBOutlet weak private var userIdValueTextField: UITextField!
+    @IBOutlet weak public var userIdTypeTextField: UITextField!
+    @IBOutlet weak public var userIdValueTextField: UITextField!
     
     @IBOutlet public var pickerIdentificationType: UIPickerView! = UIPickerView()
     
     public var identificationTypes : [IdentificationType] = [IdentificationType]()
     public var identificationType : IdentificationType?
+	
+	public var keyboardDelegate : KeyboardDelegate!
+	
+	func next() {
+		keyboardDelegate?.next(self)
+	}
+	
+	func prev() {
+		keyboardDelegate?.prev(self)
+	}
+	
+	func done() {
+		keyboardDelegate?.done(self)
+	}
+	
+	public func focus() {
+		if !self.userIdTypeTextField.isFirstResponder() {
+			self.userIdTypeTextField.becomeFirstResponder()
+		}
+	}
 	
 	override public init(style: UITableViewCellStyle, reuseIdentifier: String!) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -90,6 +110,9 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         self.userIdTypeTextField.inputView = pickerIdentificationType
         self.userIdTypeTextField.delegate = self
         self.userIdValueTextField.delegate = self
+		
+		self.userIdValueTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Tipo".localized + " - " + "Documento".localized)
+		
     }
     
     public func _setIdentificationTypes(identificationTypes: [IdentificationType]?) {

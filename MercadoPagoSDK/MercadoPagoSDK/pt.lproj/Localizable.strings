@@ -15,11 +15,16 @@
 "cod_seg_desc_amex" = "%1$s dígitos da frente do cartão de crédito";
 
 "Cuotas" = "Parcelas";
+"cuotas sin interés" = "parcelas sem juros";
 "Selecciona la cantidad de cuotas" = "Escolha o número de parcelas";
 "Selecciona un medio de pago..." = "Escolha o meio de pagamento ...";
 "Medio de pago" = "Meio de pagamento";
 "Medios de pago" = "Meios de pagamento";
 "terminada en" = "terminado em";
+
+" y " = " e ";
+
+"Términos y condiciones" = "Termos e condições";
 
 "Datos de tu tarjeta" = "Dados do seu cartão";
 
@@ -46,3 +51,7 @@
 "Ingresa el número de la tarjeta de crédito" = "Digite o número do cartão de crédito";
 "El número de tarjeta que ingresaste no se corresponde con el tipo de tarjeta" = "O número do cartão de crédito digitado não coincide com o tipo de cartão";
 "El número de tarjeta que ingresaste es incorrecto" = "O número do cartão de crédito digitado está incorreto";
+
+"Promociones" = "Promoções";
+
+"Promociones vigentes" = "Promoções atuais";

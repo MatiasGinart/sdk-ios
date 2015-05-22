@@ -44,7 +44,11 @@ public class PaymentMethod : Serializable {
         var paymentMethod : PaymentMethod = PaymentMethod()
         paymentMethod._id = JSON(json["id"]!).asString
         paymentMethod.name = JSON(json["name"]!).asString
-        paymentMethod.paymentTypeId = JSON(json["payment_type_id"]!).asString
+
+		if json["payment_type_id"] != nil && !(json["payment_type_id"]! is NSNull) {
+			paymentMethod.paymentTypeId = json["payment_type_id"] as? String
+		}
+		
         var settings : [Setting] = [Setting]()
         if let settingsArray = json["settings"] as? NSArray {
             for i in 0..<settingsArray.count {

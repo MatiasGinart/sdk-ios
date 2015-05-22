@@ -60,7 +60,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
 ##Usage
 -----
 - Swift 
-
+```swift
         import MercadoPagoSDK
         func initMercadoPagoVault() {
                 let supportedPaymentTypes = ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"]
@@ -75,7 +75,7 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
                         	let alert = UIAlertController()
                         	alert.title = "Payment Info"
                 
-                        	var msg = "Token = \(token?.id!). \n Payment method = \(paymentMethod.name!). \n"
+                        	var msg = "Token = \(token?._id!). \n Payment method = \(paymentMethod.name!). \n"
                         	msg = msg + " Installments = \(installments!)."
                         	msg = msg + " CardIssuer ID = \(cardIssuerId != nil ? cardIssuerId! : cardIssuerId)"
                 
@@ -97,7 +97,32 @@ From now on, be sure to always open the generated Xcode workspace (`.xcworkspace
                 // Put vaultController at the top of navigator.
                 self.nav!.pushViewController(vaultViewController, animated: false)
         }
-        
+```
+- Objective-C
+
+	**IMPORTANT: "Embedded Content Contains Swift Code" flag in the Build Settings that needs to be set to YES**
+```objc
+	#import "MercadoPagoSDK/MercadoPagoSDK-Swift.h"
+	- (void) getCardToken() {
+		MercadoPago *mp = [[MercadoPago alloc] initWithPublicKey:@"444a9ef5-8a6b-429f-abdf-587639155d88"];
+	
+		Identification *identification = [[Identification alloc] init];
+		identification.type = @"DNI";
+		identification.number = @"12345678";
+	
+		Cardholder *cardholder = [[Cardholder alloc] init];
+		cardholder.identification = identification;
+		cardholder.name = @"APRO";
+	
+		CardToken *cardToken = [[CardToken alloc] initWithCardNumber:@"4170068810108020" expirationMonth:10 expirationYear:15 securityCode:@"123" cardholderName:@"APRO" docType:@"DNI" docNumber:@"12345678"];
+	
+		[mp createNewCardToken:cardToken success: ^(Token *t) {
+			NSLog(@"TOKEN %@", t._id);
+		} failure: ^(NSError *e) {
+			NSLog(@"ERROR");
+		}];
+	}
+```
 ## Examples
 
 This project includes five examples you can follow to understand how MercadoPago SDK works:

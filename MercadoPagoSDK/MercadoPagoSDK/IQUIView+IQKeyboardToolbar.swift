@@ -452,7 +452,7 @@ extension UIView {
             var items : [UIBarButtonItem] = []
             
             //  Create a cancel button to show on keyboard to resign it. Adding a selector to resign it.
-            let cancelButton = IQBarButtonItem(title: leftButtonTitle, style: UIBarButtonItemStyle.Bordered, target: target, action: leftButtonAction)
+            let cancelButton = IQBarButtonItem(title: leftButtonTitle, style: UIBarButtonItemStyle.Plain, target: target, action: leftButtonAction)
             items.append(cancelButton)
             
             if let unwrappedTitleText = titleText {
@@ -474,7 +474,7 @@ extension UIView {
             items.append(nilButton)
             
             //  Create a done button to show on keyboard to resign it. Adding a selector to resign it.
-            let doneButton = IQBarButtonItem(title: rightButtonTitle, style: UIBarButtonItemStyle.Bordered, target: target, action: rightButtonAction)
+            let doneButton = IQBarButtonItem(title: rightButtonTitle, style: UIBarButtonItemStyle.Plain, target: target, action: rightButtonAction)
             items.append(doneButton)
             
             //  Adding button to toolBar.
@@ -686,7 +686,7 @@ extension UIView {
             var items : [UIBarButtonItem] = []
             
             //  Create a done button to show on keyboard to resign it. Adding a selector to resign it.
-            let doneButton = IQBarButtonItem(title: rightButtonTitle, style: UIBarButtonItemStyle.Bordered, target: target, action: rightButtonAction)
+            let doneButton = IQBarButtonItem(title: rightButtonTitle, style: UIBarButtonItemStyle.Plain, target: target, action: rightButtonAction)
             
             let prev = IQBarButtonItem(image: UIImage(named: "IQButtonBarArrowLeft", inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil), style: UIBarButtonItemStyle.Plain, target: target, action: previousAction)
             

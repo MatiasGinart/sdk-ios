@@ -44,8 +44,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
                 let issuerViewController = MercadoPago.startIssuersViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY, paymentMethod: self.selectedPaymentMethod!,
                     callback: { (issuer: Issuer) -> Void in
                         self.selectedIssuer = issuer
-                        self.tableview.reloadData()
-                        self.showViewController(newCardViewController, sender: self)
+						self.showViewController(newCardViewController, sender: self)
                 })
                 self.showViewController(issuerViewController, sender: self)
             } else {

@@ -234,32 +234,8 @@
 		0FC4FC401B0FB83700CF7148 /* PromosTyCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4FC3D1B0FB83700CF7148 /* PromosTyCViewController.swift */; };
 		0FC4FC411B0FB83700CF7148 /* PromosTyCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC4FC3E1B0FB83700CF7148 /* PromosTyCViewController.xib */; };
 		0FC4FC421B0FB83700CF7148 /* PromosTyCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC4FC3E1B0FB83700CF7148 /* PromosTyCViewController.xib */; };
-		0FE28CAF1B0E59A400D03C06 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAC1B0E59A400D03C06 /* IQNSArray+Sort.swift */; };
-		0FE28CB01B0E59A400D03C06 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAC1B0E59A400D03C06 /* IQNSArray+Sort.swift */; };
-		0FE28CB11B0E59A400D03C06 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAD1B0E59A400D03C06 /* IQUIView+Hierarchy.swift */; };
-		0FE28CB21B0E59A400D03C06 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAD1B0E59A400D03C06 /* IQUIView+Hierarchy.swift */; };
-		0FE28CB31B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAE1B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift */; };
-		0FE28CB41B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CAE1B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift */; };
-		0FE28CB71B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CB51B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift */; };
-		0FE28CB81B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CB51B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift */; };
-		0FE28CB91B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CB61B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift */; };
-		0FE28CBA1B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CB61B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift */; };
-		0FE28CBD1B0E59BC00D03C06 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CBB1B0E59BB00D03C06 /* IQKeyboardManager.swift */; };
-		0FE28CBE1B0E59BC00D03C06 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CBB1B0E59BB00D03C06 /* IQKeyboardManager.swift */; };
-		0FE28CBF1B0E59BC00D03C06 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CBC1B0E59BB00D03C06 /* IQKeyboardReturnKeyHandler.swift */; };
-		0FE28CC01B0E59BC00D03C06 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CBC1B0E59BB00D03C06 /* IQKeyboardReturnKeyHandler.swift */; };
-		0FE28CC21B0E59C500D03C06 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC11B0E59C500D03C06 /* IQTextView.swift */; };
-		0FE28CC31B0E59C500D03C06 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC11B0E59C500D03C06 /* IQTextView.swift */; };
-		0FE28CC81B0E59D000D03C06 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC41B0E59D000D03C06 /* IQBarButtonItem.swift */; };
-		0FE28CC91B0E59D000D03C06 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC41B0E59D000D03C06 /* IQBarButtonItem.swift */; };
-		0FE28CCA1B0E59D000D03C06 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC51B0E59D000D03C06 /* IQTitleBarButtonItem.swift */; };
-		0FE28CCB1B0E59D000D03C06 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC51B0E59D000D03C06 /* IQTitleBarButtonItem.swift */; };
-		0FE28CCC1B0E59D000D03C06 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC61B0E59D000D03C06 /* IQToolbar.swift */; };
-		0FE28CCD1B0E59D000D03C06 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC61B0E59D000D03C06 /* IQToolbar.swift */; };
-		0FE28CCE1B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC71B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift */; };
-		0FE28CCF1B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE28CC71B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift */; };
-		0FE28CD11B0E59DA00D03C06 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FE28CD01B0E59DA00D03C06 /* IQKeyboardManager.bundle */; };
-		0FE28CD21B0E59DA00D03C06 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FE28CD01B0E59DA00D03C06 /* IQKeyboardManager.bundle */; };
+		0FDB3DAE1B1683610047A4D4 /* MPToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB3DAD1B1683610047A4D4 /* MPToolbar.swift */; };
+		0FDB3DAF1B1683610047A4D4 /* MPToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB3DAD1B1683610047A4D4 /* MPToolbar.swift */; };
 		0FE3E37F1AE706B600C27B97 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3E37E1AE706B600C27B97 /* Utils.swift */; };
 		0FE3E3801AE706B600C27B97 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3E37E1AE706B600C27B97 /* Utils.swift */; };
 		0FE3E38D1AE7174600C27B97 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3E38C1AE7174600C27B97 /* Serializable.swift */; };
@@ -399,19 +375,7 @@
 		0FC4FC381B0FB53500CF7148 /* PromoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromoViewController.xib; sourceTree = "<group>"; };
 		0FC4FC3D1B0FB83700CF7148 /* PromosTyCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosTyCViewController.swift; sourceTree = "<group>"; };
 		0FC4FC3E1B0FB83700CF7148 /* PromosTyCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromosTyCViewController.xib; sourceTree = "<group>"; };
-		0FE28CAC1B0E59A400D03C06 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		0FE28CAD1B0E59A400D03C06 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		0FE28CAE1B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
-		0FE28CB51B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		0FE28CB61B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		0FE28CBB1B0E59BB00D03C06 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
-		0FE28CBC1B0E59BB00D03C06 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		0FE28CC11B0E59C500D03C06 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
-		0FE28CC41B0E59D000D03C06 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
-		0FE28CC51B0E59D000D03C06 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		0FE28CC61B0E59D000D03C06 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
-		0FE28CC71B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		0FE28CD01B0E59DA00D03C06 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		0FDB3DAD1B1683610047A4D4 /* MPToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPToolbar.swift; sourceTree = "<group>"; };
 		0FE3E37E1AE706B600C27B97 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0FE3E38C1AE7174600C27B97 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -785,11 +749,11 @@
 		0F98861B1AD397F400F750F0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0FE28CA61B0E596600D03C06 /* IQKeyboardManager */,
 				0F9883C11AD2AD4000F750F0 /* UILoadingView.swift */,
 				0F98861C1AD3981A00F750F0 /* GenericErrorView.swift */,
 				0F98861F1AD39E7E00F750F0 /* ErrorTableViewCell.swift */,
 				0FC4FBF41B0F4F4800CF7148 /* KeyboardDelegate.swift */,
+				0FDB3DAD1B1683610047A4D4 /* MPToolbar.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -819,66 +783,6 @@
 				0FC4FC321B0FB36F00CF7148 /* PromoTyCDetailTableViewCell.xib */,
 			);
 			name = Cells;
-			sourceTree = "<group>";
-		};
-		0FE28CA61B0E596600D03C06 /* IQKeyboardManager */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CBB1B0E59BB00D03C06 /* IQKeyboardManager.swift */,
-				0FE28CBC1B0E59BB00D03C06 /* IQKeyboardReturnKeyHandler.swift */,
-				0FE28CAB1B0E599200D03C06 /* Resources */,
-				0FE28CAA1B0E598900D03C06 /* IQToolbar */,
-				0FE28CA91B0E598200D03C06 /* IQTextView */,
-				0FE28CA81B0E597900D03C06 /* Constants */,
-				0FE28CA71B0E597200D03C06 /* Categories */,
-			);
-			name = IQKeyboardManager;
-			sourceTree = "<group>";
-		};
-		0FE28CA71B0E597200D03C06 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CAC1B0E59A400D03C06 /* IQNSArray+Sort.swift */,
-				0FE28CAD1B0E59A400D03C06 /* IQUIView+Hierarchy.swift */,
-				0FE28CAE1B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		0FE28CA81B0E597900D03C06 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CB51B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift */,
-				0FE28CB61B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift */,
-			);
-			name = Constants;
-			sourceTree = "<group>";
-		};
-		0FE28CA91B0E598200D03C06 /* IQTextView */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CC11B0E59C500D03C06 /* IQTextView.swift */,
-			);
-			name = IQTextView;
-			sourceTree = "<group>";
-		};
-		0FE28CAA1B0E598900D03C06 /* IQToolbar */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CC41B0E59D000D03C06 /* IQBarButtonItem.swift */,
-				0FE28CC51B0E59D000D03C06 /* IQTitleBarButtonItem.swift */,
-				0FE28CC61B0E59D000D03C06 /* IQToolbar.swift */,
-				0FE28CC71B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift */,
-			);
-			name = IQToolbar;
-			sourceTree = "<group>";
-		};
-		0FE28CAB1B0E599200D03C06 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0FE28CD01B0E59DA00D03C06 /* IQKeyboardManager.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -982,7 +886,6 @@
 				0F9884571AD2AEF800F750F0 /* MPPaymentMethodTableViewCell.xib in Resources */,
 				0F9884391AD2AE6200F750F0 /* InstallmentsViewController.xib in Resources */,
 				0F9883E01AD2AD5500F750F0 /* CongratsViewController.xib in Resources */,
-				0FE28CD11B0E59DA00D03C06 /* IQKeyboardManager.bundle in Resources */,
 				0F9883DC1AD2AD5500F750F0 /* PaymentDateTableViewCell.xib in Resources */,
 				0FC4FC2F1B0FB32400CF7148 /* PromoEmptyTableViewCell.xib in Resources */,
 				0F9884171AD2AE2700F750F0 /* MPCardNumberTableViewCell.xib in Resources */,
@@ -1020,7 +923,6 @@
 				0F9884581AD2AEF800F750F0 /* MPPaymentMethodTableViewCell.xib in Resources */,
 				0F98843A1AD2AE6200F750F0 /* InstallmentsViewController.xib in Resources */,
 				0F9883E11AD2AD5500F750F0 /* CongratsViewController.xib in Resources */,
-				0FE28CD21B0E59DA00D03C06 /* IQKeyboardManager.bundle in Resources */,
 				0F9883DD1AD2AD5500F750F0 /* PaymentDateTableViewCell.xib in Resources */,
 				0FC4FC301B0FB32400CF7148 /* PromoEmptyTableViewCell.xib in Resources */,
 				0F9884181AD2AE2700F750F0 /* MPCardNumberTableViewCell.xib in Resources */,
@@ -1074,24 +976,17 @@
 				0FE3E38D1AE7174600C27B97 /* Serializable.swift in Sources */,
 				0F9883A31AD2AB8000F750F0 /* PaymentService.swift in Sources */,
 				0F98845B1AD2AF1500F750F0 /* VaultViewController.swift in Sources */,
-				0FE28CBF1B0E59BC00D03C06 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0F9883831AD2AB6000F750F0 /* Payer.swift in Sources */,
-				0FE28CC81B0E59D000D03C06 /* IQBarButtonItem.swift in Sources */,
 				0F9883711AD2AB6000F750F0 /* FeesDetail.swift in Sources */,
 				0F9883F41AD2ADD300F750F0 /* PaymentMethodsViewController.swift in Sources */,
 				0FC4FC211B0FAF0E00CF7148 /* PromoTableViewCell.swift in Sources */,
 				0F9883611AD2AB6000F750F0 /* CardIssuer.swift in Sources */,
 				0F9884191AD2AE2700F750F0 /* MPCardNumberTableViewCell.swift in Sources */,
-				0FE28CC21B0E59C500D03C06 /* IQTextView.swift in Sources */,
 				0F9884011AD2ADEE00F750F0 /* IssuersViewController.swift in Sources */,
 				0F9883751AD2AB6000F750F0 /* Identification.swift in Sources */,
 				0F9883A11AD2AB8000F750F0 /* GatewayService.swift in Sources */,
 				0F9883D21AD2AD5500F750F0 /* CongratsPaymentMethodTableViewCell.swift in Sources */,
-				0FE28CAF1B0E59A400D03C06 /* IQNSArray+Sort.swift in Sources */,
-				0FE28CB31B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift in Sources */,
-				0FE28CB71B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift in Sources */,
 				0F98837B1AD2AB6000F750F0 /* Issuer.swift in Sources */,
-				0FE28CB11B0E59A400D03C06 /* IQUIView+Hierarchy.swift in Sources */,
 				0F98837D1AD2AB6000F750F0 /* Item.swift in Sources */,
 				0F9884431AD2AEB600F750F0 /* MPSecurityCodeTableViewCell.swift in Sources */,
 				0F9883851AD2AB6000F750F0 /* PayerCost.swift in Sources */,
@@ -1102,7 +997,6 @@
 				0F98835D1AD2AB6000F750F0 /* Card.swift in Sources */,
 				0FC4FC1B1B0FAD0600CF7148 /* PromosService.swift in Sources */,
 				0F9883631AD2AB6000F750F0 /* CardNumber.swift in Sources */,
-				0FE28CCE1B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0F98836D1AD2AB6000F750F0 /* Device.swift in Sources */,
 				0F9886201AD39E7E00F750F0 /* ErrorTableViewCell.swift in Sources */,
 				0F9883571AD2AB6000F750F0 /* Address.swift in Sources */,
@@ -1124,18 +1018,15 @@
 				0F98836F1AD2AB6000F750F0 /* Discount.swift in Sources */,
 				0F9883321AD2AB3C00F750F0 /* MerchantServer.swift in Sources */,
 				0F9883591AD2AB6000F750F0 /* ApiException.swift in Sources */,
-				0FE28CBD1B0E59BC00D03C06 /* IQKeyboardManager.swift in Sources */,
 				0FC4FC331B0FB36F00CF7148 /* PromoTyCDetailTableViewCell.swift in Sources */,
 				0F9883811AD2AB6000F750F0 /* Order.swift in Sources */,
 				0F98861D1AD3981A00F750F0 /* GenericErrorView.swift in Sources */,
-				0FE28CB91B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				0F98841F1AD2AE2700F750F0 /* MPCardholderNameTableViewCell.swift in Sources */,
 				0F9884311AD2AE5900F750F0 /* InstallmentTableViewCell.swift in Sources */,
 				0F9883A91AD2AB8000F750F0 /* IdentificationService.swift in Sources */,
 				0F9883731AD2AB6000F750F0 /* Fingerprint.swift in Sources */,
 				0F9883931AD2AB6000F750F0 /* SecurityCode.swift in Sources */,
 				0F98836B1AD2AB6000F750F0 /* Customer.swift in Sources */,
-				0FE28CCA1B0E59D000D03C06 /* IQTitleBarButtonItem.swift in Sources */,
 				0F9883AF1AD2ACFE00F750F0 /* CurrenciesUtil.swift in Sources */,
 				0F9883DE1AD2AD5500F750F0 /* CongratsViewController.swift in Sources */,
 				0F9883651AD2AB6000F750F0 /* CardToken.swift in Sources */,
@@ -1144,9 +1035,9 @@
 				0F9883911AD2AB6000F750F0 /* SavedCardToken.swift in Sources */,
 				0F9883E81AD2ADB000F750F0 /* PaymentMethodTableViewCell.swift in Sources */,
 				0F9884371AD2AE6200F750F0 /* InstallmentsViewController.swift in Sources */,
-				0FE28CCC1B0E59D000D03C06 /* IQToolbar.swift in Sources */,
 				0F9883BC1AD2AD1600F750F0 /* UIDevice+Additions.swift in Sources */,
 				0F9883BA1AD2AD1600F750F0 /* String+Additions.swift in Sources */,
+				0FDB3DAE1B1683610047A4D4 /* MPToolbar.swift in Sources */,
 				0F9883871AD2AB6000F750F0 /* Payment.swift in Sources */,
 				0F9883951AD2AB6000F750F0 /* Setting.swift in Sources */,
 				0F9883301AD2AB3C00F750F0 /* MercadoPago.swift in Sources */,
@@ -1158,7 +1049,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FE28CB01B0E59A400D03C06 /* IQNSArray+Sort.swift in Sources */,
 				0F98838C1AD2AB6000F750F0 /* PaymentMethodRow.swift in Sources */,
 				0F98844C1AD2AEC000F750F0 /* MPInstallmentsTableViewCell.swift in Sources */,
 				0F9883801AD2AB6000F750F0 /* MerchantPayment.swift in Sources */,
@@ -1166,16 +1056,13 @@
 				0F9883DF1AD2AD5500F750F0 /* CongratsViewController.swift in Sources */,
 				0F9883881AD2AB6000F750F0 /* Payment.swift in Sources */,
 				0FC4FC401B0FB83700CF7148 /* PromosTyCViewController.swift in Sources */,
-				0FE28CCD1B0E59D000D03C06 /* IQToolbar.swift in Sources */,
 				0F98836C1AD2AB6000F750F0 /* Customer.swift in Sources */,
 				0F9884021AD2ADEE00F750F0 /* IssuersViewController.swift in Sources */,
 				0F9884321AD2AE5900F750F0 /* InstallmentTableViewCell.swift in Sources */,
 				0FC4FC3A1B0FB53500CF7148 /* PromoViewController.swift in Sources */,
 				0F98861E1AD3981A00F750F0 /* GenericErrorView.swift in Sources */,
-				0FE28CB21B0E59A400D03C06 /* IQUIView+Hierarchy.swift in Sources */,
 				0F9883A81AD2AB8000F750F0 /* MercadoPagoService.swift in Sources */,
 				0F9883701AD2AB6000F750F0 /* Discount.swift in Sources */,
-				0FE28CCB1B0E59D000D03C06 /* IQTitleBarButtonItem.swift in Sources */,
 				0F9883331AD2AB3C00F750F0 /* MerchantServer.swift in Sources */,
 				0FE3E3801AE706B600C27B97 /* Utils.swift in Sources */,
 				0F98835C1AD2AB6000F750F0 /* Bin.swift in Sources */,
@@ -1184,6 +1071,7 @@
 				0FC4FC221B0FAF0E00CF7148 /* PromoTableViewCell.swift in Sources */,
 				0FC4FBF61B0F4F4800CF7148 /* KeyboardDelegate.swift in Sources */,
 				0F98835E1AD2AB6000F750F0 /* Card.swift in Sources */,
+				0FDB3DAF1B1683610047A4D4 /* MPToolbar.swift in Sources */,
 				0F9883A21AD2AB8000F750F0 /* GatewayService.swift in Sources */,
 				0F9883A61AD2AB8000F750F0 /* MerchantService.swift in Sources */,
 				0F98837E1AD2AB6000F750F0 /* Item.swift in Sources */,
@@ -1193,24 +1081,19 @@
 				0FC4FC191B0FAA6400CF7148 /* Promo.swift in Sources */,
 				0F9883901AD2AB6000F750F0 /* Refund.swift in Sources */,
 				0F9884561AD2AEF800F750F0 /* MPPaymentMethodTableViewCell.swift in Sources */,
-				0FE28CCF1B0E59D000D03C06 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0F9883CF1AD2AD5500F750F0 /* PaymentTotalTableViewCell.swift in Sources */,
 				0F98838A1AD2AB6000F750F0 /* PaymentMethod.swift in Sources */,
-				0FE28CC91B0E59D000D03C06 /* IQBarButtonItem.swift in Sources */,
 				0F9883721AD2AB6000F750F0 /* FeesDetail.swift in Sources */,
 				0F9883641AD2AB6000F750F0 /* CardNumber.swift in Sources */,
 				0F9883ED1AD2ADB000F750F0 /* CustomerCardsViewController.swift in Sources */,
 				0F9883761AD2AB6000F750F0 /* Identification.swift in Sources */,
 				0F9883C31AD2AD4000F750F0 /* UILoadingView.swift in Sources */,
-				0FE28CBA1B0E59AD00D03C06 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				0F98842A1AD2AE3100F750F0 /* NewCardViewController.swift in Sources */,
 				0F9884501AD2AEEF00F750F0 /* MPPaymentMethodEmptyTableViewCell.swift in Sources */,
-				0FE28CC01B0E59BC00D03C06 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0F9883601AD2AB6000F750F0 /* Cardholder.swift in Sources */,
 				0F9883821AD2AB6000F750F0 /* Order.swift in Sources */,
 				0F9883DB1AD2AD5500F750F0 /* PaymentDateTableViewCell.swift in Sources */,
 				0F9883B41AD2AD0C00F750F0 /* JSON.swift in Sources */,
-				0FE28CB81B0E59AD00D03C06 /* IQKeyboardManagerConstants.swift in Sources */,
 				0F9883311AD2AB3C00F750F0 /* MercadoPago.swift in Sources */,
 				0F9883B01AD2ACFE00F750F0 /* CurrenciesUtil.swift in Sources */,
 				0F9883A41AD2AB8000F750F0 /* PaymentService.swift in Sources */,
@@ -1227,7 +1110,6 @@
 				0F98836A1AD2AB6000F750F0 /* Currency.swift in Sources */,
 				0F9884201AD2AE2700F750F0 /* MPCardholderNameTableViewCell.swift in Sources */,
 				0F9883BD1AD2AD1600F750F0 /* UIDevice+Additions.swift in Sources */,
-				0FE28CC31B0E59C500D03C06 /* IQTextView.swift in Sources */,
 				0F9883FE1AD2ADEE00F750F0 /* IssuerTableViewCell.swift in Sources */,
 				0F9883981AD2AB6000F750F0 /* Token.swift in Sources */,
 				0F9886211AD39E7E00F750F0 /* ErrorTableViewCell.swift in Sources */,
@@ -1241,7 +1123,6 @@
 				0F9883BB1AD2AD1600F750F0 /* String+Additions.swift in Sources */,
 				0F9883581AD2AB6000F750F0 /* Address.swift in Sources */,
 				0F9883BF1AD2AD1600F750F0 /* UIColor+Additions.swift in Sources */,
-				0FE28CBE1B0E59BC00D03C06 /* IQKeyboardManager.swift in Sources */,
 				0F9883AA1AD2AB8000F750F0 /* IdentificationService.swift in Sources */,
 				0F98835A1AD2AB6000F750F0 /* ApiException.swift in Sources */,
 				0F9883B61AD2AD0C00F750F0 /* Regex.swift in Sources */,
@@ -1251,7 +1132,6 @@
 				0F9883D71AD2AD5500F750F0 /* PaymentIDTableViewCell.swift in Sources */,
 				0FC4FC341B0FB36F00CF7148 /* PromoTyCDetailTableViewCell.swift in Sources */,
 				0F9884441AD2AEB600F750F0 /* MPSecurityCodeTableViewCell.swift in Sources */,
-				0FE28CB41B0E59A400D03C06 /* IQUIWindow+Hierarchy.swift in Sources */,
 				0F98837C1AD2AB6000F750F0 /* Issuer.swift in Sources */,
 				0F9883681AD2AB6000F750F0 /* Cause.swift in Sources */,
 			);

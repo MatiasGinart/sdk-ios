@@ -304,8 +304,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
                     let issuerViewController = MercadoPago.startIssuersViewController(self.publicKey!, paymentMethod: self.selectedPaymentMethod!,
                         callback: { (issuer: Issuer) -> Void in
                             self.selectedIssuer = issuer
-                            self.tableview.reloadData()
-                            self.showViewController(newCardViewController, sender: self)
+							self.showViewController(newCardViewController, sender: self)
                     })
                     self.showViewController(issuerViewController, sender: self)
                 } else {

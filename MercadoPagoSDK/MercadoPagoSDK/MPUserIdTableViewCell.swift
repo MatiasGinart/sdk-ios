@@ -20,21 +20,7 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
     public var identificationTypes : [IdentificationType] = [IdentificationType]()
     public var identificationType : IdentificationType?
 	
-	public var keyboardDelegate : KeyboardDelegate!
-	
-	func next() {
-		keyboardDelegate?.next(self)
-	}
-	
-	func prev() {
-		keyboardDelegate?.prev(self)
-	}
-	
-	func done() {
-		keyboardDelegate?.done(self)
-	}
-	
-	public func focus() {
+	public override func focus() {
 		if !self.userIdTypeTextField.isFirstResponder() {
 			self.userIdTypeTextField.becomeFirstResponder()
 		}
@@ -111,7 +97,7 @@ public class MPUserIdTableViewCell : ErrorTableViewCell, UITextFieldDelegate, UI
         self.userIdTypeTextField.delegate = self
         self.userIdValueTextField.delegate = self
 		
-		self.userIdValueTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Tipo".localized + " - " + "Documento".localized)
+		//self.userIdValueTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Tipo".localized + " - " + "Documento".localized)
 		
     }
     

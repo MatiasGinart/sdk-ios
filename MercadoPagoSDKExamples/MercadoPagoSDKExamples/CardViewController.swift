@@ -29,6 +29,9 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	
 	var callback : ((token : Token?) -> Void)?
 	
+	var isKeyboardVisible : Bool?
+	var inputsCells : NSMutableArray!
+	
 	init(merchantPublicKey: String, paymentMethod: PaymentMethod, callback: (token: Token?) -> Void) {
 		super.init(nibName: "CardViewController", bundle: nil)
 		self.publicKey = merchantPublicKey
@@ -55,9 +58,6 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		IQKeyboardManager.sharedManager().enable = true
-		IQKeyboardManager.sharedManager().enableAutoToolbar = true
-		
 		self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
 		self.view.addSubview(self.loadingView)
 		self.title = "Datos de tu tarjeta".localized
@@ -81,6 +81,34 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		)
 	}
 	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willShowKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willHideKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+	}
+	
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	func willHideKeyboard(notification: NSNotification) {
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, 0.0, 0)
+		self.tableView.contentInset = contentInsets
+		self.tableView.scrollIndicatorInsets = contentInsets
+	}
+	
+	func willShowKeyboard(notification: NSNotification) {
+		let s:NSValue? = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)
+		var keyboardBounds :CGRect = s!.CGRectValue()
+		
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, keyboardBounds.size.height, 0)
+		self.tableView.contentInset = contentInsets
+		self.tableView.scrollIndicatorInsets = contentInsets
+	}
+	
 	@IBAction func submitForm() {
 		self.view.addSubview(self.loadingView)
 		let cardToken = CardToken(cardNumber: self.cardNumberCell.getCardNumber(), expirationMonth: self.expirationDateCell.getExpirationMonth(), expirationYear: self.expirationDateCell.getExpirationYear(), securityCode: self.securityCodeCell.getSecurityCode(), cardholderName: self.cardholderNameCell.getCardholderName(), docType: self.userIdCell.getUserIdType(), docNumber: self.userIdCell.getUserIdValue())
@@ -93,47 +121,77 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		}
 	}
 	
-	func prev(object: AnyObject) {
-		if let cell = object as? MPExpirationDateTableViewCell {
-			self.cardNumberCell.focus()
-		} else if let cell = object as? MPCardholderNameTableViewCell {
-			self.expirationDateCell.focus()
-		} else if let cell = object as? MPUserIdTableViewCell {
-			self.cardholderNameCell.focus()
-		} else if let cell = object as? SimpleSecurityCodeTableViewCell {
-			self.userIdCell.focus()
+	func getIndexForObject(object: AnyObject) -> Int {
+		var i = 0
+		for arr in self.inputsCells {
+			if let input = object as? UITextField {
+				if let arrTextField = arr[0] as? UITextField {
+					if input == arrTextField {
+						return i
+					}
+				}
+			}
+			i++
+		}
+		return -1
+	}
+	
+	func scrollToRow(indexPath: NSIndexPath) {
+		self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+	}
+	
+	func focusAndScrollForIndex(index: Int) {
+		let textField = self.inputsCells[index][0] as? UITextField!
+		let cell = self.inputsCells[index][1] as? ErrorTableViewCell!
+		if textField != nil {
+			if !textField!.isFirstResponder() {
+				textField!.becomeFirstResponder()
+			}
+		}
+		if cell != nil {
+			let indexPath = self.tableView.indexPathForCell(cell!)
+			if indexPath != nil {
+				scrollToRow(indexPath!)
+			}
 		}
 	}
 	
-	func next(object: AnyObject) {
-		if let cell = object as? MPCardNumberTableViewCell {
-			self.expirationDateCell.focus()
-		} else if let cell = object as? MPExpirationDateTableViewCell {
-			self.cardholderNameCell.focus()
-		} else if let cell = object as? MPCardholderNameTableViewCell {
-			self.userIdCell.focus()
-		} else if let cell = object as? MPUserIdTableViewCell {
-			self.securityCodeCell.focus()
+	func prev(object: AnyObject?) {
+		if object != nil {
+			var index = getIndexForObject(object!)
+			if index >= 1 {
+				focusAndScrollForIndex(index-1)
+			}
 		}
 	}
 	
-	func done(object: AnyObject) {
-		if let cell = object as? MPCardNumberTableViewCell {
-			self.cardNumberCell.cardNumberTextField.resignFirstResponder()
-		} else if let cell = object as? MPExpirationDateTableViewCell {
-			self.expirationDateCell.expirationDateTextField.resignFirstResponder()
-		} else if let cell = object as? MPCardholderNameTableViewCell {
-			self.cardholderNameCell.cardholderNameTextField.resignFirstResponder()
-		} else if let cell = object as? MPUserIdTableViewCell {
-			self.userIdCell.userIdValueTextField.resignFirstResponder()
-			self.userIdCell.userIdTypeTextField.resignFirstResponder()
-		}else if let cell = object as? SimpleSecurityCodeTableViewCell {
-			self.securityCodeCell.securityCodeTextField.resignFirstResponder()
+	func next(object: AnyObject?) {
+		if object != nil {
+			var index = getIndexForObject(object!)
+			if index < self.inputsCells.count - 1 {
+				focusAndScrollForIndex(index+1)
+			}
 		}
 	}
 	
+	func done(object: AnyObject?) {
+		if object != nil {
+			var index = getIndexForObject(object!)
+			if index < self.inputsCells.count {
+				let textField = self.inputsCells[index][0] as? UITextField!
+				let cell = self.inputsCells[index][1] as? ErrorTableViewCell!
+				if textField != nil {
+					textField!.resignFirstResponder()
+				}
+				let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+				scrollToRow(indexPath!)
+			}
+		}
+	}
 	
 	func prepareTableView() {
+		
+		self.inputsCells = NSMutableArray()
 		
 		var cardNumberNib = UINib(nibName: "MPCardNumberTableViewCell", bundle: MercadoPago.getBundle())
 		self.tableView.registerNib(cardNumberNib, forCellReuseIdentifier: "cardNumberCell")
@@ -141,42 +199,43 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		self.cardNumberCell.height = 55.0
 		self.cardNumberCell.setIcon(self.paymentMethod._id)
 		self.cardNumberCell._setSetting(self.paymentMethod.settings[0])
-		self.cardNumberCell.keyboardDelegate = self
-		self.cardNumberCell.cardNumberTextField.setEnablePrevious(false, isNextEnabled: true)
+		self.cardNumberCell.cardNumberTextField.inputAccessoryView = MPToolbar(prevEnabled: false, nextEnabled: true, delegate: self, textFieldContainer: self.cardNumberCell.cardNumberTextField)
+		self.inputsCells.addObject([self.cardNumberCell.cardNumberTextField, self.cardNumberCell])
 		
 		var expirationDateNib = UINib(nibName: "MPExpirationDateTableViewCell", bundle: MercadoPago.getBundle())
 		self.tableView.registerNib(expirationDateNib, forCellReuseIdentifier: "expirationDateCell")
 		self.expirationDateCell = self.tableView.dequeueReusableCellWithIdentifier("expirationDateCell") as! MPExpirationDateTableViewCell
 		self.expirationDateCell.height = 55.0
-		self.expirationDateCell.keyboardDelegate = self
-		self.expirationDateCell.expirationDateTextField.setEnablePrevious(true, isNextEnabled: true)
+		self.expirationDateCell.expirationDateTextField.inputAccessoryView = MPToolbar(prevEnabled: true, nextEnabled: true, delegate: self, textFieldContainer: self.expirationDateCell.expirationDateTextField)
+		self.inputsCells.addObject([self.expirationDateCell.expirationDateTextField, self.expirationDateCell])
 		
 		var cardholderNameNib = UINib(nibName: "MPCardholderNameTableViewCell", bundle: MercadoPago.getBundle())
 		self.tableView.registerNib(cardholderNameNib, forCellReuseIdentifier: "cardholderNameCell")
 		self.cardholderNameCell = self.tableView.dequeueReusableCellWithIdentifier("cardholderNameCell") as! MPCardholderNameTableViewCell
 		self.cardholderNameCell.height = 55.0
-		self.cardholderNameCell.keyboardDelegate = self
-		self.cardholderNameCell.cardholderNameTextField.setEnablePrevious(true, isNextEnabled: true)
+		self.cardholderNameCell.cardholderNameTextField.inputAccessoryView = MPToolbar(prevEnabled: true, nextEnabled: true, delegate: self, textFieldContainer: self.cardholderNameCell.cardholderNameTextField)
+		self.inputsCells.addObject([self.cardholderNameCell.cardholderNameTextField, self.cardholderNameCell])
 		
 		var userIdNib = UINib(nibName: "MPUserIdTableViewCell", bundle: MercadoPago.getBundle())
 		self.tableView.registerNib(userIdNib, forCellReuseIdentifier: "userIdCell")
 		self.userIdCell = self.tableView.dequeueReusableCellWithIdentifier("userIdCell") as! MPUserIdTableViewCell
 		self.userIdCell._setIdentificationTypes(self.identificationTypes)
 		self.userIdCell.height = 55.0
-		self.userIdCell.keyboardDelegate = self
-		self.userIdCell.userIdValueTextField.setEnablePrevious(true, isNextEnabled: true)
+		self.userIdCell.userIdTypeTextField.inputAccessoryView = MPToolbar(prevEnabled: true, nextEnabled: true, delegate: self, textFieldContainer: self.userIdCell.userIdTypeTextField)
+		self.userIdCell.userIdValueTextField.inputAccessoryView = MPToolbar(prevEnabled: true, nextEnabled: true, delegate: self, textFieldContainer: self.userIdCell.userIdValueTextField)
+		
+		self.inputsCells.addObject([self.userIdCell.userIdTypeTextField, self.userIdCell])
+		self.inputsCells.addObject([self.userIdCell.userIdValueTextField, self.userIdCell])
 		
 		var securityCodeNib = UINib(nibName: "SimpleSecurityCodeTableViewCell", bundle: nil)
 		self.tableView.registerNib(securityCodeNib, forCellReuseIdentifier: "securityCodeCell")
 		self.securityCodeCell = self.tableView.dequeueReusableCellWithIdentifier("securityCodeCell") as! SimpleSecurityCodeTableViewCell
 		self.securityCodeCell.height = 55.0
-		self.securityCodeCell.keyboardDelegate = self
-		self.securityCodeCell.securityCodeTextField.setEnablePrevious(true, isNextEnabled: false)
-		
+		self.securityCodeCell.securityCodeTextField.inputAccessoryView = MPToolbar(prevEnabled: true, nextEnabled: false, delegate: self, textFieldContainer: self.securityCodeCell.securityCodeTextField)
+		self.inputsCells.addObject([self.securityCodeCell.securityCodeTextField, self.securityCodeCell])
+
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
-		self.tableView.autoresizesSubviews = true
-		self.tableView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

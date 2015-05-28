@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol KeyboardDelegate : NSObjectProtocol {
-	func prev(object: AnyObject)
-	func next(object: AnyObject)
-	func done(object: AnyObject)
+	func prev(object: AnyObject?)
+	func next(object: AnyObject?)
+	func done(object: AnyObject?)
 }

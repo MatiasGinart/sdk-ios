@@ -35,9 +35,9 @@
 		0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
 		0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
 		0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
-		0FC4FC831B0FF60300CF7148 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC4FC821B0FF60300CF7148 /* MercadoPagoSDK.framework */; };
-		0FC4FC841B0FF60300CF7148 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC4FC821B0FF60300CF7148 /* MercadoPagoSDK.framework */; };
-		0FC4FC851B0FF60900CF7148 /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC4FC821B0FF60300CF7148 /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FB2CC7A1B17A118000CA5BA /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CC791B17A118000CA5BA /* MercadoPagoSDK.framework */; };
+		0FB2CC7B1B17A118000CA5BA /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CC791B17A118000CA5BA /* MercadoPagoSDK.framework */; };
+		0FB2CC7C1B17A11D000CA5BA /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB2CC791B17A118000CA5BA /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0FCE50A41AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
 		0FCE50A51AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
 		0FFDB7261AF2B1F600F7AF9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */; };
@@ -61,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0FC4FC851B0FF60900CF7148 /* MercadoPagoSDK.framework in Embed Frameworks */,
+				0FB2CC7C1B17A11D000CA5BA /* MercadoPagoSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +89,7 @@
 		0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedVaultViewController.swift; sourceTree = "<group>"; };
 		0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalVaultViewController.swift; sourceTree = "<group>"; };
 		0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		0FC4FC821B0FF60300CF7148 /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
+		0FB2CC791B17A118000CA5BA /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
 		0FCE50A31AF2B05600A30177 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		0FFDB72A1AF2B1FA00F7AF9D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FFDB72B1AF2B21A00F7AF9D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC4FC831B0FF60300CF7148 /* MercadoPagoSDK.framework in Frameworks */,
+				0FB2CC7A1B17A118000CA5BA /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC4FC841B0FF60300CF7148 /* MercadoPagoSDK.framework in Frameworks */,
+				0FB2CC7B1B17A118000CA5BA /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 		0F9884ED1AD2BCB900F750F0 = {
 			isa = PBXGroup;
 			children = (
-				0FC4FC821B0FF60300CF7148 /* MercadoPagoSDK.framework */,
+				0FB2CC791B17A118000CA5BA /* MercadoPagoSDK.framework */,
 				0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */,
 				0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
 				0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,

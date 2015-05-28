@@ -29,7 +29,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
 		keyboardDelegate?.done(self)
 	}
 	
-	public func focus() {
+	public override func focus() {
 		if !self.cardNumberTextField.isFirstResponder() {
 			self.cardNumberTextField.becomeFirstResponder()
 		}
@@ -43,7 +43,7 @@ public class MPCardNumberTableViewCell : ErrorTableViewCell, UITextFieldDelegate
         super.awakeFromNib()
 		self.cardNumberLabel.text = "Número de tarjeta".localized
 		
-		self.cardNumberTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Número de tarjeta".localized)
+		//self.cardNumberTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Número de tarjeta".localized)
 		
     }
     

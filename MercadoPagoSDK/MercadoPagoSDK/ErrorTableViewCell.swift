@@ -25,6 +25,9 @@ public class ErrorTableViewCell : UITableViewCell {
             self.addSubview(self.errorView!)
         }
     }
+	
+	public func focus() {
+	}
     
     public func hasError() -> Bool {
         return self.errorView != nil

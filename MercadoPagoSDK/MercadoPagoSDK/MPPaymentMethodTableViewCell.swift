@@ -48,7 +48,7 @@ public class MPPaymentMethodTableViewCell : UITableViewCell {
             let range = Range(start: advance(card!.cardNumber!.endIndex, -4),
                 end: card!.cardNumber!.endIndex)
             let lastFourDigits : String = card!.cardNumber!.substringWithRange(range)
-            self.cardTextLabel.text = paymentMethod!.name + " terminada en ".localized + lastFourDigits
+            self.cardTextLabel.text = paymentMethod!.name + " " + "terminada en".localized + " " + lastFourDigits
             self.cardIcon.image = UIImage(named: "icoTc_" + paymentMethod!._id, inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection:nil)
         }
     }

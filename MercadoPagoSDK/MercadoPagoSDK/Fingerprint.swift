@@ -24,10 +24,9 @@ public class Fingerprint : NSObject {
     
     public func deviceFingerprint() -> [String : AnyObject] {
         var device : UIDevice = UIDevice.currentDevice()
-        var dictionary : [String : AnyObject] = ["os" : "iOS"]
-
-                return dictionary
-   /*     let devicesId : [AnyObject]? = devicesID()
+        var dictionary : [String : AnyObject] = [String : AnyObject]()
+		dictionary["os"] = "iOS"
+		let devicesId : [AnyObject]? = devicesID()
         if devicesId != nil {
             dictionary["vendor_ids"] = devicesId!
         }
@@ -43,16 +42,16 @@ public class Fingerprint : NSObject {
         }
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
-        public var width = NSString(format: "%.0f", screenSize.width)
-        public var height = NSString(format: "%.0f", screenSize.height)
+        var width = NSString(format: "%.0f", screenSize.width)
+        var height = NSString(format: "%.0f", screenSize.height)
         
-        dictionary["resolution"] = width + "x" + height
+        dictionary["resolution"] =  "\(width)x\(height)"
         
         dictionary["ram"] = device.totalMemory
         dictionary["disk_space"] = device.totalDiskSpace
         dictionary["free_disk_space"] = device.freeDiskSpace
         
-        public var moreData : [String : AnyObject]
+		var moreData = [String : AnyObject]()
         
         moreData["feature_camera"] = device.cameraAvailable
         moreData["feature_flash"] = device.cameraFlashAvailable
@@ -61,7 +60,7 @@ public class Fingerprint : NSObject {
         moreData["cpu_count"] = device.cpuCount
         moreData["retina_display_capable"] = device.retinaDisplayCapable
         
-        if device.userInterfaceIdiom {
+        if device.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
             moreData["device_idiom"] = "Pad"
         } else {
             moreData["device_idiom"] = "Phone"
@@ -91,13 +90,13 @@ public class Fingerprint : NSObject {
             moreData["platform"] = device.platform
         }
         
-        moreData["device_family"] = device.deviceFamily
+        moreData["device_family"] = device.deviceFamily.rawValue
         
         if !String.isNullOrEmpty(device.name) {
             moreData["device_name"] = device.name
         }
         
-        public var simulator : Bool = false
+        var simulator : Bool = false
         #if TARGET_IPHONE_SIMULATOR
             simulator = YES
         #endif
@@ -109,7 +108,9 @@ public class Fingerprint : NSObject {
         }
         
         dictionary["vendor_specific_attributes"] = moreData
-        */
+		
+		return dictionary
+		
     }
     
     public func devicesID() -> [AnyObject]? {

@@ -644,6 +644,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK11MercadoPago")
 - (void)getPromos:(void (^ __nonnull)(NSArray * __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 + (BOOL)isCardPaymentType:(NSString * __nonnull)paymentTypeId;
 + (NSBundle * __nullable)getBundle;
++ (CGRect)screenBoundsFixedToPortraitOrientation;
 + (void)showAlertViewWithError:(NSError * __nullable)error nav:(UINavigationController * __nullable)nav;
 @end
 
@@ -699,7 +700,10 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK21NewCardViewController")
 - (void)prepareTableView;
 - (void)submitForm;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)viewDidLayoutSubviews;
+- (void)tableView:(UITableView * __nonnull)tableView willDisplayCell:(UITableViewCell * __nonnull)cell forRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (BOOL)validateForm:(CardToken * __nonnull)cardToken;
 @end
@@ -1070,6 +1074,9 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK19VaultViewController")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)scrollToRow:(NSIndexPath * __nonnull)indexPath;
 - (void)declareAndInitCells;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;

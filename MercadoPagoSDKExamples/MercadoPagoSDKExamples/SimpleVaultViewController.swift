@@ -54,17 +54,12 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
         super.init(coder: aDecoder)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        declareAndInitCells()
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Pagar".localized
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continuar".localized, style: UIBarButtonItemStyle.Plain, target: self, action: "submitForm")
@@ -81,6 +76,44 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
                 self.tableview.reloadData()
             }, failure: nil)
     }
+	
+	override func viewWillAppear(animated: Bool) {
+		declareAndInitCells()
+		super.viewWillAppear(animated)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willShowKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willHideKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+	}
+	
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	func willHideKeyboard(notification: NSNotification) {
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, 0.0, 0)
+		self.tableview.contentInset = contentInsets
+		self.tableview.scrollIndicatorInsets = contentInsets
+		self.scrollToRow(NSIndexPath(forRow: 0, inSection: 0))
+	}
+	
+	func willShowKeyboard(notification: NSNotification) {
+		let s:NSValue? = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)
+		var keyboardBounds :CGRect = s!.CGRectValue()
+		
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, keyboardBounds.size.height, 0)
+		self.tableview.contentInset = contentInsets
+		self.tableview.scrollIndicatorInsets = contentInsets
+		let securityIndexPath = self.tableview.indexPathForCell(self.securityCodeCell)
+		if securityIndexPath != nil {
+			self.scrollToRow(securityIndexPath!)
+		}
+	}
+	
+	func scrollToRow(indexPath: NSIndexPath) {
+		self.tableview.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+	}
     
     func declareAndInitCells() {
         var paymentMethodNib = UINib(nibName: "MPPaymentMethodTableViewCell", bundle: MercadoPago.getBundle())

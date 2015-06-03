@@ -57,7 +57,7 @@ public class IssuersViewController: UIViewController, UITableViewDataSource, UIT
                 self.loadingView.removeFromSuperview()
             }, failure: nil)
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         var issuerNib = UINib(nibName: "IssuerTableViewCell", bundle: self.bundle)

@@ -52,7 +52,7 @@ public class PromoViewController: UIViewController, UITableViewDataSource, UITab
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 		
-		self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+		self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
 		
 		self.view.addSubview(self.loadingView)
 		

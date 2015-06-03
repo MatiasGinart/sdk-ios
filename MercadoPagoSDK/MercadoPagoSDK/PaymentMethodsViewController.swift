@@ -50,7 +50,7 @@ public class PaymentMethodsViewController : UIViewController, UITableViewDataSou
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás".localized, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)

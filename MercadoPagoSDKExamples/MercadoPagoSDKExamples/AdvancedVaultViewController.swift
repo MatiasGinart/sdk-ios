@@ -164,7 +164,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
             }), sender: self)
         }
     }
-    
+	
     override func submitForm() {
         
         let mercadoPago : MercadoPago = MercadoPago(publicKey: self.publicKey!)
@@ -181,6 +181,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
 				var installments = self.selectedPayerCost == nil ? 0 : self.selectedPayerCost!.installments
 				
                 mercadoPago.createToken(savedCardToken, success: {(token: Token?) -> Void in
+					self.loadingView.removeFromSuperview()
                     self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?._id, issuerId: self.selectedIssuer?._id, installments: installments)
                 }, failure: nil)
             } else {
@@ -194,6 +195,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
 			var installments = self.selectedPayerCost == nil ? 0 : self.selectedPayerCost!.installments
 			
             mercadoPago.createNewCardToken(self.selectedCardToken!, success: {(token: Token?) -> Void in
+					self.loadingView.removeFromSuperview()
                     self.advancedCallback!(paymentMethod: self.selectedPaymentMethod!, token: token?._id, issuerId: self.selectedIssuer?._id, installments: installments)
             }, failure: nil)
         }

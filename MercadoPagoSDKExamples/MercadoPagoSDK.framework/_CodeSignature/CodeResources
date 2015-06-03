@@ -6,106 +6,63 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		3SLd8v+f+L9YqEpYTGBZsEq4WUw=
+		7h/vj5toc6tq2DTmtgBX2YmMrIE=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		dJkj72QBPJPuS/hZofMcJVRG+FE=
+		VwLwQ2KZmMYLT9qVRHS3POg6GRQ=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		MuQFk1NXSguPehvC5OhbmKEjhJA=
+		LeDwcXs3B8AC/sVVHYUbMTOySts=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		DmPMinqc2ckZQmOFYPm2uDkF73Y=
+		pgXn6bFGkzaOJ0PgVp7Tj7F/Noo=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		xTp20sQz6KGFHbMzQVDjhRlEInw=
+		j09lxo9lN/sgetCthBMKr4grMZc=
 		</data>
 		<key>CongratsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		7g/MN0oSRhfm7dTHRE79SF/yuz8=
+		KXLDiGhEnBWD0i65LfCMF0qHM8o=
 		</data>
 		<key>CongratsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		n8SvhdC0yw9jIMJB3V6QB6wnqR8=
+		jb7OOeMxA42wSmlE2N7O8jiiPo4=
 		</data>
 		<key>CongratsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		CRhqdN3H+Ay2RBiDfA7cyMVaZy0=
+		ROfW0DmMeoXbWVxrTZTrCyZUxVI=
 		</data>
 		<key>CongratsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		pKXR7Opppn8aor2iUEFiTMk+nGE=
+		8IkaV712ZAIyEVmueW5YylKY6jY=
 		</data>
 		<key>CustomerCardsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		Q9eqLneICXOBHUWNLVYCZNPgkTU=
+		6xgPocUWNalxOZngXrW6RR6j0gc=
 		</data>
 		<key>CustomerCardsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		IQZETT74FBpG8RPBhcTam/lKdv8=
+		JEXW5lxPLSy00oErYnBAdJjLGZo=
 		</data>
 		<key>CustomerCardsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		AJsrXcJyNLd4qrgKts3+xQ36aIo=
+		d+EE7IqGT/0STmgQl+U1d7omwgg=
 		</data>
 		<key>CustomerCardsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		E2bhwEVWHzIZdkXjtiKr7QbtsYI=
+		lrialz+gnOf/E+BlEHDUGkTOI+8=
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		hDWG+DSb+1R6JUBrtJTW+K1lAdE=
+		+sD+kNsCGkaKkNUyzKof4aJHgGA=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
 		Y8UQT4/5WgMOLz1QvSz/T14Z/NM=
-		</data>
-		<key>IQKeyboardManager.bundle/IQButtonBarArrowLeft@2x.png</key>
-		<data>
-		JnWKFwDxiQg+P5BZj+eUUpuMa5E=
-		</data>
-		<key>IQKeyboardManager.bundle/IQButtonBarArrowRight@2x.png</key>
-		<data>
-		8bXoFgM9W8yUsfwwhyu04s5FFi0=
-		</data>
-		<key>IQKeyboardManager.bundle/de.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XAMtfCBPAbgSPBoutKHQwStCT48=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/en.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sMbInXsoKAUK7+dZ1n/0jF84h5o=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/es.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vrhRgiujgh91e57LnlUs3rWBD9E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/zh-Hans/IQKeyboardManager.strings</key>
-		<data>
-		0dhsbGPLjTzRqQAqEGZBhe3AsdM=
-		</data>
-		<key>IQKeyboardManager.bundle/zh-Hant/IQKeyboardManager.strings</key>
-		<data>
-		549Z0CX5jIn+3EYVDi3nSNNKeRY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -113,191 +70,191 @@
 		</data>
 		<key>InstallmentTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		71XbJjHU3eLwk/89ewI0/da+uok=
+		6EUbQtUOVLZPvh6uDWPXHZMaebo=
 		</data>
 		<key>InstallmentTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		S2gBXUc6X0f9cQMVlOcVUdN6GGY=
+		Ip9mD9kMwVNoTbIBiPiM14Naf00=
 		</data>
 		<key>InstallmentTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		sVbRP33JeBJeqRjgT0lWqZQeDiM=
+		DXZRlXM6VXcQKCEQw3TdpO0h5pI=
 		</data>
 		<key>InstallmentTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		pNo9gLIE8MLc3Mfrd0WpK+BTo4U=
+		B/7Uo+8HPyhw2W1gyg4RDBZMuls=
 		</data>
 		<key>InstallmentsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		55onyJmst3FwqQ1b6jS/e4qFTj0=
+		3tJUtvybq+VCfmWqJhfNVrIs21I=
 		</data>
 		<key>InstallmentsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		uL1QZzzEnZe4GR8zWE7GssPwvVs=
+		Bj0o+5xl0lleUrP4uShTBOTbofM=
 		</data>
 		<key>InstallmentsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		hho8lEzv9D5pgbWZzJ8sKvNinlg=
+		K06nuZnkkS8JtSysdE9Yb3M7wUE=
 		</data>
 		<key>InstallmentsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		9jcIa45fwCTBC8j2yDGtqnh+q5k=
+		OAe5esmXfTn8huqHLGcKMRRk4uw=
 		</data>
 		<key>IssuerTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		xo+iSorOSuYrYnzVCBY5I5TxZW0=
+		1Em2IsMy9YUKarh8wIEgHxLItuA=
 		</data>
 		<key>IssuerTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		1IDOvTzcNy2kjjygkn0HHKoNBDo=
+		PcemNHSaoz08MCEU/ThvSSQBfrc=
 		</data>
 		<key>IssuerTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		MibUVy6b32D2+tDfEPSBJgP5x3g=
+		qvgkHQzJR8AtpBv1MZUwC7vVNKI=
 		</data>
 		<key>IssuerTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		O6n/ZfrhVg/bm1aNc+pZHkjf8XA=
+		kdZViKVAbqQ4zScKOndZKR3Kr6w=
 		</data>
 		<key>IssuersViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		SGsIVbwxGZzSAA/R2oqRyhkg4VI=
+		DHpYhWdPvBsrTEUVeESsEpTdzac=
 		</data>
 		<key>IssuersViewController~ipad.nib/runtime.nib</key>
 		<data>
-		5JJIZ+9I+rt0bsjKMkqD8pkFD9M=
+		bF5jZxI5wiJYcr+CObGSq2m8zUo=
 		</data>
 		<key>IssuersViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		YgQNIhuUrOUilSPfON/K07hcxpY=
+		ohVn8DgbRaZPvctYhHtXzzGoKc0=
 		</data>
 		<key>IssuersViewController~iphone.nib/runtime.nib</key>
 		<data>
-		TLmBbU6XaMbtgjNIuXaCi32jrQg=
+		FUzk9+J2b8OSzBQANu3CJtmH1DI=
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		rSX8k4wbKIhnPrReZG9mto3FDRI=
+		lN3SADiHR940VMmzA1VUNJtrJ+M=
 		</data>
 		<key>MPCardholderNameTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		bVC58StFK00Q4FPRJ6xxmBDu78Y=
+		Ec/ldnYIDO+6qbosU5ikDn30VfA=
 		</data>
 		<key>MPCardholderNameTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		LTZbsgQEb1B7GhrxpL7v7L6WawE=
+		AbX4FpPWuwSSiXMrBIUjywDKJOE=
 		</data>
 		<key>MPCardholderNameTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		jU74cHOQlA4BUEm24mPbE49Zihg=
+		xU9qA1qF9aRfT9hGAo6m4jRTb2w=
 		</data>
 		<key>MPCardholderNameTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		nioEQ16bjvfq27+/NqFOlfWfJjY=
+		MiZg09OqNJURFsueX1+Mv2rz71U=
 		</data>
 		<key>MPExpirationDateTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		jpN3Y6prH6n4NyHzk++F51A4v44=
+		vuX32mUC2uxdc9EikSg0oyc2WkQ=
 		</data>
 		<key>MPExpirationDateTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		s87cd+do0GCc1VxTqs/g8vtj4v0=
+		mS8jt6TpOgIdYsNki5VG/9YK3vw=
 		</data>
 		<key>MPExpirationDateTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		6n9QmSHS8SMvuC202rD+GGY8rhA=
+		NUdh/70Dd48F46ivSFUVGJxNqt8=
 		</data>
 		<key>MPExpirationDateTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		YIR0y3X8+VvvxdMvpWhuOU/BRJA=
+		rUa0ahZRRYETQMHpOEAKoLvtveo=
 		</data>
 		<key>MPInstallmentsTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		dVD12sz/F0crnrNbQlC4P3gH6dw=
+		2R5ozHtPC1NFJPHztymZmL3v5Ic=
 		</data>
 		<key>MPInstallmentsTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		sHL8E6POsTcoN0q2yRgS3IcYdsk=
+		vZG/lRMsqDj8bln5omJLdvCFrdM=
 		</data>
 		<key>MPInstallmentsTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		qXx/n7aP+7ndfBcg5p7w85Ans74=
+		a/DVtJMZUrx0eNcw1IukQDXnOw0=
 		</data>
 		<key>MPInstallmentsTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		8s2ZJieWnp+LkA3hhThsBKurhXg=
+		h/nZQcoO9mBTk4GFx7Kf4UH4rks=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		I2uREAWuMn+G0GsCbrXN63X6VVU=
+		s+oSD8tbHj8HNZvaw6AuZq2643w=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		FL8LbjMrzW+CKoBMG3IpCOk2L3o=
+		cuqls9oNn/jwzRC+omJ6Q9cX4DU=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7inL6SyI8Gzgv7wqVlt2b+MjQuc=
+		jEaCcUHgrdP/7yawdHYtRSTYkpA=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Rw/Fha4XUjkv3OjRQloHrjyL9hY=
+		O6aDOma5QM7F6lKF32sSNFuPSlU=
 		</data>
 		<key>MPPaymentMethodTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		pihv9L+YatT1FLwAtAcqG/yU7AU=
+		B1x1E7M/CyGacdVMcNiGEwCOlqE=
 		</data>
 		<key>MPPaymentMethodTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		2HnE9JEPBoLhvYQBL0VX6VfErOM=
+		/4Tzu1GbDxeyyZNqOb+P+MgKU4s=
 		</data>
 		<key>MPPaymentMethodTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		nydARz6ngYXp4de/PsC2ZcdmXPU=
+		fzkfdTuWMw4MaMxcrbrI0AFK4n0=
 		</data>
 		<key>MPPaymentMethodTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Nhu3PV70Ny1iEiBFRHFxtwG4EqU=
+		a7zFy6W530Hi+zd82CsLEJMyg04=
 		</data>
 		<key>MPSecurityCodeTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		ffrUiLH3sQbwZGhElYxsQAKQ3aA=
+		ShSq6US5JMDe2NteqUzy+Xp0aiU=
 		</data>
 		<key>MPSecurityCodeTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		Zwa9Wy5GIuZvxt8DADjjcOYKOD8=
+		um614idozlDB7GvyXy9bv57JZN0=
 		</data>
 		<key>MPSecurityCodeTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		Uw8KctYZ+uJQnvk7sZt1yAILppo=
+		rukXiHJWpmeGaDP24xV6Ikkkj7g=
 		</data>
 		<key>MPSecurityCodeTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Emm1jHYF2mPKiEYmzsndxMhkfME=
+		tRRtOanRC/ITH327mG9U9mkyLco=
 		</data>
 		<key>MPUserIdTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		L+zxhWNuKyYPwxvXNcxd2LaMMjg=
+		1dl3SdmAq7ubF89G4tvq3KyQbjE=
 		</data>
 		<key>MPUserIdTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		+7OveYoKlEJnAaJjkJaaL3oy9OA=
+		3gixZudqcxcQ78XXwtSpel0vcSo=
 		</data>
 		<key>MPUserIdTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		AKtKjWt+2fdQWKs5bGMKAPBgBqI=
+		ll3AU/w/gQ+wTwA1T2O36aIyv9E=
 		</data>
 		<key>MPUserIdTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		WBK4j37YmMcvHL2rIykBe6GDHJ8=
+		qedh+or3ZKFhovClZE1BCPBX1Uk=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		9CHxc1pTMzdWTX4xHhs5CLqaPu0=
+		tt2LpASq63eQpeobU+jFVRBsNHI=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		sDmem88v//8HXXKG1OONV6njOho=
+		FQwJ3m8ukzFMSOMgaCUygcO9V30=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -305,7 +262,7 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		HjnxnZ5q+WdutmjtdBzrFVAUAZE=
+		U6uUjHAehxh3OkxbLwKIgyJqJSI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -313,199 +270,199 @@
 		</data>
 		<key>NewCardViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		2VQbjmTaCGdDNBF1FMHD9PpGHyI=
+		wZCbfkRitE8WZ/9rfPlLvpHIGaw=
 		</data>
 		<key>NewCardViewController~ipad.nib/runtime.nib</key>
 		<data>
-		MEhILSNng3yQqifqhmgKMofkvak=
+		5ifHkiroNhhXCJ+IElNMXcqMmSE=
 		</data>
 		<key>NewCardViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		5aeIcLSaDOHrluwp03OLgaaj+7I=
+		PoZj6WHOyUeY3jkDRvGeQZgMhvQ=
 		</data>
 		<key>NewCardViewController~iphone.nib/runtime.nib</key>
 		<data>
-		zddwjE2nxre9GRCJvsUDgBFC4mg=
+		ASLOqiaWDC67O+idaf0IVGrdZv8=
 		</data>
 		<key>PaymentDateTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		YzJ2O1psFU7/wUb6EC544gvNLgs=
+		2xNdnGz4g7C5oXJLcqUNTmbJEn8=
 		</data>
 		<key>PaymentDateTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		41aR4YrXJbNL9LTEMtzrC07SwpQ=
+		oTBgBYYMH24BxsvJcv6KYeeAoaE=
 		</data>
 		<key>PaymentDateTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		iAH/giGmEOA5uw3IwY4RgAfrMD8=
+		yHg9L7FAB9QbSu+fv36czAzkKBc=
 		</data>
 		<key>PaymentDateTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		iZV3dCI0qCNpfRJFBmS1V6soBh8=
+		G//w0M6qEVQ62xzunUu8jVBfUUI=
 		</data>
 		<key>PaymentIDTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		G1nJUd0aMWQD76MKJiLmZWgNLes=
+		Tt9qEKSe0zZ/u5dd/mSHBzWPSPo=
 		</data>
 		<key>PaymentIDTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		LrVP6R2Id1kWSNiSdz0sJpmw6LQ=
+		GTAt/gp5h+XhNCrvkUlRwk3GV4o=
 		</data>
 		<key>PaymentIDTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		nsLSjsF/ZpSMRPVpBQRyJOLnUaw=
+		unTO0Jm8554pwB/GVKU8Z1FQEwc=
 		</data>
 		<key>PaymentIDTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		5UY22qHjbeNUqh6EchaodreM2cI=
+		yDEG6XdsZ0XGjs6G7g8kWprGgPc=
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		mMXlfdfZXJ8fqN+ih2X26QhxgC0=
+		wkbc4QhowPcY050F/tswHSVuRkA=
 		</data>
 		<key>PaymentMethodsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		PWswIrdc23WUHiag9DpFyM6xYX8=
+		dt5ti17UL4Bm2amjlWBh6zD4Jn0=
 		</data>
 		<key>PaymentMethodsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		HSVyy48q6DQaOgi6VwCZ6ffUTNM=
+		NL9YoQ/jNkVeS9DHiBfUdLvttCg=
 		</data>
 		<key>PaymentMethodsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		0Fh7T1c1OQQiz/GiWFC1L4/wRYY=
+		fOW56E8cp2YPdItAZaXD61mn4zI=
 		</data>
 		<key>PaymentMethodsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		c6UJwATA9yOI6m+NBwfJPfuvkpo=
+		GSaQtM9AkhMM/RQhfR2swEsDXJU=
 		</data>
 		<key>PaymentTotalTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		zfpw/GeSMoqkW+t382ov6Z6CRTY=
+		HMaOwMUhd7SdNC7pG1xM/eA00Q8=
 		</data>
 		<key>PaymentTotalTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		7vLK9GRW6nHm0apewUFekICmnOQ=
+		mJO1A+M5/sHgOuNTzpLBE2/gktI=
 		</data>
 		<key>PaymentTotalTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		WsdqFlFcqEoGeaGvOfWGOaWZWyI=
+		eU9t8zqDsFcb1HIuEx5vayVkIyQ=
 		</data>
 		<key>PaymentTotalTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		YNPeJwSr1QlhWqemjqSoybX3ulI=
+		h+jvGCEvzCSVxe7P6NlQXbJU6Mw=
 		</data>
 		<key>PromoEmptyTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		YMNO/SF0jgrZ/4Wo4HdoIhhYPfA=
+		J7i59uKAQy2/zDfVZDmh1OJSFw8=
 		</data>
 		<key>PromoEmptyTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		EopCws75dL9+yf/O5S+DOYA0G9c=
+		R2J+MG5dYqVHegsP3LJf4Dpxw5w=
 		</data>
 		<key>PromoEmptyTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		xBJdGJjHiLiHKJjJYICFebwpucg=
+		EThy4WXfXsxkR20HT8MNZXP20Yc=
 		</data>
 		<key>PromoEmptyTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		NI7kuwKmW7yP+bzRV3Q1+b9+dlo=
+		F5ta3wGhepntjIeESC9UUzBdYO0=
 		</data>
 		<key>PromoTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		g1zFYUI20lb/HGxOA8a2eCUAGAs=
+		BYm5H9rrMrYX6UGo0e7pLfEroSo=
 		</data>
 		<key>PromoTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		UvOPDySi3lh4IkH474A3u6OphGE=
+		H99yZSu+r8Vy8OVyDUYVvIl+lJw=
 		</data>
 		<key>PromoTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		p2lU6PS+s4hTQvmyYEeWLwUuTRM=
+		mPJrAKyOhc/iYFCm2SwDqF9FrZU=
 		</data>
 		<key>PromoTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		ZAjmapYtT17t209Z7nUTzfm8myw=
+		X7sJ9hOxp2HZoRf67pTGQXgpPfA=
 		</data>
 		<key>PromoTyCDetailTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		zrChMOjImohYjL5d9dxss3rUAHc=
+		WxBCVu1fcWNHi5AglEGXLXYtG3I=
 		</data>
 		<key>PromoTyCDetailTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		sddKXeqP3Q8ptL39AzWgEk13WDo=
+		4lt2DZjUNrbjHeC9i8Vuoo3mDvM=
 		</data>
 		<key>PromoTyCDetailTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		5/ksSKfSstu0AHsV8hs8pB4XiTU=
+		vzkwTlowDBuP9quIIPikS9+NhFk=
 		</data>
 		<key>PromoTyCDetailTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		mTfXHR0BEDesfzTs9q7FwDbXaaE=
+		qIHaJSUtG5v8w9H6N063nmwIMHM=
 		</data>
 		<key>PromoViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		CbPj+kODOQnvlPr0NERyDJvixuE=
+		cS+YQy70TWzMk4jzHkOBVot/TTc=
 		</data>
 		<key>PromoViewController~ipad.nib/runtime.nib</key>
 		<data>
-		+QKsY9oh1hOf41eKq0L8V1UuHkk=
+		FAxOQwfU5UcbBMlEd4aQ/aKFk2w=
 		</data>
 		<key>PromoViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		Xh3uCIv+7F7aLnaZhcsQ8SYauj8=
+		aJ8MJcACdNqGgJyr6llU/0svB8E=
 		</data>
 		<key>PromoViewController~iphone.nib/runtime.nib</key>
 		<data>
-		UYbqNJsLRWzSUwpjD9PfFPMTv/U=
+		sTIQ5atIYFcZPLryE3dIhDYIJ+4=
 		</data>
 		<key>PromosTyCTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		FFwhKNfgoxZYMY1UxbV85R00w9M=
+		+/bMsgg727qkdlYrv4vYaAVSIvc=
 		</data>
 		<key>PromosTyCTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		McCy2MRFCVy8j8aoNvXmj1bux+k=
+		AJeqF8pYJzF8K5gYRe2VTc3G8f0=
 		</data>
 		<key>PromosTyCTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7dLuOuJdYpZVwWcDbXuIuHJ0/Zs=
+		aF4QOziQ+RIZF9TcUqsYVl4by44=
 		</data>
 		<key>PromosTyCTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		ySY2+FaY+15khcwQG7Awhj/Rg+E=
+		yDqs7kGFhqU8NvMuhAMmNd7aGJw=
 		</data>
 		<key>PromosTyCViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		I9IYX1TpuB84Cz+yJLjXNhha6QU=
+		/9BGb6OrvdqBh6ARKYAPg3zob7g=
 		</data>
 		<key>PromosTyCViewController~ipad.nib/runtime.nib</key>
 		<data>
-		SvBzYf4TqMEw2M3JigYr89rJhzc=
+		yBOM0MY9dbE270Sw5bHQ5B85L6M=
 		</data>
 		<key>PromosTyCViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		OuLkXUANfyc0hTQrOqmtR0rFDKA=
+		24reLQuQbOvVleOwoSW52g54h3g=
 		</data>
 		<key>PromosTyCViewController~iphone.nib/runtime.nib</key>
 		<data>
-		eBDVHhMpKKEt9doHw9S/Y+tLVVU=
+		9Qo9YabMRQdb6D/maBqu8x3Rsns=
 		</data>
 		<key>VaultViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		Me4WyMRFRAzvc2H9ItugR0Co1SM=
+		D9wU3eR3/XEzQcxXukdPpWI5XZQ=
 		</data>
 		<key>VaultViewController~ipad.nib/runtime.nib</key>
 		<data>
-		iw2SPRf0YJuM8co4eSreJrBzIww=
+		sqsK9PkxHMF5go3q0QAvxL+7uBM=
 		</data>
 		<key>VaultViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7jLRpmr22lD98dr1t6/9i3bYxRo=
+		YWJiPKj/zm1+GTBgD8+m9ZwP8lI=
 		</data>
 		<key>VaultViewController~iphone.nib/runtime.nib</key>
 		<data>
-		sXjJC3I26B2Hr0pNEEZdscxm7n4=
+		UYY7LxLwLJLF2X6pA2hn8zlxo6I=
 		</data>
 		<key>es-CO.lproj/Localizable.strings</key>
 		<dict>
@@ -548,294 +505,251 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		3SLd8v+f+L9YqEpYTGBZsEq4WUw=
+		7h/vj5toc6tq2DTmtgBX2YmMrIE=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		dJkj72QBPJPuS/hZofMcJVRG+FE=
+		VwLwQ2KZmMYLT9qVRHS3POg6GRQ=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		MuQFk1NXSguPehvC5OhbmKEjhJA=
+		LeDwcXs3B8AC/sVVHYUbMTOySts=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		DmPMinqc2ckZQmOFYPm2uDkF73Y=
+		pgXn6bFGkzaOJ0PgVp7Tj7F/Noo=
 		</data>
 		<key>CongratsPaymentMethodTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		xTp20sQz6KGFHbMzQVDjhRlEInw=
+		j09lxo9lN/sgetCthBMKr4grMZc=
 		</data>
 		<key>CongratsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		7g/MN0oSRhfm7dTHRE79SF/yuz8=
+		KXLDiGhEnBWD0i65LfCMF0qHM8o=
 		</data>
 		<key>CongratsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		n8SvhdC0yw9jIMJB3V6QB6wnqR8=
+		jb7OOeMxA42wSmlE2N7O8jiiPo4=
 		</data>
 		<key>CongratsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		CRhqdN3H+Ay2RBiDfA7cyMVaZy0=
+		ROfW0DmMeoXbWVxrTZTrCyZUxVI=
 		</data>
 		<key>CongratsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		pKXR7Opppn8aor2iUEFiTMk+nGE=
+		8IkaV712ZAIyEVmueW5YylKY6jY=
 		</data>
 		<key>CustomerCardsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		Q9eqLneICXOBHUWNLVYCZNPgkTU=
+		6xgPocUWNalxOZngXrW6RR6j0gc=
 		</data>
 		<key>CustomerCardsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		IQZETT74FBpG8RPBhcTam/lKdv8=
+		JEXW5lxPLSy00oErYnBAdJjLGZo=
 		</data>
 		<key>CustomerCardsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		AJsrXcJyNLd4qrgKts3+xQ36aIo=
+		d+EE7IqGT/0STmgQl+U1d7omwgg=
 		</data>
 		<key>CustomerCardsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		E2bhwEVWHzIZdkXjtiKr7QbtsYI=
+		lrialz+gnOf/E+BlEHDUGkTOI+8=
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		hDWG+DSb+1R6JUBrtJTW+K1lAdE=
+		+sD+kNsCGkaKkNUyzKof4aJHgGA=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
 		Y8UQT4/5WgMOLz1QvSz/T14Z/NM=
 		</data>
-		<key>IQKeyboardManager.bundle/IQButtonBarArrowLeft@2x.png</key>
-		<data>
-		JnWKFwDxiQg+P5BZj+eUUpuMa5E=
-		</data>
-		<key>IQKeyboardManager.bundle/IQButtonBarArrowRight@2x.png</key>
-		<data>
-		8bXoFgM9W8yUsfwwhyu04s5FFi0=
-		</data>
-		<key>IQKeyboardManager.bundle/de.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XAMtfCBPAbgSPBoutKHQwStCT48=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/en.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sMbInXsoKAUK7+dZ1n/0jF84h5o=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/es.lproj/IQKeyboardManager.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vrhRgiujgh91e57LnlUs3rWBD9E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>IQKeyboardManager.bundle/zh-Hans/IQKeyboardManager.strings</key>
-		<data>
-		0dhsbGPLjTzRqQAqEGZBhe3AsdM=
-		</data>
-		<key>IQKeyboardManager.bundle/zh-Hant/IQKeyboardManager.strings</key>
-		<data>
-		549Z0CX5jIn+3EYVDi3nSNNKeRY=
-		</data>
 		<key>InstallmentTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		71XbJjHU3eLwk/89ewI0/da+uok=
+		6EUbQtUOVLZPvh6uDWPXHZMaebo=
 		</data>
 		<key>InstallmentTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		S2gBXUc6X0f9cQMVlOcVUdN6GGY=
+		Ip9mD9kMwVNoTbIBiPiM14Naf00=
 		</data>
 		<key>InstallmentTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		sVbRP33JeBJeqRjgT0lWqZQeDiM=
+		DXZRlXM6VXcQKCEQw3TdpO0h5pI=
 		</data>
 		<key>InstallmentTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		pNo9gLIE8MLc3Mfrd0WpK+BTo4U=
+		B/7Uo+8HPyhw2W1gyg4RDBZMuls=
 		</data>
 		<key>InstallmentsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		55onyJmst3FwqQ1b6jS/e4qFTj0=
+		3tJUtvybq+VCfmWqJhfNVrIs21I=
 		</data>
 		<key>InstallmentsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		uL1QZzzEnZe4GR8zWE7GssPwvVs=
+		Bj0o+5xl0lleUrP4uShTBOTbofM=
 		</data>
 		<key>InstallmentsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		hho8lEzv9D5pgbWZzJ8sKvNinlg=
+		K06nuZnkkS8JtSysdE9Yb3M7wUE=
 		</data>
 		<key>InstallmentsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		9jcIa45fwCTBC8j2yDGtqnh+q5k=
+		OAe5esmXfTn8huqHLGcKMRRk4uw=
 		</data>
 		<key>IssuerTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		xo+iSorOSuYrYnzVCBY5I5TxZW0=
+		1Em2IsMy9YUKarh8wIEgHxLItuA=
 		</data>
 		<key>IssuerTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		1IDOvTzcNy2kjjygkn0HHKoNBDo=
+		PcemNHSaoz08MCEU/ThvSSQBfrc=
 		</data>
 		<key>IssuerTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		MibUVy6b32D2+tDfEPSBJgP5x3g=
+		qvgkHQzJR8AtpBv1MZUwC7vVNKI=
 		</data>
 		<key>IssuerTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		O6n/ZfrhVg/bm1aNc+pZHkjf8XA=
+		kdZViKVAbqQ4zScKOndZKR3Kr6w=
 		</data>
 		<key>IssuersViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		SGsIVbwxGZzSAA/R2oqRyhkg4VI=
+		DHpYhWdPvBsrTEUVeESsEpTdzac=
 		</data>
 		<key>IssuersViewController~ipad.nib/runtime.nib</key>
 		<data>
-		5JJIZ+9I+rt0bsjKMkqD8pkFD9M=
+		bF5jZxI5wiJYcr+CObGSq2m8zUo=
 		</data>
 		<key>IssuersViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		YgQNIhuUrOUilSPfON/K07hcxpY=
+		ohVn8DgbRaZPvctYhHtXzzGoKc0=
 		</data>
 		<key>IssuersViewController~iphone.nib/runtime.nib</key>
 		<data>
-		TLmBbU6XaMbtgjNIuXaCi32jrQg=
+		FUzk9+J2b8OSzBQANu3CJtmH1DI=
 		</data>
 		<key>MPCardNumberTableViewCell.nib</key>
 		<data>
-		rSX8k4wbKIhnPrReZG9mto3FDRI=
+		lN3SADiHR940VMmzA1VUNJtrJ+M=
 		</data>
 		<key>MPCardholderNameTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		bVC58StFK00Q4FPRJ6xxmBDu78Y=
+		Ec/ldnYIDO+6qbosU5ikDn30VfA=
 		</data>
 		<key>MPCardholderNameTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		LTZbsgQEb1B7GhrxpL7v7L6WawE=
+		AbX4FpPWuwSSiXMrBIUjywDKJOE=
 		</data>
 		<key>MPCardholderNameTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		jU74cHOQlA4BUEm24mPbE49Zihg=
+		xU9qA1qF9aRfT9hGAo6m4jRTb2w=
 		</data>
 		<key>MPCardholderNameTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		nioEQ16bjvfq27+/NqFOlfWfJjY=
+		MiZg09OqNJURFsueX1+Mv2rz71U=
 		</data>
 		<key>MPExpirationDateTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		jpN3Y6prH6n4NyHzk++F51A4v44=
+		vuX32mUC2uxdc9EikSg0oyc2WkQ=
 		</data>
 		<key>MPExpirationDateTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		s87cd+do0GCc1VxTqs/g8vtj4v0=
+		mS8jt6TpOgIdYsNki5VG/9YK3vw=
 		</data>
 		<key>MPExpirationDateTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		6n9QmSHS8SMvuC202rD+GGY8rhA=
+		NUdh/70Dd48F46ivSFUVGJxNqt8=
 		</data>
 		<key>MPExpirationDateTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		YIR0y3X8+VvvxdMvpWhuOU/BRJA=
+		rUa0ahZRRYETQMHpOEAKoLvtveo=
 		</data>
 		<key>MPInstallmentsTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		dVD12sz/F0crnrNbQlC4P3gH6dw=
+		2R5ozHtPC1NFJPHztymZmL3v5Ic=
 		</data>
 		<key>MPInstallmentsTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		sHL8E6POsTcoN0q2yRgS3IcYdsk=
+		vZG/lRMsqDj8bln5omJLdvCFrdM=
 		</data>
 		<key>MPInstallmentsTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		qXx/n7aP+7ndfBcg5p7w85Ans74=
+		a/DVtJMZUrx0eNcw1IukQDXnOw0=
 		</data>
 		<key>MPInstallmentsTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		8s2ZJieWnp+LkA3hhThsBKurhXg=
+		h/nZQcoO9mBTk4GFx7Kf4UH4rks=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		I2uREAWuMn+G0GsCbrXN63X6VVU=
+		s+oSD8tbHj8HNZvaw6AuZq2643w=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		FL8LbjMrzW+CKoBMG3IpCOk2L3o=
+		cuqls9oNn/jwzRC+omJ6Q9cX4DU=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7inL6SyI8Gzgv7wqVlt2b+MjQuc=
+		jEaCcUHgrdP/7yawdHYtRSTYkpA=
 		</data>
 		<key>MPPaymentMethodEmptyTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Rw/Fha4XUjkv3OjRQloHrjyL9hY=
+		O6aDOma5QM7F6lKF32sSNFuPSlU=
 		</data>
 		<key>MPPaymentMethodTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		pihv9L+YatT1FLwAtAcqG/yU7AU=
+		B1x1E7M/CyGacdVMcNiGEwCOlqE=
 		</data>
 		<key>MPPaymentMethodTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		2HnE9JEPBoLhvYQBL0VX6VfErOM=
+		/4Tzu1GbDxeyyZNqOb+P+MgKU4s=
 		</data>
 		<key>MPPaymentMethodTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		nydARz6ngYXp4de/PsC2ZcdmXPU=
+		fzkfdTuWMw4MaMxcrbrI0AFK4n0=
 		</data>
 		<key>MPPaymentMethodTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Nhu3PV70Ny1iEiBFRHFxtwG4EqU=
+		a7zFy6W530Hi+zd82CsLEJMyg04=
 		</data>
 		<key>MPSecurityCodeTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		ffrUiLH3sQbwZGhElYxsQAKQ3aA=
+		ShSq6US5JMDe2NteqUzy+Xp0aiU=
 		</data>
 		<key>MPSecurityCodeTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		Zwa9Wy5GIuZvxt8DADjjcOYKOD8=
+		um614idozlDB7GvyXy9bv57JZN0=
 		</data>
 		<key>MPSecurityCodeTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		Uw8KctYZ+uJQnvk7sZt1yAILppo=
+		rukXiHJWpmeGaDP24xV6Ikkkj7g=
 		</data>
 		<key>MPSecurityCodeTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		Emm1jHYF2mPKiEYmzsndxMhkfME=
+		tRRtOanRC/ITH327mG9U9mkyLco=
 		</data>
 		<key>MPUserIdTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		L+zxhWNuKyYPwxvXNcxd2LaMMjg=
+		1dl3SdmAq7ubF89G4tvq3KyQbjE=
 		</data>
 		<key>MPUserIdTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		+7OveYoKlEJnAaJjkJaaL3oy9OA=
+		3gixZudqcxcQ78XXwtSpel0vcSo=
 		</data>
 		<key>MPUserIdTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		AKtKjWt+2fdQWKs5bGMKAPBgBqI=
+		ll3AU/w/gQ+wTwA1T2O36aIyv9E=
 		</data>
 		<key>MPUserIdTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		WBK4j37YmMcvHL2rIykBe6GDHJ8=
+		qedh+or3ZKFhovClZE1BCPBX1Uk=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		9CHxc1pTMzdWTX4xHhs5CLqaPu0=
+		tt2LpASq63eQpeobU+jFVRBsNHI=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		sDmem88v//8HXXKG1OONV6njOho=
+		FQwJ3m8ukzFMSOMgaCUygcO9V30=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -843,7 +757,7 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		HjnxnZ5q+WdutmjtdBzrFVAUAZE=
+		U6uUjHAehxh3OkxbLwKIgyJqJSI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -851,199 +765,199 @@
 		</data>
 		<key>NewCardViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		2VQbjmTaCGdDNBF1FMHD9PpGHyI=
+		wZCbfkRitE8WZ/9rfPlLvpHIGaw=
 		</data>
 		<key>NewCardViewController~ipad.nib/runtime.nib</key>
 		<data>
-		MEhILSNng3yQqifqhmgKMofkvak=
+		5ifHkiroNhhXCJ+IElNMXcqMmSE=
 		</data>
 		<key>NewCardViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		5aeIcLSaDOHrluwp03OLgaaj+7I=
+		PoZj6WHOyUeY3jkDRvGeQZgMhvQ=
 		</data>
 		<key>NewCardViewController~iphone.nib/runtime.nib</key>
 		<data>
-		zddwjE2nxre9GRCJvsUDgBFC4mg=
+		ASLOqiaWDC67O+idaf0IVGrdZv8=
 		</data>
 		<key>PaymentDateTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		YzJ2O1psFU7/wUb6EC544gvNLgs=
+		2xNdnGz4g7C5oXJLcqUNTmbJEn8=
 		</data>
 		<key>PaymentDateTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		41aR4YrXJbNL9LTEMtzrC07SwpQ=
+		oTBgBYYMH24BxsvJcv6KYeeAoaE=
 		</data>
 		<key>PaymentDateTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		iAH/giGmEOA5uw3IwY4RgAfrMD8=
+		yHg9L7FAB9QbSu+fv36czAzkKBc=
 		</data>
 		<key>PaymentDateTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		iZV3dCI0qCNpfRJFBmS1V6soBh8=
+		G//w0M6qEVQ62xzunUu8jVBfUUI=
 		</data>
 		<key>PaymentIDTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		G1nJUd0aMWQD76MKJiLmZWgNLes=
+		Tt9qEKSe0zZ/u5dd/mSHBzWPSPo=
 		</data>
 		<key>PaymentIDTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		LrVP6R2Id1kWSNiSdz0sJpmw6LQ=
+		GTAt/gp5h+XhNCrvkUlRwk3GV4o=
 		</data>
 		<key>PaymentIDTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		nsLSjsF/ZpSMRPVpBQRyJOLnUaw=
+		unTO0Jm8554pwB/GVKU8Z1FQEwc=
 		</data>
 		<key>PaymentIDTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		5UY22qHjbeNUqh6EchaodreM2cI=
+		yDEG6XdsZ0XGjs6G7g8kWprGgPc=
 		</data>
 		<key>PaymentMethodTableViewCell.nib</key>
 		<data>
-		mMXlfdfZXJ8fqN+ih2X26QhxgC0=
+		wkbc4QhowPcY050F/tswHSVuRkA=
 		</data>
 		<key>PaymentMethodsViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		PWswIrdc23WUHiag9DpFyM6xYX8=
+		dt5ti17UL4Bm2amjlWBh6zD4Jn0=
 		</data>
 		<key>PaymentMethodsViewController~ipad.nib/runtime.nib</key>
 		<data>
-		HSVyy48q6DQaOgi6VwCZ6ffUTNM=
+		NL9YoQ/jNkVeS9DHiBfUdLvttCg=
 		</data>
 		<key>PaymentMethodsViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		0Fh7T1c1OQQiz/GiWFC1L4/wRYY=
+		fOW56E8cp2YPdItAZaXD61mn4zI=
 		</data>
 		<key>PaymentMethodsViewController~iphone.nib/runtime.nib</key>
 		<data>
-		c6UJwATA9yOI6m+NBwfJPfuvkpo=
+		GSaQtM9AkhMM/RQhfR2swEsDXJU=
 		</data>
 		<key>PaymentTotalTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		zfpw/GeSMoqkW+t382ov6Z6CRTY=
+		HMaOwMUhd7SdNC7pG1xM/eA00Q8=
 		</data>
 		<key>PaymentTotalTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		7vLK9GRW6nHm0apewUFekICmnOQ=
+		mJO1A+M5/sHgOuNTzpLBE2/gktI=
 		</data>
 		<key>PaymentTotalTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		WsdqFlFcqEoGeaGvOfWGOaWZWyI=
+		eU9t8zqDsFcb1HIuEx5vayVkIyQ=
 		</data>
 		<key>PaymentTotalTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		YNPeJwSr1QlhWqemjqSoybX3ulI=
+		h+jvGCEvzCSVxe7P6NlQXbJU6Mw=
 		</data>
 		<key>PromoEmptyTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		YMNO/SF0jgrZ/4Wo4HdoIhhYPfA=
+		J7i59uKAQy2/zDfVZDmh1OJSFw8=
 		</data>
 		<key>PromoEmptyTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		EopCws75dL9+yf/O5S+DOYA0G9c=
+		R2J+MG5dYqVHegsP3LJf4Dpxw5w=
 		</data>
 		<key>PromoEmptyTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		xBJdGJjHiLiHKJjJYICFebwpucg=
+		EThy4WXfXsxkR20HT8MNZXP20Yc=
 		</data>
 		<key>PromoEmptyTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		NI7kuwKmW7yP+bzRV3Q1+b9+dlo=
+		F5ta3wGhepntjIeESC9UUzBdYO0=
 		</data>
 		<key>PromoTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		g1zFYUI20lb/HGxOA8a2eCUAGAs=
+		BYm5H9rrMrYX6UGo0e7pLfEroSo=
 		</data>
 		<key>PromoTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		UvOPDySi3lh4IkH474A3u6OphGE=
+		H99yZSu+r8Vy8OVyDUYVvIl+lJw=
 		</data>
 		<key>PromoTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		p2lU6PS+s4hTQvmyYEeWLwUuTRM=
+		mPJrAKyOhc/iYFCm2SwDqF9FrZU=
 		</data>
 		<key>PromoTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		ZAjmapYtT17t209Z7nUTzfm8myw=
+		X7sJ9hOxp2HZoRf67pTGQXgpPfA=
 		</data>
 		<key>PromoTyCDetailTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		zrChMOjImohYjL5d9dxss3rUAHc=
+		WxBCVu1fcWNHi5AglEGXLXYtG3I=
 		</data>
 		<key>PromoTyCDetailTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		sddKXeqP3Q8ptL39AzWgEk13WDo=
+		4lt2DZjUNrbjHeC9i8Vuoo3mDvM=
 		</data>
 		<key>PromoTyCDetailTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		5/ksSKfSstu0AHsV8hs8pB4XiTU=
+		vzkwTlowDBuP9quIIPikS9+NhFk=
 		</data>
 		<key>PromoTyCDetailTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		mTfXHR0BEDesfzTs9q7FwDbXaaE=
+		qIHaJSUtG5v8w9H6N063nmwIMHM=
 		</data>
 		<key>PromoViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		CbPj+kODOQnvlPr0NERyDJvixuE=
+		cS+YQy70TWzMk4jzHkOBVot/TTc=
 		</data>
 		<key>PromoViewController~ipad.nib/runtime.nib</key>
 		<data>
-		+QKsY9oh1hOf41eKq0L8V1UuHkk=
+		FAxOQwfU5UcbBMlEd4aQ/aKFk2w=
 		</data>
 		<key>PromoViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		Xh3uCIv+7F7aLnaZhcsQ8SYauj8=
+		aJ8MJcACdNqGgJyr6llU/0svB8E=
 		</data>
 		<key>PromoViewController~iphone.nib/runtime.nib</key>
 		<data>
-		UYbqNJsLRWzSUwpjD9PfFPMTv/U=
+		sTIQ5atIYFcZPLryE3dIhDYIJ+4=
 		</data>
 		<key>PromosTyCTableViewCell~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		FFwhKNfgoxZYMY1UxbV85R00w9M=
+		+/bMsgg727qkdlYrv4vYaAVSIvc=
 		</data>
 		<key>PromosTyCTableViewCell~ipad.nib/runtime.nib</key>
 		<data>
-		McCy2MRFCVy8j8aoNvXmj1bux+k=
+		AJeqF8pYJzF8K5gYRe2VTc3G8f0=
 		</data>
 		<key>PromosTyCTableViewCell~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7dLuOuJdYpZVwWcDbXuIuHJ0/Zs=
+		aF4QOziQ+RIZF9TcUqsYVl4by44=
 		</data>
 		<key>PromosTyCTableViewCell~iphone.nib/runtime.nib</key>
 		<data>
-		ySY2+FaY+15khcwQG7Awhj/Rg+E=
+		yDqs7kGFhqU8NvMuhAMmNd7aGJw=
 		</data>
 		<key>PromosTyCViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		I9IYX1TpuB84Cz+yJLjXNhha6QU=
+		/9BGb6OrvdqBh6ARKYAPg3zob7g=
 		</data>
 		<key>PromosTyCViewController~ipad.nib/runtime.nib</key>
 		<data>
-		SvBzYf4TqMEw2M3JigYr89rJhzc=
+		yBOM0MY9dbE270Sw5bHQ5B85L6M=
 		</data>
 		<key>PromosTyCViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		OuLkXUANfyc0hTQrOqmtR0rFDKA=
+		24reLQuQbOvVleOwoSW52g54h3g=
 		</data>
 		<key>PromosTyCViewController~iphone.nib/runtime.nib</key>
 		<data>
-		eBDVHhMpKKEt9doHw9S/Y+tLVVU=
+		9Qo9YabMRQdb6D/maBqu8x3Rsns=
 		</data>
 		<key>VaultViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		Me4WyMRFRAzvc2H9ItugR0Co1SM=
+		D9wU3eR3/XEzQcxXukdPpWI5XZQ=
 		</data>
 		<key>VaultViewController~ipad.nib/runtime.nib</key>
 		<data>
-		iw2SPRf0YJuM8co4eSreJrBzIww=
+		sqsK9PkxHMF5go3q0QAvxL+7uBM=
 		</data>
 		<key>VaultViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		7jLRpmr22lD98dr1t6/9i3bYxRo=
+		YWJiPKj/zm1+GTBgD8+m9ZwP8lI=
 		</data>
 		<key>VaultViewController~iphone.nib/runtime.nib</key>
 		<data>
-		sXjJC3I26B2Hr0pNEEZdscxm7n4=
+		UYY7LxLwLJLF2X6pA2hn8zlxo6I=
 		</data>
 		<key>es-CO.lproj/Localizable.strings</key>
 		<dict>

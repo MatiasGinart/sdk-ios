@@ -62,7 +62,7 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
     override public func viewDidLoad() {
         super.viewDidLoad()
 		
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         
         self.title = "Datos de tu tarjeta".localized
         
@@ -246,33 +246,65 @@ public class NewCardViewController : UIViewController, UITableViewDataSource, UI
     }
 
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
+	
+	public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 2
+	}
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        if indexPath.row == 0 {
-            return self.cardNumberCell
-        } else if indexPath.row == 1 {
-            return self.expirationDateCell
-        }  else if indexPath.row == 2 {
-            return self.cardholderNameCell
-        }  else if indexPath.row == 3 {
-            return self.userIdCell
-        }
+		if indexPath.section == 0 {
+			if indexPath.row == 0 {
+				return self.cardNumberCell
+			} else if indexPath.row == 1 {
+				return self.expirationDateCell
+			}
+		} else if indexPath.section == 1 {
+			if indexPath.row == 0 {
+				return self.cardholderNameCell
+			} else if indexPath.row == 1 {
+				return self.userIdCell
+			}
+		}
         return UITableViewCell()
     }
-    
+	
+	override public func viewDidLayoutSubviews() {
+		if self.tableView.respondsToSelector(Selector("setSeparatorInset:")) {
+			self.tableView.separatorInset = UIEdgeInsetsZero
+		}
+		
+		if self.tableView.respondsToSelector(Selector("setSeparatorInset:")) {
+			self.tableView.layoutMargins = UIEdgeInsetsZero
+		}
+	}
+	
+	public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+		if cell.respondsToSelector(Selector("setSeparatorInset:")) {
+			cell.separatorInset = UIEdgeInsetsZero
+		}
+		
+		if cell.respondsToSelector(Selector("setSeparatorInset:")) {
+			cell.layoutMargins = UIEdgeInsetsZero
+		}
+	}
+	
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return self.cardNumberCell.getHeight()
-        } else if indexPath.row == 1 {
-            return self.expirationDateCell.getHeight()
-        }  else if indexPath.row == 2 {
-            return self.cardholderNameCell.getHeight()
-        }  else if indexPath.row == 3 {
-            return self.userIdCell.getHeight()
-        }
+		if indexPath.section == 0 {
+			if indexPath.row == 0 {
+				return self.cardNumberCell.getHeight()
+			} else if indexPath.row == 1 {
+				return self.expirationDateCell.getHeight()
+			}
+		} else if indexPath.section == 1 {
+			if indexPath.row == 0 {
+				return self.cardholderNameCell.getHeight()
+			} else if indexPath.row == 1 {
+				return self.userIdCell.getHeight()
+			}
+		}
         return 55
     }
     

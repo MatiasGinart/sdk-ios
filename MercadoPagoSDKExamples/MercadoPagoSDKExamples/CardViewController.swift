@@ -58,7 +58,7 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+		self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
 		self.view.addSubview(self.loadingView)
 		self.title = "Datos de tu tarjeta".localized
 		
@@ -239,38 +239,70 @@ class CardViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+		return section == 2 ? 1 : 2
+	}
+	
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 3
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		if indexPath.row == 0 {
-			return self.cardNumberCell
-		} else if indexPath.row == 1 {
-			return self.expirationDateCell
-		}  else if indexPath.row == 2 {
-			return self.cardholderNameCell
-		}  else if indexPath.row == 3 {
-			return self.userIdCell
-		}  else if indexPath.row == 4 {
+		if indexPath.section == 0 {
+			if indexPath.row == 0 {
+				return self.cardNumberCell
+			} else if indexPath.row == 1 {
+				return self.expirationDateCell
+			}
+		} else if indexPath.section == 1 {
+			if indexPath.row == 0 {
+				return self.cardholderNameCell
+			} else if indexPath.row == 1 {
+				return self.userIdCell
+			}
+		} else if indexPath.section == 2 {
 			return self.securityCodeCell
 		}
 		return UITableViewCell()
 	}
 	
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-		if indexPath.row == 0 {
-			return self.cardNumberCell.getHeight()
-		} else if indexPath.row == 1 {
-			return self.expirationDateCell.getHeight()
-		}  else if indexPath.row == 2 {
-			return self.cardholderNameCell.getHeight()
-		}  else if indexPath.row == 3 {
-			return self.userIdCell.getHeight()
-		}  else if indexPath.row == 4 {
+		if indexPath.section == 0 {
+			if indexPath.row == 0 {
+				return self.cardNumberCell.getHeight()
+			} else if indexPath.row == 1 {
+				return self.expirationDateCell.getHeight()
+			}
+		} else if indexPath.section == 1 {
+			if indexPath.row == 0 {
+				return self.cardholderNameCell.getHeight()
+			} else if indexPath.row == 1 {
+				return self.userIdCell.getHeight()
+			}
+		} else if indexPath.section == 2 {
 			return self.securityCodeCell.getHeight()
 		}
 		return 55
+	}
+	
+	override func viewDidLayoutSubviews() {
+		if self.tableView.respondsToSelector(Selector("setSeparatorInset:")) {
+			self.tableView.separatorInset = UIEdgeInsetsZero
+		}
+		
+		if self.tableView.respondsToSelector(Selector("setSeparatorInset:")) {
+			self.tableView.layoutMargins = UIEdgeInsetsZero
+		}
+	}
+	
+	func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+		if cell.respondsToSelector(Selector("setSeparatorInset:")) {
+			cell.separatorInset = UIEdgeInsetsZero
+		}
+		
+		if cell.respondsToSelector(Selector("setSeparatorInset:")) {
+			cell.layoutMargins = UIEdgeInsetsZero
+		}
 	}
 	
 	func validateForm(cardToken : CardToken) -> Bool {

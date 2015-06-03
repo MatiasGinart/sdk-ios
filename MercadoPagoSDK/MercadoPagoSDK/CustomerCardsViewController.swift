@@ -41,7 +41,7 @@ public class CustomerCardsViewController : UIViewController, UITableViewDataSour
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "newCard")
 
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         self.view.addSubview(self.loadingView)
         
         var paymentMethodNib = UINib(nibName: "PaymentMethodTableViewCell", bundle: self.bundle)

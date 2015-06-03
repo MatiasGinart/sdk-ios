@@ -1,3 +1,4 @@
+
 //
 //  MercadoPago.swift
 //  MercadoPagoSDK
@@ -302,7 +303,15 @@ public class MercadoPago : NSObject {
         }
         return nil
     }
-    
+	
+	public class func screenBoundsFixedToPortraitOrientation() -> CGRect {
+		var screenSize : CGRect = UIScreen.mainScreen().bounds
+		if NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1 && UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation) {
+			return CGRectMake(0.0, 0.0, screenSize.height, screenSize.width)
+		}
+		return screenSize
+	}
+	
     public class func showAlertViewWithError(error: NSError?, nav: UINavigationController?) {
         
         var msg : String? = "An error occurred while processing your request. Please try again."

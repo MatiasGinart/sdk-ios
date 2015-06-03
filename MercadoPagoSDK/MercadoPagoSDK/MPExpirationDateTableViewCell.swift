@@ -29,7 +29,6 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
 		self.expirationDateTextField.placeholder = "Mes / Año".localized
         self.expirationDateTextField.delegate = self
         self.expirationDateTextField.keyboardType = UIKeyboardType.NumberPad
-		//self.expirationDateTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Válida hasta".localized)
     }
     
     required public  init(coder aDecoder: NSCoder) {
@@ -68,22 +67,20 @@ public class MPExpirationDateTableViewCell : ErrorTableViewCell, UITextFieldDele
         
         var txtAfterUpdate:NSString = textField.text as NSString
         txtAfterUpdate = txtAfterUpdate.stringByReplacingCharactersInRange(range, withString: string)
+		var str : String = ""
         if txtAfterUpdate.length <= 7 {
-            let date : NSString = txtAfterUpdate.stringByReplacingOccurrencesOfString(" / ", withString:"")
-            if date.length > 2 {
-                var mutableString : NSMutableString = NSMutableString(capacity: date.length + 1)
-                for i in 0...(date.length-1) {
-                    if i == 2 {
-                        mutableString.appendFormat(" / %C", date.characterAtIndex(i))
-                    } else {
-                        mutableString.appendFormat("%C", date.characterAtIndex(i))
-                    }
-                }
-                self.expirationDateTextField.text = mutableString as String
-                return false
-            }
-            return true
-        }
-        return false
+			var date : NSString = txtAfterUpdate.stringByReplacingOccurrencesOfString(" ", withString:"")
+			date = date.stringByReplacingOccurrencesOfString("/", withString:"")
+			if date.length >= 1 && date.length <= 4 {
+				for i in 0...(date.length-1) {
+					if i == 2 {
+						str = str + " / "
+					}
+					str = str + String(format: "%C", date.characterAtIndex(i))
+				}
+			}
+			self.expirationDateTextField.text = str
+		}
+		return false
     }
 }

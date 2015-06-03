@@ -73,7 +73,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
         
         self.title = "Pagar".localized
         
-        self.loadingView = UILoadingView(frame: self.view.bounds, text: "Cargando...".localized)
+        self.loadingView = UILoadingView(frame: MercadoPago.screenBoundsFixedToPortraitOrientation(), text: "Cargando...".localized)
         
         declareAndInitCells()
         
@@ -99,6 +99,44 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
         }
 
     }
+	
+	public override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willShowKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "willHideKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+	}
+	
+	public override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	func willHideKeyboard(notification: NSNotification) {
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, 0.0, 0)
+		self.tableview.contentInset = contentInsets
+		self.tableview.scrollIndicatorInsets = contentInsets
+		self.scrollToRow(NSIndexPath(forRow: 0, inSection: 0))
+	}
+	
+	func willShowKeyboard(notification: NSNotification) {
+		let s:NSValue? = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)
+		var keyboardBounds :CGRect = s!.CGRectValue()
+		
+		// resize content insets.
+		let contentInsets = UIEdgeInsetsMake(64, 0.0, keyboardBounds.size.height, 0)
+		self.tableview.contentInset = contentInsets
+		self.tableview.scrollIndicatorInsets = contentInsets
+
+		let securityIndexPath = self.tableview.indexPathForCell(self.securityCodeCell)
+		if securityIndexPath != nil {
+			self.scrollToRow(securityIndexPath!)
+		}
+	}
+	
+	public func scrollToRow(indexPath: NSIndexPath) {
+		self.tableview.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+	}
     
     public func declareAndInitCells() {
         var paymentMethodNib = UINib(nibName: "MPPaymentMethodTableViewCell", bundle: self.bundle)

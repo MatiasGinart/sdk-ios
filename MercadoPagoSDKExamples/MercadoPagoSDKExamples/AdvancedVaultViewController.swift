@@ -32,7 +32,6 @@ class AdvancedVaultViewController : SimpleVaultViewController {
     override func getSelectionCallbackPaymentMethod() -> (paymentMethod : PaymentMethod) -> Void {
         return { (paymentMethod : PaymentMethod) -> Void in
             self.selectedCard = nil
-            self.newCard = true
             self.selectedPaymentMethod = paymentMethod
             if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
                 self.securityCodeLength = paymentMethod.settings![0].securityCode!.length
@@ -72,7 +71,6 @@ class AdvancedVaultViewController : SimpleVaultViewController {
                 self.selectedCard = selectedCard
                 self.selectedPaymentMethod = self.selectedCard?.paymentMethod
                 self.selectedIssuer = self.selectedCard?.issuer
-                self.newCard = false
                 self.bin = self.selectedCard?.firstSixDigits
                 self.securityCodeLength = self.selectedCard!.securityCode!.length
                 self.securityCodeRequired = self.securityCodeLength > 0
@@ -92,7 +90,7 @@ class AdvancedVaultViewController : SimpleVaultViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.selectedCard == nil && !newCard {
+        if self.selectedCard == nil && self.selectedCardToken == nil {
             return 1
         }
         else if self.selectedPayerCost == nil {
@@ -105,12 +103,12 @@ class AdvancedVaultViewController : SimpleVaultViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            if (!newCard && self.selectedCard == nil) {
+            if (self.selectedCardToken == nil && self.selectedCard == nil) {
                 self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
                 return self.emptyPaymentMethodCell
             } else {
                 self.paymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("paymentMethodCell") as! MPPaymentMethodTableViewCell
-                if newCard {
+                if self.selectedCardToken != nil {
                     self.paymentMethodCell.fillWithCardTokenAndPaymentMethod(self.selectedCardToken, paymentMethod: self.selectedPaymentMethod!)
                 } else {
                     self.paymentMethodCell.fillWithCard(self.selectedCard)

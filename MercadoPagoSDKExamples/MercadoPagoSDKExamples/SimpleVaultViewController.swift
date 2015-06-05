@@ -28,8 +28,6 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     
     // User's saved card
     var selectedCard : Card? = nil
-    // New card
-    var newCard : Bool = false
     var selectedCardToken : CardToken? = nil
     // New card paymentMethod
     var selectedPaymentMethod : PaymentMethod? = nil
@@ -130,7 +128,7 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.selectedCard == nil && !newCard) {
+        if self.selectedCard == nil && self.selectedCardToken == nil {
             return 1
         } else if !self.securityCodeRequired {
             self.navigationItem.rightBarButtonItem?.enabled = true
@@ -141,10 +139,10 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            if (!newCard && self.selectedCard == nil) {
+            if self.selectedCardToken == nil && self.selectedCard == nil {
                 return self.emptyPaymentMethodCell
             } else {
-                if newCard {
+                if self.selectedCardToken != nil {
                     self.paymentMethodCell.fillWithCardTokenAndPaymentMethod(self.selectedCardToken, paymentMethod: self.selectedPaymentMethod!)
                 } else {
                     self.paymentMethodCell.fillWithCard(self.selectedCard)
@@ -202,7 +200,6 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
                 self.selectedCard = selectedCard
                 self.selectedPaymentMethod = self.selectedCard!.paymentMethod
                 self.securityCodeRequired = self.selectedCard!.securityCode!.length != 0
-                self.newCard = false
                 self.securityCodeLength = self.selectedCard!.securityCode!.length
                 self.bin = self.selectedCard!.firstSixDigits
                 self.tableview.reloadData()
@@ -216,7 +213,6 @@ class SimpleVaultViewController: UIViewController, UITableViewDataSource, UITabl
     func getSelectionCallbackPaymentMethod() -> (paymentMethod : PaymentMethod) -> Void {
         return { (paymentMethod : PaymentMethod) -> Void in
             self.selectedCard = nil
-            self.newCard = true
             self.selectedPaymentMethod = paymentMethod
             if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
                 self.securityCodeLength = paymentMethod.settings![0].securityCode!.length

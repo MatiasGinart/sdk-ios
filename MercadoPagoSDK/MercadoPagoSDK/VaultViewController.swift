@@ -35,7 +35,6 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     public var selectedCardToken : CardToken? = nil
     public var selectedPaymentMethod : PaymentMethod? = nil
     public var selectedIssuer : Issuer? = nil
-    public var newCard : Bool = false
     public var cards : [Card]?
     public var payerCosts : [PayerCost]?
 
@@ -157,7 +156,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     }
  
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if (self.selectedCard == nil && !newCard) && (self.selectedCardToken == nil) {
+		if self.selectedCard == nil && self.selectedCardToken == nil {
 			if (self.selectedPaymentMethod != nil && !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
 				self.navigationItem.rightBarButtonItem?.enabled = true
 			}
@@ -175,7 +174,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            if !newCard && self.selectedCard == nil && self.selectedPaymentMethod == nil {
+            if self.selectedCard == nil && self.selectedPaymentMethod == nil {
                 self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
                 return self.emptyPaymentMethodCell
             } else {
@@ -183,7 +182,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
                 if !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId) {
                     self.paymentMethodCell.fillWithPaymentMethod(self.selectedPaymentMethod!)
                 }
-                else if newCard {
+                else if self.selectedCardToken != nil {
                     self.paymentMethodCell.fillWithCardTokenAndPaymentMethod(self.selectedCardToken, paymentMethod: self.selectedPaymentMethod!)
                 } else {
                     self.paymentMethodCell.fillWithCard(self.selectedCard)
@@ -220,7 +219,6 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
                             self.selectedCard = selectedCard
                             self.selectedPaymentMethod = self.selectedCard?.paymentMethod
                             self.selectedIssuer = self.selectedCard?.issuer
-                            self.newCard = false
                             self.bin = self.selectedCard?.firstSixDigits
                             self.securityCodeLength = self.selectedCard!.securityCode!.length
                             self.securityCodeRequired = self.securityCodeLength > 0
@@ -329,7 +327,6 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
             self.selectedPaymentMethod = paymentMethod
             if MercadoPago.isCardPaymentType(paymentMethod.paymentTypeId) {
                 self.selectedCard = nil
-                self.newCard = true
                 if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
                     self.securityCodeLength = paymentMethod.settings![0].securityCode!.length
                     self.securityCodeRequired = self.securityCodeLength != 0

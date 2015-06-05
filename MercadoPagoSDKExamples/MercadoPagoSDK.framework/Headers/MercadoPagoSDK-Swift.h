@@ -1066,7 +1066,6 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK19VaultViewController")
 @property (nonatomic) CardToken * __nullable selectedCardToken;
 @property (nonatomic) PaymentMethod * __nullable selectedPaymentMethod;
 @property (nonatomic) Issuer * __nullable selectedIssuer;
-@property (nonatomic) BOOL newCard;
 @property (nonatomic, copy) NSArray * __nullable cards;
 @property (nonatomic, copy) NSArray * __nullable payerCosts;
 @property (nonatomic) BOOL securityCodeRequired;

@@ -27,7 +27,6 @@ class FinalVaultViewController : AdvancedVaultViewController {
             self.selectedPaymentMethod = paymentMethod
             if MercadoPago.isCardPaymentType(paymentMethod.paymentTypeId) {
                 self.selectedCard = nil
-                self.newCard = true
                 if paymentMethod.settings != nil && paymentMethod.settings.count > 0 {
                     self.securityCodeLength = paymentMethod.settings![0].securityCode!.length
                     self.securityCodeRequired = self.securityCodeLength != 0
@@ -51,7 +50,7 @@ class FinalVaultViewController : AdvancedVaultViewController {
         }
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.selectedCard == nil && !newCard) && (self.selectedCardToken == nil) || (self.selectedPaymentMethod != nil && !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
+        if (self.selectedCard == nil && self.selectedCardToken == nil) || (self.selectedPaymentMethod != nil && !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
             return 1
         }
         else if self.selectedPayerCost == nil {
@@ -64,7 +63,7 @@ class FinalVaultViewController : AdvancedVaultViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            if !newCard && self.selectedCard == nil && self.selectedPaymentMethod == nil {
+            if self.selectedCardToken == nil && self.selectedCard == nil && self.selectedPaymentMethod == nil {
                 self.emptyPaymentMethodCell = self.tableview.dequeueReusableCellWithIdentifier("emptyPaymentMethodCell") as! MPPaymentMethodEmptyTableViewCell
                 return self.emptyPaymentMethodCell
             } else {
@@ -72,7 +71,7 @@ class FinalVaultViewController : AdvancedVaultViewController {
                 if !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId) {
                     self.paymentMethodCell.fillWithPaymentMethod(self.selectedPaymentMethod!)                    
                 }
-                else if newCard {
+                else if self.selectedCardToken != nil {
                     self.paymentMethodCell.fillWithCardTokenAndPaymentMethod(self.selectedCardToken, paymentMethod: self.selectedPaymentMethod!)
                 } else {
                     self.paymentMethodCell.fillWithCard(self.selectedCard)

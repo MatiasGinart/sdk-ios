@@ -16,3 +16,5 @@
 "Cuotas" = "Mensualidades";
 "Documento" = "Cédula de ciudadanía";
 "cuotas sin interés" = "mensualidades sin interés";
+"NOT_INSTALLMENTS_FOUND" = "No se encontraron mensualidades disponibles para un monto de $";
+"PAYMENT_ERROR" = "No se pudo realizar el pago.";

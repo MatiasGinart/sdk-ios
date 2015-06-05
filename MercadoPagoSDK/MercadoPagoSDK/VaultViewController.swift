@@ -157,9 +157,12 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
     }
  
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.selectedCard == nil && !newCard) && (self.selectedPaymentMethod == nil || !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
-            return 1
-        }
+		if (self.selectedCard == nil && !newCard) && (self.selectedCardToken == nil) {
+			if (self.selectedPaymentMethod != nil && !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
+				self.navigationItem.rightBarButtonItem?.enabled = true
+			}
+			return 1
+		}
         else if self.selectedPayerCost == nil {
             return 2
         } else if !securityCodeRequired {
@@ -233,9 +236,9 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
             }
         } else if indexPath.row == 1 {
             self.showViewController(MercadoPago.startInstallmentsViewController(payerCosts!, amount: amount, callback: { (payerCost: PayerCost?) -> Void in
-                    self.selectedPayerCost = payerCost
-                    self.tableview.reloadData()
-                    self.navigationController!.popToViewController(self, animated: true)
+					self.selectedPayerCost = payerCost
+					self.tableview.reloadData()
+					self.navigationController!.popToViewController(self, animated: true)
                 }), sender: self)
         }
     }
@@ -251,6 +254,7 @@ public class VaultViewController : UIViewController, UITableViewDataSource, UITa
             }
             }, failure: { (error: NSError?) -> Void in
                 MercadoPago.showAlertViewWithError(error, nav: self.navigationController)
+				self.navigationController?.popToRootViewControllerAnimated(true)
         })
     }
     

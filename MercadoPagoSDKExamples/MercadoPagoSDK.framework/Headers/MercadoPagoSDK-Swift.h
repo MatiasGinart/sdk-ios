@@ -623,6 +623,8 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK11MercadoPago")
 + (NSInteger)ERROR_KEY_CODE;
 + (NSInteger)ERROR_API_CODE;
 + (NSInteger)ERROR_UNKNOWN_CODE;
++ (NSInteger)ERROR_NOT_INSTALLMENTS_FOUND;
++ (NSInteger)ERROR_PAYMENT;
 @property (nonatomic, copy) NSString * __nullable privateKey;
 @property (nonatomic, copy) NSString * __nullable publicKey;
 @property (nonatomic, copy) NSString * __nullable paymentMethodId;

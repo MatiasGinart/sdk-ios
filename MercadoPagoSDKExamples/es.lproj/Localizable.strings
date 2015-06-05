@@ -13,11 +13,13 @@
 "step3_description" = "Flujo de pagos con cuotas y manejo de bancos.";
 "step4_description" = "Flujo de pagos que incluye los medios off-line como medios de pago disponibles.";
 "step5_description" = "Flujo de pagos por defecto. Incluye todos los módulos de pago.";
-"step6_description" = "Promociones";
+"step6_description" = "Flujo de pagos por defecto sin tarjetas guardadas. Incluye todos los módulos de pago.";
+"step7_description" = "Promociones";
 
 "step1_title" = "Formulario simple";
 "step2_title" = "Tarjetas guardadas";
 "step3_title" = "Pagos con cuotas";
 "step4_title" = "Pagos con medios off-line";
 "step5_title" = "Flujo de pagos completo";
-"step6_title" = "Promociones";
+"step6_title" = "Flujo de pagos completo sin tarjetas guardadas";
+"step7_title" = "Promociones";

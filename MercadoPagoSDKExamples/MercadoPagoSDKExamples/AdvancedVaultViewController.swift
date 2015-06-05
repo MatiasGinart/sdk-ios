@@ -149,9 +149,12 @@ class AdvancedVaultViewController : SimpleVaultViewController {
                 self.tableview.reloadData()
                 self.loadingView.removeFromSuperview()
             }
-            }, failure: nil)
+			}, failure: { (error: NSError?) -> Void in
+				MercadoPago.showAlertViewWithError(error, nav: self.navigationController)
+				self.navigationController?.popToRootViewControllerAnimated(true)
+		})
     }
-    
+	
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
             super.tableView(tableView, didSelectRowAtIndexPath: indexPath)

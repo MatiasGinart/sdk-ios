@@ -26,7 +26,6 @@ public class MPCardholderNameTableViewCell : ErrorTableViewCell {
     override public func awakeFromNib() {
         super.awakeFromNib()
 		self.cardholderNameLabel.text = "Nombre y apellido impreso en la tarjeta".localized
-		//self.cardholderNameTextField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: Selector("prev"), nextAction: Selector("next"), doneAction: Selector("done"), titleText: "Nombre y apellido impreso en la tarjeta".localized)
     }
     
     
@@ -36,7 +35,7 @@ public class MPCardholderNameTableViewCell : ErrorTableViewCell {
     
     
     public func getCardholderName() -> String! {
-        return self.cardholderNameTextField.text
+		return self.cardholderNameTextField.text != nil ? self.cardholderNameTextField.text.uppercaseString : nil
     }
     
     public func setTextFieldDelegate(delegate : UITextFieldDelegate) {

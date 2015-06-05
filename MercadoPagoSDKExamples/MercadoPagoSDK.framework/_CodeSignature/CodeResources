@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		+sD+kNsCGkaKkNUyzKof4aJHgGA=
+		0s6JhpOZR9vyYqaq9YBTvlih29c=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -250,11 +250,11 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		tt2LpASq63eQpeobU+jFVRBsNHI=
+		9CHxc1pTMzdWTX4xHhs5CLqaPu0=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		FQwJ3m8ukzFMSOMgaCUygcO9V30=
+		JqbQ5HrAX0SAWysb8/lM2TDW8gI=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		U6uUjHAehxh3OkxbLwKIgyJqJSI=
+		w8Aajrgi+1mr1NlqS4qBSniKajw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -468,7 +468,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			72cetMTKOsguCOAAYUYMTqtwp/k=
+			KaDC6dQLI6JMoDhIa6+Zq6NGlaM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -477,7 +477,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uJDGmGp4XjFJlulR8RKtBEmHDMI=
+			RRuADdA33mqeY6132B1NCkMQor0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -486,7 +486,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mOJGaiy0FsJzgs1W5L0oHrOA65I=
+			ZBqMHh1fd2XYwtxF6rqbqn820Ew=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -495,7 +495,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MaDxCt96/+Mf7YfXgSCAutXCWhg=
+			/tqsVwbV9n9aa6u+hF+wyI+zlLQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -557,7 +557,7 @@
 		</data>
 		<key>Headers/MercadoPagoSDK-Swift.h</key>
 		<data>
-		+sD+kNsCGkaKkNUyzKof4aJHgGA=
+		0s6JhpOZR9vyYqaq9YBTvlih29c=
 		</data>
 		<key>Headers/MercadoPagoSDK.h</key>
 		<data>
@@ -745,11 +745,11 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		tt2LpASq63eQpeobU+jFVRBsNHI=
+		9CHxc1pTMzdWTX4xHhs5CLqaPu0=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		FQwJ3m8ukzFMSOMgaCUygcO9V30=
+		JqbQ5HrAX0SAWysb8/lM2TDW8gI=
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -757,7 +757,7 @@
 		</data>
 		<key>Modules/MercadoPagoSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		U6uUjHAehxh3OkxbLwKIgyJqJSI=
+		w8Aajrgi+1mr1NlqS4qBSniKajw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -963,7 +963,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			72cetMTKOsguCOAAYUYMTqtwp/k=
+			KaDC6dQLI6JMoDhIa6+Zq6NGlaM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -972,7 +972,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uJDGmGp4XjFJlulR8RKtBEmHDMI=
+			RRuADdA33mqeY6132B1NCkMQor0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -981,7 +981,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mOJGaiy0FsJzgs1W5L0oHrOA65I=
+			ZBqMHh1fd2XYwtxF6rqbqn820Ew=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -990,7 +990,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MaDxCt96/+Mf7YfXgSCAutXCWhg=
+			/tqsVwbV9n9aa6u+hF+wyI+zlLQ=
 			</data>
 			<key>optional</key>
 			<true/>

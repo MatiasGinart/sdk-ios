@@ -14,7 +14,7 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak private var tableview : UITableView!
 	
     let examples : [String] = ["step1_title".localized, "step2_title".localized, "step3_title".localized, "step4_title".localized,
-    "step5_title".localized, "step6_title".localized]
+    "step5_title".localized, "step6_title".localized, "step7_title".localized]
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -81,6 +81,10 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
                     self.createPayment(token, paymentMethod: paymentMethod, installments: installments, cardIssuerId: issuerId, discount: nil)
             }), sender: self)
 		case 5:
+			self.showViewController(MercadoPago.startVaultViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY, merchantBaseUrl: nil, merchantGetCustomerUri: nil, merchantAccessToken: ExamplesUtils.MERCHANT_ACCESS_TOKEN, amount: ExamplesUtils.AMOUNT, supportedPaymentTypes: ["credit_card", "debit_card", "prepaid_card", "ticket", "atm"], callback: {(paymentMethod: PaymentMethod, token: String?, issuerId: Int64?, installments: Int) -> Void in
+				self.createPayment(token, paymentMethod: paymentMethod, installments: installments, cardIssuerId: issuerId, discount: nil)
+			}), sender: self)
+		case 6:
 			self.showViewController(MercadoPago.startPromosViewController(ExamplesUtils.MERCHANT_PUBLIC_KEY), sender: self)
         default:
             println("Otra opcion")

@@ -30,7 +30,15 @@ public class MercadoPago : NSObject {
     public class var ERROR_UNKNOWN_CODE : Int {
         return -3
     }
-    
+	
+	public class var ERROR_NOT_INSTALLMENTS_FOUND : Int {
+		return -4
+	}
+	
+	public class var ERROR_PAYMENT : Int {
+		return -4
+	}
+	
     let BIN_LENGTH : Int = 6
 	
     let MP_API_BASE_URL : String = "https://api.mercadopago.com"
@@ -222,12 +230,15 @@ public class MercadoPago : NSObject {
                 } else {
                     var paymentMethods = jsonResult as? NSArray
                     var installments : [Installment] = [Installment]()
-                    if paymentMethods != nil {
+                    if paymentMethods != nil && paymentMethods?.count > 0 {
                         if let dic = paymentMethods![0] as? NSDictionary {
                             installments.append(Installment.fromJSON(dic))
                         }
-                    }
-                    success(installments: installments)
+						success(installments: installments)
+					} else {
+						var error : NSError = NSError(domain: "mercadopago.sdk.getIdentificationTypes", code: MercadoPago.ERROR_NOT_INSTALLMENTS_FOUND, userInfo: ["message": "NOT_INSTALLMENTS_FOUND".localized + "\(amount)"])
+						failure?(error: error)
+					}
                 }
             }, failure: failure)
         } else {
@@ -313,8 +324,8 @@ public class MercadoPago : NSObject {
 	}
 	
     public class func showAlertViewWithError(error: NSError?, nav: UINavigationController?) {
-        
-        var msg : String? = "An error occurred while processing your request. Please try again."
+        let msgDefault = "An error occurred while processing your request. Please try again."
+        var msg : String? = msgDefault
         
         if error != nil {
             msg = error!.userInfo!["message"] as? String
@@ -322,7 +333,7 @@ public class MercadoPago : NSObject {
         
         let alert = UIAlertController()
         alert.title = "MercadoPago Error"
-        alert.message = "Error = \(msg)"
+		alert.message = "Error = \(msg != nil ? msg! : msgDefault)"
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
             switch action.style{
             case .Default:

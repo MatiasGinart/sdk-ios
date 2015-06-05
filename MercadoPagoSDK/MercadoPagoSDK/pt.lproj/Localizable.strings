@@ -47,7 +47,7 @@
 "Imprime el cupón y paga. Se acreditará en 1 a 3 días hábiles." = "Imprima o boleto e realize o pagamento - Será aprovado no prazo de 1 a 3 dias úteis";
 "En unos minutos te enviaremos por e-mail el resultado." = "Em poucos minutos enviaremos por e-mail o resultado";
 "No se pudo realizar el pago." = "Não foi possível realizar o pagamento";
-
+"PAYMENT_ERROR" = "Não foi possível realizar o pagamento";
 "Ingresa el número de la tarjeta de crédito" = "Digite o número do cartão de crédito";
 "El número de tarjeta que ingresaste no se corresponde con el tipo de tarjeta" = "O número do cartão de crédito digitado não coincide com o tipo de cartão";
 "El número de tarjeta que ingresaste es incorrecto" = "O número do cartão de crédito digitado está incorreto";
@@ -55,3 +55,5 @@
 "Promociones" = "Promoções";
 
 "Promociones vigentes" = "Promoções atuais";
+
+"NOT_INSTALLMENTS_FOUND" = "Não existem parcelas disponíveis para um valor de R$";

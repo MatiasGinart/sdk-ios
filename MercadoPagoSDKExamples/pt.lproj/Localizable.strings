@@ -15,12 +15,14 @@
 "step3_description" = "Fluxo de pagamento para que o comprador escolha o parcelamento desejado e qual é a administradora do cartão.";
 "step4_description" = "Fluxo que inclui os meios offline como meios de pagamento disponíveis.";
 "step5_description" = "Fluxo de pagamento padrão. Inclui todos os módulos de pagamento.";
-"step6_description" = "Promoções.";
+"step6_description" = "Fluxo de pagamento padrão sem cartões salvos do usuário. Inclui todos os módulos de pagamento.";
+"step7_description" = "Promoções.";
 
 "step1_title" = "Formulário simples";
 "step2_title" = "Cartões salvos";
 "step3_title" = "Pagamento parcelado";
 "step4_title" = "Pagamentos com meios offline";
 "step5_title" = "Fluxo de pagamento completo";
-"step6_title" = "Promoções";
+"step6_title" = "Fluxo de pagamento completo sem cartões salvos do usuário";
+"step7_title" = "Promoções";
 "Información" = "Informação";

@@ -51,7 +51,7 @@ class FinalVaultViewController : AdvancedVaultViewController {
         }
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.selectedCard == nil && !newCard) && (self.selectedPaymentMethod == nil || !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
+        if (self.selectedCard == nil && !newCard) && (self.selectedCardToken == nil) || (self.selectedPaymentMethod != nil && !MercadoPago.isCardPaymentType(self.selectedPaymentMethod!.paymentTypeId)) {
             return 1
         }
         else if self.selectedPayerCost == nil {

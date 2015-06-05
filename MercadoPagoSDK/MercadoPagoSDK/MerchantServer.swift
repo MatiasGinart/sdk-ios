@@ -48,8 +48,13 @@ public class MerchantServer : NSObject {
                         failure!(error: NSError(domain: "mercadopago.sdk.merchantServer.createPayment", code: MercadoPago.ERROR_API_CODE, userInfo: paymentDic as [NSObject : AnyObject]))
                     }
                 } else {
-                    payment = Payment.fromJSON(paymentDic)
-                    success(payment: payment!)
+					if paymentDic.allKeys.count > 0 {
+						payment = Payment.fromJSON(paymentDic)
+						success(payment: payment!)
+					} else {
+						failure!(error: NSError(domain: "mercadopago.sdk.merchantServer.createPayment", code: MercadoPago.ERROR_PAYMENT, userInfo: ["message": "PAYMENT_ERROR".localized]))
+					}
+					
                 }
             } else {
                 if failure != nil {

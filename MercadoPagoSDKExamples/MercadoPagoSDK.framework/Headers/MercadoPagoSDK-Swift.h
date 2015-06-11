@@ -913,7 +913,7 @@ SWIFT_CLASS("_TtC14MercadoPagoSDK19PromoViewController")
 
 SWIFT_CLASS("_TtC14MercadoPagoSDK13PromosService")
 @interface PromosService : MercadoPagoService
-- (void)getPromosWithUrl:(NSString * __nonnull)url method:(NSString * __nonnull)method success:(void (^ __nonnull)(id __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
+- (void)getPromosWithUrl:(NSString * __nonnull)url method:(NSString * __nonnull)method public_key:(NSString * __nonnull)public_key success:(void (^ __nonnull)(id __nullable))success failure:(void (^ __nullable)(NSError * __nonnull))failure;
 @end
 
 

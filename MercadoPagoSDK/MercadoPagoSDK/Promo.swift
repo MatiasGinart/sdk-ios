@@ -12,12 +12,10 @@ public class Promo {
 	
 	public var promoId : String!
 	public var issuer : Issuer!
-	public var maxInstallments : NSNumber!
-	public var marketplace : String!
-	public var startDate : NSDate!
-	public var expirationDate : NSDate!
+	public var recommendedMessage : String!
 	public var paymentMethods : [PaymentMethod]!
 	public var legals : String!
+	public var url : String!
 	
 	public class func fromJSON(json : NSDictionary) -> Promo {
 		
@@ -27,10 +25,12 @@ public class Promo {
 		if let issuerDic = json["issuer"] as? NSDictionary {
 			promo.issuer = Issuer.fromJSON(issuerDic)
 		}
+
+		promo.recommendedMessage = json["recommended_message"] as? String
 		
-		promo.maxInstallments = json["max_installments"] as? NSNumber
-		promo.startDate = getDateFromString(json["start_date"] as? String)
-		promo.expirationDate = getDateFromString(json["expiration_date"] as? String)
+		if let picDic = json["picture"] as? NSDictionary {
+			promo.url = picDic["url"] as? String
+		}
 		
 		var paymentMethods : [PaymentMethod] = [PaymentMethod]()
 		if let pmArray = json["payment_methods"] as? NSArray {
@@ -42,9 +42,6 @@ public class Promo {
 		}
 		
 		promo.paymentMethods = paymentMethods
-		
-		promo.marketplace = json["marketplace"] as? String
-		promo.legals = json["legals"] as? String
 		
 		return promo
 	}

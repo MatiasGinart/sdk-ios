@@ -282,8 +282,8 @@ public class MercadoPago : NSObject {
 	
 	public func getPromos(success: (promos: [Promo]?) -> Void, failure: ((error: NSError) -> Void)?) {
 		// TODO: Está hecho para MLA fijo porque va a cambiar la URL para que dependa de una API y una public key
-		let service : PromosService = PromosService(baseURL: "https://www.mercadopago.com")
-		service.getPromos(success: { (jsonResult) -> Void in
+		let service : PromosService = PromosService(baseURL: MP_API_BASE_URL)
+		service.getPromos(public_key: self.publicKey!, success: { (jsonResult) -> Void in
 			var promosArray = jsonResult as? NSArray?
 			var promos : [Promo] = [Promo]()
 			if promosArray != nil {

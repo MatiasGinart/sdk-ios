@@ -29,7 +29,7 @@ public class PromoTableViewCell: UITableViewCell {
 	public func setPromoInfo(promo: Promo!) {
 		var placeholderImage = "empty_tc"
 		if promo != nil && promo!.issuer != nil && promo!.issuer!._id != nil {
-			var imgURL: NSURL = NSURL(string: "http://static.mlstatic.com/org-img/MP/app/wallet/android/promos-bancos/ico_bank_\(promo!.issuer!._id!).png")!
+			var imgURL: NSURL = NSURL(string: promo.url)!
 			let request: NSURLRequest = NSURLRequest(URL: imgURL)
 			NSURLConnection.sendAsynchronousRequest(
 				request, queue: NSOperationQueue.mainQueue(),
@@ -40,7 +40,7 @@ public class PromoTableViewCell: UITableViewCell {
 			})
 		}
 
-		self.sharesSubtitle.text = "\(promo.maxInstallments!) " + "cuotas sin interés".localized
+		self.sharesSubtitle.text = promo.recommendedMessage
 		
 		if promo!.paymentMethods != nil && promo!.paymentMethods!.count > 0 {
 			if promo!.paymentMethods!.count == 1 {

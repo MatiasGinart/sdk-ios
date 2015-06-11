@@ -29,6 +29,7 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         self.tableview.reloadData()
     }
     
@@ -38,6 +39,13 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.title = "MercadoPago SDK"
         self.tableview.delegate = self
         self.tableview.dataSource = self
+
+        self.setAccessibilityLabels()
+    }
+
+    func setAccessibilityLabels() {
+        MPTestHelper.setAccessibilityId("EXAMPLES_VIEW", forObject: self.view)
+        MPTestHelper.setAccessibilityId("EXAMPLES_TABLE_VIEW", forObject: self.tableview)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

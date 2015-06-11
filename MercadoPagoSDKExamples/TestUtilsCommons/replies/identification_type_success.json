@@ -1,0 +1,9 @@
+[
+ {
+ "id" : "CPF",
+ "max_length": 11,
+ "min_length": 11,
+ "name": "CPF",
+ "type": "number"
+ }
+]

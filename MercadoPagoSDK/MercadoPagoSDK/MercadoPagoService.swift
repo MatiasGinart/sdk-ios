@@ -12,7 +12,7 @@ import UIKit
 public class MercadoPagoService : NSObject {
 
     var baseURL : String!
-    init (baseURL : String) {
+    public init (baseURL : String) {
         super.init()
         self.baseURL = baseURL
     }
@@ -40,14 +40,27 @@ public class MercadoPagoService : NSObject {
                 NSURLResponse!,data: NSData!,error: NSError!) -> Void in
 				
 				UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-				
-				if error == nil {
+
+                // Puede que viniera status code de error pero no un NSError
+                var hasError = (error != nil)
+                var statusCode = 200
+                if !hasError && response is NSHTTPURLResponse {
+                    let httpResponse = response as! NSHTTPURLResponse
+                    statusCode = httpResponse.statusCode
+                    hasError = (statusCode < 200 || statusCode >= 400)
+                }
+
+				if !hasError {
                     success(jsonResult: NSJSONSerialization.JSONObjectWithData(data,
                         options:NSJSONReadingOptions.MutableContainers, error: nil))
                 }
                 else {
                     if failure != nil {
-                        failure!(error: error)
+                        if error != nil {
+                            failure!(error: error)
+                        } else {
+                            failure!(error: NSError(domain: "mercadoPago", code: statusCode, userInfo: nil))
+                        }
                     }
                 }
         })

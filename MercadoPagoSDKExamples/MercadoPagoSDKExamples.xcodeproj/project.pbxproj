@@ -8,44 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		0F2071E51B2205CE00CE11AB /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */; };
-		0F2071E61B2205CE00CE11AB /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */; };
 		0F2071E71B2205D900CE11AB /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */; };
 		0F9884FF1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */; };
 		0F9885061AD2BCB900F750F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885051AD2BCB900F750F0 /* Images.xcassets */; };
-		0F9885151AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */; };
 		0F9885251AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */; };
-		0F9885261AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */; };
 		0F9885271AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */; };
-		0F9885281AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */; };
 		0F98852B1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */; };
-		0F98852C1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */; };
 		0F9885341AD2BD8700F750F0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885321AD2BD8700F750F0 /* CardViewController.swift */; };
-		0F9885351AD2BD8700F750F0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885321AD2BD8700F750F0 /* CardViewController.swift */; };
 		0F9885361AD2BD8700F750F0 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885331AD2BD8700F750F0 /* CardViewController.xib */; };
-		0F9885371AD2BD8700F750F0 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885331AD2BD8700F750F0 /* CardViewController.xib */; };
 		0F98853A1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */; };
-		0F98853B1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885381AD2BD9100F750F0 /* SimpleSecurityCodeTableViewCell.swift */; };
 		0F98853C1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */; };
-		0F98853D1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885391AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib */; };
 		0F9885401AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */; };
-		0F9885411AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98853E1AD2BDA700F750F0 /* SimpleVaultViewController.swift */; };
 		0F9885421AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */; };
-		0F9885431AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98853F1AD2BDA700F750F0 /* SimpleVaultViewController.xib */; };
 		0F9885451AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */; };
-		0F9885461AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885441AD2BDB300F750F0 /* AdvancedVaultViewController.swift */; };
 		0F9885481AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
-		0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9885471AD2BDBE00F750F0 /* FinalVaultViewController.swift */; };
 		0F98854B1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
-		0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F98854A1AD2BDDD00F750F0 /* LaunchScreen.xib */; };
 		0FCE50A41AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
 		0FCE50A51AF2B05600A30177 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE50A31AF2B05600A30177 /* String+Additions.swift */; };
 		0FFDB7261AF2B1F600F7AF9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */; };
-		0FFDB7271AF2B1F600F7AF9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */; };
+		30EBC730F5F350E9401EE476 /* libPods-Functional Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D3C0F916784ABEA7C53F0B /* libPods-Functional Tests.a */; };
+		8C1EDEF51B29F78C000A8C92 /* MPMockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF11B29F78C000A8C92 /* MPMockServer.swift */; };
+		8C1EDEF61B29F78C000A8C92 /* MPMockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF11B29F78C000A8C92 /* MPMockServer.swift */; };
+		8C1EDEF71B29F78C000A8C92 /* MPMockServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF21B29F78C000A8C92 /* MPMockServiceBase.swift */; };
+		8C1EDEF81B29F78C000A8C92 /* MPMockServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF21B29F78C000A8C92 /* MPMockServiceBase.swift */; };
+		8C1EDEF91B29F78C000A8C92 /* MPMockServiceRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF31B29F78C000A8C92 /* MPMockServiceRules.swift */; };
+		8C1EDEFA1B29F78C000A8C92 /* MPMockServiceRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF31B29F78C000A8C92 /* MPMockServiceRules.swift */; };
+		8C1EDEFB1B29F78C000A8C92 /* MPMockURLInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF41B29F78C000A8C92 /* MPMockURLInformation.swift */; };
+		8C1EDEFC1B29F78C000A8C92 /* MPMockURLInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDEF41B29F78C000A8C92 /* MPMockURLInformation.swift */; };
+		8C1EDF101B29FCAB000A8C92 /* identification_type_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1EDF0F1B29FCAB000A8C92 /* identification_type_success.json */; };
+		8C1EDF111B29FCAB000A8C92 /* identification_type_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C1EDF0F1B29FCAB000A8C92 /* identification_type_success.json */; };
+		8C1EDF131B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF121B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift */; };
+		8C1EDF141B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF121B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift */; };
+		8C1EDF171B29FD02000A8C92 /* IdentificationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF161B29FD02000A8C92 /* IdentificationServiceTest.swift */; };
+		8C1EDF191B29FD3F000A8C92 /* MPBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF181B29FD3F000A8C92 /* MPBaseTestCase.swift */; };
+		8C1EDF201B2A0D4A000A8C92 /* XCTest+KIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF1F1B2A0D4A000A8C92 /* XCTest+KIF.swift */; };
+		8C1EDF221B2A0D6E000A8C92 /* MPTestFunctionalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF211B2A0D6E000A8C92 /* MPTestFunctionalCase.swift */; };
+		8C1EDF251B2A0D9D000A8C92 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF241B2A0D9D000A8C92 /* String+Utils.swift */; };
+		8C1EDF261B2A0D9D000A8C92 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF241B2A0D9D000A8C92 /* String+Utils.swift */; };
+		8C1EDF291B2A11AF000A8C92 /* TestForTheTestModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF281B2A11AF000A8C92 /* TestForTheTestModule.swift */; };
+		8C1EDF2B1B2A1284000A8C92 /* MPTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EDF2A1B2A1284000A8C92 /* MPTestHelper.swift */; };
+		AEC71922CF2356ED61CF2D51 /* libPods-Unit Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C12110D03C165FA07077D0 /* libPods-Unit Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0F98850F1AD2BCB900F750F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F9884EE1AD2BCB900F750F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F9884F51AD2BCB900F750F0;
+			remoteInfo = MercadoPagoSDKExamples;
+		};
+		8C1EDEE71B29F4A0000A8C92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0F9884EE1AD2BCB900F750F0 /* Project object */;
 			proxyType = 1;
@@ -69,15 +83,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04630511956DCED3AD47D9E8 /* Pods-Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
 		0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9884FA1AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F9884FE1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MercadoPagoSDKExamples.xcdatamodel; sourceTree = "<group>"; };
 		0F9885051AD2BCB900F750F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoPagoSDKExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F9885131AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoPagoSDKExamplesTests.swift; sourceTree = "<group>"; };
+		0F98850E1AD2BCB900F750F0 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9885231AD2BD1B00F750F0 /* ExamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
 		0F9885241AD2BD1B00F750F0 /* ExamplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamplesViewController.xib; sourceTree = "<group>"; };
 		0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesUtils.swift; sourceTree = "<group>"; };
@@ -95,6 +108,29 @@
 		0FFDB72B1AF2B21A00F7AF9D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FFDB72C1AF2B59700F7AF9D /* es-CO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CO"; path = "es-CO.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		0FFDB72D1AF2B5BB00F7AF9D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		23C12110D03C165FA07077D0 /* libPods-Unit Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Unit Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		367C74919E19095D457D852A /* Pods-Functional Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Functional Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Functional Tests/Pods-Functional Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C1EDEE11B29F4A0000A8C92 /* Functional Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Functional Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1EDEEE1B29F6C7000A8C92 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Unit Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
+		8C1EDEF11B29F78C000A8C92 /* MPMockServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMockServer.swift; sourceTree = "<group>"; };
+		8C1EDEF21B29F78C000A8C92 /* MPMockServiceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMockServiceBase.swift; sourceTree = "<group>"; };
+		8C1EDEF31B29F78C000A8C92 /* MPMockServiceRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMockServiceRules.swift; sourceTree = "<group>"; };
+		8C1EDEF41B29F78C000A8C92 /* MPMockURLInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMockURLInformation.swift; sourceTree = "<group>"; };
+		8C1EDF091B29F8F6000A8C92 /* FunctionalTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FunctionalTests-Bridging-Header.h"; path = "FunctionalTests/FunctionalTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		8C1EDF0A1B29F8F6000A8C92 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FunctionalTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		8C1EDF0C1B29F94A000A8C92 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UnitTests-Bridging-Header.h"; path = "Unit Tests/UnitTests-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		8C1EDF0F1B29FCAB000A8C92 /* identification_type_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = identification_type_success.json; path = replies/identification_type_success.json; sourceTree = "<group>"; };
+		8C1EDF121B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMockServiceIdentificationType.swift; sourceTree = "<group>"; };
+		8C1EDF161B29FD02000A8C92 /* IdentificationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentificationServiceTest.swift; path = "Unit Tests/IdentificationServiceTest.swift"; sourceTree = SOURCE_ROOT; };
+		8C1EDF181B29FD3F000A8C92 /* MPBaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MPBaseTestCase.swift; path = "Unit Tests/MPBaseTestCase.swift"; sourceTree = SOURCE_ROOT; };
+		8C1EDF1F1B2A0D4A000A8C92 /* XCTest+KIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTest+KIF.swift"; path = "FunctionalTests/XCTest+KIF.swift"; sourceTree = SOURCE_ROOT; };
+		8C1EDF211B2A0D6E000A8C92 /* MPTestFunctionalCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MPTestFunctionalCase.swift; path = FunctionalTests/MPTestFunctionalCase.swift; sourceTree = SOURCE_ROOT; };
+		8C1EDF241B2A0D9D000A8C92 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		8C1EDF281B2A11AF000A8C92 /* TestForTheTestModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestForTheTestModule.swift; path = FunctionalTests/TestForTheTestModule.swift; sourceTree = SOURCE_ROOT; };
+		8C1EDF2A1B2A1284000A8C92 /* MPTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPTestHelper.swift; sourceTree = "<group>"; };
+		94D3C0F916784ABEA7C53F0B /* libPods-Functional Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Functional Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2878A5E325DF7E22A9AB007 /* Pods-Unit Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F95F52F9521A69440457002E /* Pods-Functional Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Functional Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Functional Tests/Pods-Functional Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +146,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2071E61B2205CE00CE11AB /* MercadoPagoSDK.framework in Frameworks */,
+				AEC71922CF2356ED61CF2D51 /* libPods-Unit Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1EDEDE1B29F4A0000A8C92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EBC730F5F350E9401EE476 /* libPods-Functional Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +167,12 @@
 				0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */,
 				0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */,
 				0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
-				0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,
+				8C1EDEF01B29F756000A8C92 /* TestUtilsCommons */,
+				0F9885111AD2BCB900F750F0 /* Unit Tests */,
+				8C1EDEE21B29F4A0000A8C92 /* Functional Tests */,
 				0F9884F71AD2BCB900F750F0 /* Products */,
+				AEF8707E55638D6BE109017D /* Pods */,
+				BE967C991DCB4369E934C243 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */,
-				0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */,
+				0F98850E1AD2BCB900F750F0 /* Unit Tests.xctest */,
+				8C1EDEE11B29F4A0000A8C92 /* Functional Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,19 +207,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0F9885111AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */ = {
+		0F9885111AD2BCB900F750F0 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0F9885141AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift */,
+				8C1EDF1B1B29FD50000A8C92 /* Services */,
+				8C1EDF1A1B29FD44000A8C92 /* Commons */,
 				0F9885121AD2BCB900F750F0 /* Supporting Files */,
 			);
+			name = "Unit Tests";
 			path = MercadoPagoSDKExamplesTests;
 			sourceTree = "<group>";
 		};
 		0F9885121AD2BCB900F750F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F9885131AD2BCB900F750F0 /* Info.plist */,
+				8C1EDF0C1B29F94A000A8C92 /* UnitTests-Bridging-Header.h */,
+				8C1EDEEE1B29F6C7000A8C92 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +277,7 @@
 		0F9885291AD2BD2200F750F0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8C1EDF2A1B2A1284000A8C92 /* MPTestHelper.swift */,
 				0FCE50A31AF2B05600A30177 /* String+Additions.swift */,
 				0F98852A1AD2BD3700F750F0 /* ExamplesUtils.swift */,
 			);
@@ -274,6 +327,116 @@
 			name = FinalVault;
 			sourceTree = "<group>";
 		};
+		8C1EDEE21B29F4A0000A8C92 /* Functional Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF271B2A118C000A8C92 /* TestTest */,
+				8C1EDF1E1B2A0D2A000A8C92 /* Commons */,
+				8C1EDEE31B29F4A0000A8C92 /* Supporting Files */,
+			);
+			path = "Functional Tests";
+			sourceTree = "<group>";
+		};
+		8C1EDEE31B29F4A0000A8C92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF091B29F8F6000A8C92 /* FunctionalTests-Bridging-Header.h */,
+				8C1EDF0A1B29F8F6000A8C92 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C1EDEF01B29F756000A8C92 /* TestUtilsCommons */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF241B2A0D9D000A8C92 /* String+Utils.swift */,
+				8C1EDF0E1B29FB86000A8C92 /* MockService */,
+				8C1EDF0D1B29FB7C000A8C92 /* MockServer */,
+			);
+			path = TestUtilsCommons;
+			sourceTree = SOURCE_ROOT;
+		};
+		8C1EDF0D1B29FB7C000A8C92 /* MockServer */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDEF11B29F78C000A8C92 /* MPMockServer.swift */,
+				8C1EDEF21B29F78C000A8C92 /* MPMockServiceBase.swift */,
+				8C1EDEF31B29F78C000A8C92 /* MPMockServiceRules.swift */,
+				8C1EDEF41B29F78C000A8C92 /* MPMockURLInformation.swift */,
+			);
+			name = MockServer;
+			sourceTree = "<group>";
+		};
+		8C1EDF0E1B29FB86000A8C92 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF151B29FCBB000A8C92 /* IdentificationService */,
+			);
+			name = MockService;
+			sourceTree = "<group>";
+		};
+		8C1EDF151B29FCBB000A8C92 /* IdentificationService */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF121B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift */,
+				8C1EDF0F1B29FCAB000A8C92 /* identification_type_success.json */,
+			);
+			name = IdentificationService;
+			sourceTree = "<group>";
+		};
+		8C1EDF1A1B29FD44000A8C92 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF181B29FD3F000A8C92 /* MPBaseTestCase.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		8C1EDF1B1B29FD50000A8C92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF161B29FD02000A8C92 /* IdentificationServiceTest.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8C1EDF1E1B2A0D2A000A8C92 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF211B2A0D6E000A8C92 /* MPTestFunctionalCase.swift */,
+				8C1EDF1F1B2A0D4A000A8C92 /* XCTest+KIF.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		8C1EDF271B2A118C000A8C92 /* TestTest */ = {
+			isa = PBXGroup;
+			children = (
+				8C1EDF281B2A11AF000A8C92 /* TestForTheTestModule.swift */,
+			);
+			name = TestTest;
+			sourceTree = "<group>";
+		};
+		AEF8707E55638D6BE109017D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				367C74919E19095D457D852A /* Pods-Functional Tests.debug.xcconfig */,
+				F95F52F9521A69440457002E /* Pods-Functional Tests.release.xcconfig */,
+				04630511956DCED3AD47D9E8 /* Pods-Unit Tests.debug.xcconfig */,
+				C2878A5E325DF7E22A9AB007 /* Pods-Unit Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE967C991DCB4369E934C243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D3C0F916784ABEA7C53F0B /* libPods-Functional Tests.a */,
+				23C12110D03C165FA07077D0 /* libPods-Unit Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,22 +458,44 @@
 			productReference = 0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F98850D1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */ = {
+		0F98850D1AD2BCB900F750F0 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamplesTests" */;
+			buildConfigurationList = 0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
 			buildPhases = (
+				52E5B8A3104052B4646003C6 /* Check Pods Manifest.lock */,
 				0F98850A1AD2BCB900F750F0 /* Sources */,
 				0F98850B1AD2BCB900F750F0 /* Frameworks */,
 				0F98850C1AD2BCB900F750F0 /* Resources */,
+				CD58FA460B6AF95E5DB9ADAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0F9885101AD2BCB900F750F0 /* PBXTargetDependency */,
 			);
-			name = MercadoPagoSDKExamplesTests;
+			name = "Unit Tests";
 			productName = MercadoPagoSDKExamplesTests;
-			productReference = 0F98850E1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.xctest */;
+			productReference = 0F98850E1AD2BCB900F750F0 /* Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C1EDEE01B29F4A0000A8C92 /* Functional Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1EDEE91B29F4A0000A8C92 /* Build configuration list for PBXNativeTarget "Functional Tests" */;
+			buildPhases = (
+				4BFADA1ABB8AAD232AB95EF6 /* Check Pods Manifest.lock */,
+				8C1EDEDD1B29F4A0000A8C92 /* Sources */,
+				8C1EDEDE1B29F4A0000A8C92 /* Frameworks */,
+				8C1EDEDF1B29F4A0000A8C92 /* Resources */,
+				368E0868304DF37BAA1478DF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C1EDEE81B29F4A0000A8C92 /* PBXTargetDependency */,
+			);
+			name = "Functional Tests";
+			productName = "Functional Tests";
+			productReference = 8C1EDEE11B29F4A0000A8C92 /* Functional Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -327,6 +512,10 @@
 					};
 					0F98850D1AD2BCB900F750F0 = {
 						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 0F9884F51AD2BCB900F750F0;
+					};
+					8C1EDEE01B29F4A0000A8C92 = {
+						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 0F9884F51AD2BCB900F750F0;
 					};
 				};
@@ -347,7 +536,8 @@
 			projectRoot = "";
 			targets = (
 				0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
-				0F98850D1AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests */,
+				0F98850D1AD2BCB900F750F0 /* Unit Tests */,
+				8C1EDEE01B29F4A0000A8C92 /* Functional Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -371,22 +561,89 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F98854C1AD2BDDD00F750F0 /* LaunchScreen.xib in Resources */,
-				0FFDB7271AF2B1F600F7AF9D /* Localizable.strings in Resources */,
-				0F98853D1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.xib in Resources */,
-				0F9885371AD2BD8700F750F0 /* CardViewController.xib in Resources */,
-				0F9885281AD2BD1B00F750F0 /* ExamplesViewController.xib in Resources */,
-				0F9885431AD2BDA700F750F0 /* SimpleVaultViewController.xib in Resources */,
+				8C1EDF101B29FCAB000A8C92 /* identification_type_success.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1EDEDF1B29F4A0000A8C92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1EDF111B29FCAB000A8C92 /* identification_type_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		368E0868304DF37BAA1478DF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Functional Tests/Pods-Functional Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BFADA1ABB8AAD232AB95EF6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52E5B8A3104052B4646003C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD58FA460B6AF95E5DB9ADAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F9884F21AD2BCB900F750F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1EDF2B1B2A1284000A8C92 /* MPTestHelper.swift in Sources */,
 				0F9885251AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */,
 				0F9885451AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */,
 				0F9885341AD2BD8700F750F0 /* CardViewController.swift in Sources */,
@@ -404,15 +661,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9885351AD2BD8700F750F0 /* CardViewController.swift in Sources */,
-				0F9885151AD2BCB900F750F0 /* MercadoPagoSDKExamplesTests.swift in Sources */,
-				0F9885461AD2BDB300F750F0 /* AdvancedVaultViewController.swift in Sources */,
-				0F9885261AD2BD1B00F750F0 /* ExamplesViewController.swift in Sources */,
-				0F9885411AD2BDA700F750F0 /* SimpleVaultViewController.swift in Sources */,
+				8C1EDF251B2A0D9D000A8C92 /* String+Utils.swift in Sources */,
+				8C1EDF131B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift in Sources */,
+				8C1EDEF71B29F78C000A8C92 /* MPMockServiceBase.swift in Sources */,
+				8C1EDF191B29FD3F000A8C92 /* MPBaseTestCase.swift in Sources */,
 				0FCE50A51AF2B05600A30177 /* String+Additions.swift in Sources */,
-				0F98852C1AD2BD3700F750F0 /* ExamplesUtils.swift in Sources */,
-				0F9885491AD2BDBE00F750F0 /* FinalVaultViewController.swift in Sources */,
-				0F98853B1AD2BD9200F750F0 /* SimpleSecurityCodeTableViewCell.swift in Sources */,
+				8C1EDEFB1B29F78C000A8C92 /* MPMockURLInformation.swift in Sources */,
+				8C1EDEF51B29F78C000A8C92 /* MPMockServer.swift in Sources */,
+				8C1EDEF91B29F78C000A8C92 /* MPMockServiceRules.swift in Sources */,
+				8C1EDF171B29FD02000A8C92 /* IdentificationServiceTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1EDEDD1B29F4A0000A8C92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1EDF261B2A0D9D000A8C92 /* String+Utils.swift in Sources */,
+				8C1EDEFC1B29F78C000A8C92 /* MPMockURLInformation.swift in Sources */,
+				8C1EDF201B2A0D4A000A8C92 /* XCTest+KIF.swift in Sources */,
+				8C1EDF141B29FCB7000A8C92 /* MPMockServiceIdentificationType.swift in Sources */,
+				8C1EDF291B2A11AF000A8C92 /* TestForTheTestModule.swift in Sources */,
+				8C1EDEF81B29F78C000A8C92 /* MPMockServiceBase.swift in Sources */,
+				8C1EDF221B2A0D6E000A8C92 /* MPTestFunctionalCase.swift in Sources */,
+				8C1EDEFA1B29F78C000A8C92 /* MPMockServiceRules.swift in Sources */,
+				8C1EDEF61B29F78C000A8C92 /* MPMockServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +696,11 @@
 			isa = PBXTargetDependency;
 			target = 0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */;
 			targetProxy = 0F98850F1AD2BCB900F750F0 /* PBXContainerItemProxy */;
+		};
+		8C1EDEE81B29F4A0000A8C92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F9884F51AD2BCB900F750F0 /* MercadoPagoSDKExamples */;
+			targetProxy = 8C1EDEE71B29F4A0000A8C92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -534,6 +812,7 @@
 				INFOPLIST_FILE = MercadoPagoSDKExamples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -558,8 +837,10 @@
 		};
 		0F98851C1AD2BCB900F750F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04630511956DCED3AD47D9E8 /* Pods-Unit Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -569,25 +850,81 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MercadoPagoSDKExamplesTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Unit Tests/UnitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
 			};
 			name = Debug;
 		};
 		0F98851D1AD2BCB900F750F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2878A5E325DF7E22A9AB007 /* Pods-Unit Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = MercadoPagoSDKExamplesTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Unit Tests/UnitTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
+			};
+			name = Release;
+		};
+		8C1EDEEA1B29F4A0000A8C92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 367C74919E19095D457D852A /* Pods-Functional Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FunctionalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunctionalTests/FunctionalTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
+			};
+			name = Debug;
+		};
+		8C1EDEEB1B29F4A0000A8C92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95F52F9521A69440457002E /* Pods-Functional Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = FunctionalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunctionalTests/FunctionalTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoPagoSDKExamples.app/MercadoPagoSDKExamples";
 			};
 			name = Release;
@@ -613,11 +950,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "MercadoPagoSDKExamplesTests" */ = {
+		0F98851B1AD2BCB900F750F0 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F98851C1AD2BCB900F750F0 /* Debug */,
 				0F98851D1AD2BCB900F750F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1EDEE91B29F4A0000A8C92 /* Build configuration list for PBXNativeTarget "Functional Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1EDEEA1B29F4A0000A8C92 /* Debug */,
+				8C1EDEEB1B29F4A0000A8C92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

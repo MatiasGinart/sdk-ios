@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+link_with 'MercadoPagoSDKExamples', 'Unit Tests', 'Functional Tests'
+
+workspace '../MercadoPagoSDK'
+
+target 'Unit Tests', :exclusive => true do
+    pod 'OHHTTPStubs', '~> 4.0'
+end
+
+target 'Functional Tests', :exclusive => true do
+    pod 'KIF', '~>3.2'
+    pod 'OHHTTPStubs', '~> 4.0'
+end

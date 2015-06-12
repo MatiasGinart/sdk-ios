@@ -34,7 +34,7 @@ Copy and paste the following lines into the TextEdit window:
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
     platform :ios, '8.0'
-    pod 'MercadoPagoSDK', '~> 0.1.5'
+    pod 'MercadoPagoSDK', '~> 0.2.3'
 
 > You shouldn’t use TextEdit to edit the pod file because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
@@ -132,6 +132,7 @@ This project includes five examples you can follow to understand how MercadoPago
 3. Manage installments and bank issuers
 4. Pay with other payment types (ticket, atm)
 5. Let MercadoPago SDK do steps 1-4 for you!
+6. Show deals list
 
 ## Documentation
 

@@ -98,7 +98,7 @@ class ExamplesViewController: UIViewController, UITableViewDataSource, UITableVi
             println("Otra opcion")
         }
     }
-    
+	
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         var message : String = "step\(indexPath.row+1)_description".localized
 

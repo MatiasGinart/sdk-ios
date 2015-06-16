@@ -96,7 +96,7 @@ public class Fingerprint : NSObject {
             moreData["device_name"] = device.name
         }
         
-        var simulator : Bool = false
+        /*var simulator : Bool = false
         #if TARGET_IPHONE_SIMULATOR
             simulator = YES
         #endif
@@ -105,8 +105,10 @@ public class Fingerprint : NSObject {
             moreData["simulator"] = 1
         } else {
             moreData["simulator"] = 0
-        }
-        
+		}*/
+		
+		moreData["simulator"] = 0
+		
         dictionary["vendor_specific_attributes"] = moreData
 		
 		return dictionary

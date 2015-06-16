@@ -27,7 +27,7 @@ public class MPToolbar : UIToolbar {
 		var items : [UIBarButtonItem] = []
 		
 		//  Create a done button to show on keyboard to resign it. Adding a selector to resign it.
-		let doneButton = UIBarButtonItem(title: "OK", style: UIBarButtonItemStyle.Bordered, target: self, action: "done")
+		let doneButton = UIBarButtonItem(title: "OK", style: UIBarButtonItemStyle.Plain, target: self, action: "done")
 		
 		let prev = UIBarButtonItem(image: UIImage(named: "IQButtonBarArrowLeft", inBundle: MercadoPago.getBundle(), compatibleWithTraitCollection: nil), style: UIBarButtonItemStyle.Plain, target: self, action: "prev")
 		

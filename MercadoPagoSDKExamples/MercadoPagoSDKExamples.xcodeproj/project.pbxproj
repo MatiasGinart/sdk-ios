@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2071E51B2205CE00CE11AB /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */; };
-		0F2071E71B2205D900CE11AB /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F6AC87B1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6AC87A1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework */; };
+		0F6AC87C1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6AC87A1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework */; };
+		0F6AC87D1B2A3FE4007FF9F1 /* MercadoPagoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6AC87A1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F9884FC1AD2BCB900F750F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */; };
 		0F9884FF1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F9884FD1AD2BCB900F750F0 /* MercadoPagoSDKExamples.xcdatamodeld */; };
 		0F9885061AD2BCB900F750F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9885051AD2BCB900F750F0 /* Images.xcassets */; };
@@ -75,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0F2071E71B2205D900CE11AB /* MercadoPagoSDK.framework in Embed Frameworks */,
+				0F6AC87D1B2A3FE4007FF9F1 /* MercadoPagoSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +85,7 @@
 
 /* Begin PBXFileReference section */
 		04630511956DCED3AD47D9E8 /* Pods-Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
+		0F6AC87A1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MercadoPagoSDK.framework; sourceTree = "<group>"; };
 		0F9884F61AD2BCB900F750F0 /* MercadoPagoSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoPagoSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9884FA1AD2BCB900F750F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9884FB1AD2BCB900F750F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2071E51B2205CE00CE11AB /* MercadoPagoSDK.framework in Frameworks */,
+				0F6AC87B1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC71922CF2356ED61CF2D51 /* libPods-Unit Tests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C1EDEDE1B29F4A0000A8C92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30EBC730F5F350E9401EE476 /* libPods-Functional Tests.a in Frameworks */,
+                0F6AC87C1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +158,7 @@
 		0F9884ED1AD2BCB900F750F0 = {
 			isa = PBXGroup;
 			children = (
-				0F2071E41B2205CE00CE11AB /* MercadoPagoSDK.framework */,
+				0F6AC87A1B2A3FDD007FF9F1 /* MercadoPagoSDK.framework */,
 				0FFDB7291AF2B1F600F7AF9D /* Localizable.strings */,
 				0F9884F81AD2BCB900F750F0 /* MercadoPagoSDKExamples */,
 				8C1EDEF01B29F756000A8C92 /* TestUtilsCommons */,
